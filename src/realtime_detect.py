@@ -4,7 +4,7 @@ import sounddevice as sd
 import numpy as np
 from scipy.io.wavfile import write
 
-# Load models
+
 print("Loading Whisper model...")
 whisper_model = whisper.load_model("small")
 
@@ -15,7 +15,7 @@ vectorizer = joblib.load("models/vectorizer.pkl")
 print("\nReal-time scam detection started...")
 print("Listening to microphone...\n")
 
-# Keyword list
+
 danger_keywords = [
     "digital arrest",
     "arrest",
@@ -29,7 +29,7 @@ danger_keywords = [
 ]
 
 sample_rate = 16000
-duration = 5  # seconds per chunk
+duration = 5  
 
 
 def analyze_audio():
@@ -43,17 +43,17 @@ def analyze_audio():
     audio = sd.rec(int(duration * sample_rate),
                samplerate=sample_rate,
                channels=1,
-               device=2,
+               device=1,
                dtype='float32')
     
     sd.wait()
 
     audio = np.squeeze(audio)
 
-    # Save temporary file
+   
     write("temp.wav", sample_rate, audio)
 
-    # Transcribe
+   
     result = whisper_model.transcribe("temp.wav", fp16=False)
     text = result["text"]
 
@@ -74,7 +74,7 @@ def analyze_audio():
 
     final_score = probability + keyword_score
 
-    # Decision
+   
     if final_score > 0.6:
         print("⚠️ HIGH FRAUD RISK")
     elif final_score > 0.3:
