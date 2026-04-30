@@ -1,80 +1,1039 @@
-label,text
-1,You are under digital arrest
-1,Your Aadhaar is linked to money laundering
-1,Cyber crime department calling regarding your bank account
-1,Your bank account is under investigation
-1,Transfer funds immediately to avoid legal action
-1,Police investigation has started
-1,Do not disconnect the call
-1,Your SIM card is linked to illegal activity
-1,Government investigation against your identity
-1,You must transfer money to secure account
-0,Let's meet tomorrow
-0,Call me when you reach home
-0,Did you finish the assignment
-0,See you at 5 pm
-0,Happy birthday
-1,You are under digital arrest by cyber crime police
-1,Your Aadhaar is linked to a money laundering case
-1,Transfer funds immediately to government account
-1,Police investigation has started against you
-1,Do not disconnect the call or you will be arrested
-1,Cyber crime department calling regarding illegal activity
-1,Your bank account is under investigation
-1,Immediate legal action will be taken
-1,Stay on the call and transfer money now
-1,Your SIM card is used in criminal activity
-1,You are under arrest
-1,You are under digital arrest
-1,Police investigation against your account
-1,Cyber crime investigation against your identity
-1,Your identity has been flagged in a national cybercrime investigation
-1,We are calling from the cyber enforcement division regarding suspicious transactions
-1,A criminal complaint has been registered against your identity
-1,Your bank account has been linked to an illegal financial operation
-1,A legal case has been initiated against your Aadhaar number
-1,We detected suspicious activity linked to your phone number
-1,You must cooperate with the cybercrime department immediately
-1,Your identity has been used in fraudulent banking transactions
-1,You are required to verify your bank accounts for investigation purposes
-1,Your account has been frozen due to suspected illegal activity
-1,A digital warrant has been issued under your name
-1,Failure to comply may result in immediate arrest proceedings
-1,Your identity is associated with a financial crime case
-1,This call is part of an official cybercrime investigation
-1,You must stay connected while we verify your financial records
-1,Authorities are monitoring this investigation in real time
-1,Your identity verification process must be completed immediately
-1,This is a legal compliance call from the investigation department
-1,Your mobile number appears in a fraud investigation report
-1,Your banking credentials must be verified for legal clearance
-1,We are reviewing your financial records for suspicious transactions
-1,A complaint has been filed against your digital identity
-1,You must follow the instructions of the investigation officer
-1,You are required to cooperate with law enforcement verification
-1,The investigation team needs to confirm your account details
-1,Your identity has been associated with illegal financial transfers
-1,This is a confidential investigation regarding your bank account
-1,Your account is under review by financial crime authorities
-1,You must verify your identity to avoid legal consequences
-1,A cybercrime case number has been issued against your profile
-1,Your financial records show suspicious activity patterns
-1,You are required to remain on this call during verification
-1,Authorities require immediate cooperation to resolve this case
-1,This investigation involves your bank account and phone number
-1,Your digital identity is currently under legal scrutiny
-1,We need to verify your banking activity to close the case
-1,Your profile has triggered a cybercrime alert
-1,Failure to comply will escalate the investigation
-1,Your bank transactions are being examined for fraud
-1,You must confirm your financial activity with investigators
-1,Your identity has been linked to a cross-border financial crime
-1,You are required to complete verification procedures immediately
-1,Law enforcement authorities are monitoring your financial activity
-1,You must provide account verification to clear your name
-1,Your identity has appeared in a cyber fraud complaint
-1,Your bank account requires immediate compliance verification
-1,An investigation officer is assigned to your case
-1,Your financial activity requires immediate legal clarification
-1,You must complete verification to prevent legal escalation
-1,This call is an official inquiry regarding your financial identity
+text,label
+"This is officer Sharma from the Cyber Crime Department Mumbai. We have registered a case against your Aadhaar number.",1
+"Sir aapka Aadhaar number ek money laundering case mein involve hai. Aapko abhi cooperate karna hoga.",1
+"You are under digital arrest. Do not move from your location until our officers arrive.",1
+"This is CBI headquarters. We have frozen your bank account due to suspicious transactions.",1
+"Madam your phone number has been used to send illegal content. You will be arrested within 2 hours.",1
+"Sir please don't tell anyone about this call. This is a confidential government investigation.",1
+"Transfer Rs 50000 to this account immediately or we will issue a non-bailable warrant.",1
+"Yeh call record ho rahi hai. Aap agar cooperate nahi kiya toh aapko jail bheja jayega.",1
+"Your PAN card has been linked to a fraud case. You must verify your identity immediately.",1
+"We are from TRAI. Your SIM card will be blocked in 30 minutes due to illegal usage.",1
+"This is the Enforcement Directorate. We have evidence of tax evasion against your name.",1
+"Sir aapke naam pe 4 FIR darj hain. Abhi agar bail chahiye toh 1 lakh deposit karo.",1
+"Do not disconnect this call. You are being monitored by the cyber crime division.",1
+"Your Aadhaar has been used to open 12 fake accounts. This is a serious offence.",1
+"Madam you have 24 hours to transfer the verification amount or face arrest.",1
+"Hum Supreme Court ke order pe call kar rahe hain. Aapka account suspend ho gaya hai.",1
+"Sir we found drugs shipment linked to your address. Pay the clearance fee now.",1
+"This is officer Verma from the Anti-Terrorism Squad. You are a suspect in our ongoing case.",1
+"Your KYC is expired and your account will be permanently blocked. Pay Rs 999 to renew.",1
+"Aap abhi ghar pe hi rahein. Hamara officer aapko arrest karne aayega agar aapne transfer nahi kiya.",1
+"We have video evidence of your involvement in cybercrime. Settle this case by paying penalty.",1
+"Sir aapki beti ne online fraud kiya hai. Usse bachane ke liye abhi paise transfer karo.",1
+"This is RBI officer. Your UPI is being misused. Share your OTP to secure your account.",1
+"You have been flagged by INTERPOL for cross-border financial crimes.",1
+"Madam aapka passport illegal activities mein use hua hai. Aapko court mein appear karna hoga.",1
+"Do not call police. If you contact anyone you will be charged with obstruction of justice.",1
+"Sir hamara drone aapke ghar ke upar hai. Aap monitored hain. Cooperate karo.",1
+"Your Aadhaar biometric has been cloned. Pay Rs 5000 immediately for deactivation.",1
+"We are calling from the Income Tax Department. You owe Rs 2 lakh in unpaid taxes.",1
+"Aapka naam ek drug trafficking network mein aa gaya hai. Abhi settlement karo.",1
+"This call is being recorded by the National Cyber Crime Reporting Portal.",1
+"Sir your mobile number was used to make threats to a government official. Explain yourself.",1
+"Aapka bank account hum freeze kar rahe hain jab tak aap Rs 30000 deposit nahi karte.",1
+"You must stay on this video call or we will assume you are absconding.",1
+"Madam aapke account se 15 lakh ka illegal transaction hua hai pichle raat.",1
+"This is officer from CBI financial crimes wing. Your name appears in a shell company.",1
+"Sir apna ATM card number share karo verification ke liye warna account band ho jayega.",1
+"We have issued a look-out notice against you. You cannot travel until this is resolved.",1
+"Aapke phone se child abuse content share hua hai. Yeh non-bailable offence hai.",1
+"Transfer the amount to our safe account. Once cleared you will get a clean chit.",1
+"This is the last warning from the cyber cell. Pay or face arrest tonight.",1
+"Sir aapke naam pe loan liya gaya hai fraudulently. Aapko abhi verify karna hoga.",1
+"Hamara senior officer aapse personally baat karna chahta hai. Hold karein.",1
+"Your number has received 47 complaints. Court has ordered us to take immediate action.",1
+"Madam yeh ek sealed case hai. Kisi ko bhi mat batao warna contempt of court hoga.",1
+"We have frozen your PAN card. Pay Rs 8000 for re-activation immediately.",1
+"Sir aap ek international fraud ring ke suspect hain. Abhi cooperate karo.",1
+"I am DCP Mehta. This is your last chance to resolve this before we come to your house.",1
+"Aapka Aadhaar se linked number blacklisted ho gaya hai. Turant verify karo.",1
+"You are being placed under digital surveillance. Do not try to escape.",1
+"This is officer Rajan from Mumbai Cyber Crime Cell. Your IP address has been flagged for illegal downloads.",1
+"Sir we have intercepted a parcel in your name containing 200 grams of cocaine at IGI Airport.",1
+"Aapka naam ek Ponzi scheme mein hai. Court ne aapki sampatti freeze karne ka order diya hai.",1
+"You must not leave your home. Our team is on the way to take your statement.",1
+"Madam your daughter's phone was used to circulate obscene content. She will be arrested.",1
+"Sir we are from the Financial Intelligence Unit. Your account shows hawala transactions.",1
+"Aapko abhi ek video call join karni hogi. Yeh virtual court hearing hai.",1
+"This is your final notice before we register a non-cognizable offence against you.",1
+"Sir ek anonymous complaint aayi hai aapke khilaf. Hum investigate kar rahe hain.",1
+"Your SIM card was cloned and used in a terrorist funding case. Cooperate immediately.",1
+"Madam aapke husband ke naam pe 3 cases darj hain alag alag cities mein.",1
+"Sir pay Rs 15000 as a processing fee to get a clean chit from our department.",1
+"Hum aapki call record kar rahe hain. Yeh court mein evidence ki tarah use hogi.",1
+"You are legally obligated to share your account details with us right now.",1
+"Aapko apna current location share karna hoga humare officer ke saath.",1
+"This is the Anti Corruption Bureau. We have evidence of bribery against your name.",1
+"Sir aapka naam Central Vigilance Commission ki watchlist mein hai.",1
+"Your Aadhaar has been suspended due to suspicious biometric access from another state.",1
+"Madam aapke naam pe ek fake company register hai. Yeh money laundering hai.",1
+"We have a court order to seize your assets unless you pay a security deposit today.",1
+"Sir aapke phone mein malware detect hua hai jo illegal transactions kar raha tha.",1
+"You are under Section 420 IPC. Pay the fine immediately or face criminal proceedings.",1
+"Hum aapki location GPS se trace kar rahe hain. Aap monitored hain.",1
+"Madam your minor child's Aadhaar was misused. Provide verification immediately.",1
+"Sir aapne unknowingly ek terrorist organization ko fund kiya hai. Explain karo.",1
+"This is officer Desai from the Directorate of Revenue Intelligence. Cooperate or face arrest.",1
+"Aap agar abhi paise nahi bhejna chahte toh hamare senior se baat karo.",1
+"Your bank flagged a Rs 3.5 lakh transfer to a Dubai account. Confirm your involvement.",1
+"Sir aapka passport blacklisted ho gaya hai. Isko remove karwane ke liye charge bharo.",1
+"Madam yeh crime branch hai. Aapko thoda samay lagega samajhne mein isliye dhyan se suno.",1
+"This is a court summons. You must appear before the magistrate within 24 hours.",1
+"Sir aapke account se Rs 87000 ka suspicious transaction hua hai aaj raat 2 baje.",1
+"Hum aapke employer ko bhi inform kar sakte hain agar aap cooperate nahi karte.",1
+"Madam aapka Aadhaar number leaked ho gaya dark web pe. Abhi secure karo.",1
+"You will receive a legal notice at your address if this call is disconnected.",1
+"Sir aapke ghar pe raid padne wali hai aaj raat agar fine nahi bhara.",1
+"This is the GST Department. Your business shows Rs 12 lakh tax fraud.",1
+"Aapko ek secret account mein paise transfer karne honge taaki hum aapki identity protect kar sakein.",1
+"Sir your name appears in a hawala network operating between India and Pakistan.",1
+"Madam ek FIR already darj ho gayi hai. Bail mili hai aapko temporarily.",1
+"Do not hang up. Hanging up will be considered fleeing from investigation.",1
+"Sir aap Aadhaar biometric update nahi karwaya. Aapka account illegal reh gaya hai.",1
+"Hum CBI ke special task force se hain. Yeh matter bahut sensitive hai.",1
+"Your number was used to make bomb threat calls last Tuesday. Explain immediately.",1
+"Madam aapka beta college mein drugs le gaya tha. Case registered ho gaya hai.",1
+"This is officer from National Investigation Agency. Your travel history is under scrutiny.",1
+"Sir aapko abhi Rs 25000 online transfer karna hoga as a security bond.",1
+"Aap is matter mein agar media ko involve kiya toh aap par additional charges lagenge.",1
+"Your phone has been tapped by the cyber surveillance unit for the past 3 weeks.",1
+"Madam aapki company ke accounts mein irregularities payi gayi hain by ROC.",1
+"Sir this is your last opportunity to settle before the warrant is executed.",1
+"Aapko apna bank passbook aur ATM card details verify karne honge abhi.",1
+"We have frozen all your linked accounts. Cooperate to unfreeze them.",1
+"Sir government ka ek notice aapke address pe send kiya tha lekin return aa gaya.",1
+"Madam is call ke dauran kisi bhi family member ko room mein mat aane do.",1
+"Your social media accounts have been flagged for spreading misinformation.",1
+"Sir aapne ek government portal pe galat information submit ki thi. Yeh fraud hai.",1
+"This is SEBI officer. Your stock trading account shows insider trading activity.",1
+"Aapka naam ek WhatsApp group mein hai jo seditious content share karta tha.",1
+"Sir we need your net banking credentials to verify your account from our end.",1
+"Madam aapke naam pe ek SIM card Rajasthan mein activate hua hai 2 din pehle.",1
+"If you fail to comply within the next 60 minutes we will initiate the arrest process.",1
+"Sir aapke Aadhaar se 7 mobile numbers linked hain alag alag states mein.",1
+"This is the Labour Department. Your company has violated minimum wage laws.",1
+"Aapko court mein apni baat rakhni hogi agar aap abhi cooperate nahi karte.",1
+"Sir your UPI ID was used to receive money from a terror suspect.",1
+"Madam ek politician ne aapke number pe harassment ki complaint ki hai.",1
+"You are being held under preventive detention laws. Do not contact a lawyer yet.",1
+"Sir aapke ghar ki legal property documents mein kuch irregularity aayi hai.",1
+"This is the Delhi Police Cybercell. We have a warrant for your digital devices.",1
+"Aapko is call ke baad kisi bhi family member ko yeh baat nahi batani hai.",1
+"Sir your electricity account was used to mine cryptocurrency illegally.",1
+"Madam hum aapki mदद kar sakte hain lekin aapko pehle Rs 10000 security deposit dena hoga.",1
+"We have a signed court order authorizing us to freeze your entire savings.",1
+"Sir yeh call TRAI ke under recorded hai. Aapka response documented hoga.",1
+"Aapke PAN number se ITR file nahi hua hai 3 saalon se. Yeh criminal offence hai.",1
+"This is the customs department. Declare the foreign currency you received last month.",1
+"Sir aapne ek NGO ko donate kiya tha jo banned organization ke liye funds collect karta tha.",1
+"Madam aapki beti ka phone illegal content ke liye forensic analysis mein hai.",1
+"You must transfer the funds to a government escrow account for safety.",1
+"Sir is case mein agar aap sach bol rahe hain toh aapko darr nahi hai. Sirf Rs 5000 pay karo.",1
+"This is Income Tax officer. Your ITR has discrepancies worth Rs 4.7 lakh.",1
+"Aapko ek NDA sign karna hoga is investigation ke baare mein. Kisi ko baat mat karo.",1
+"Sir the National Cyber Crime portal has received 23 complaints from your number.",1
+"Madam aapka acount ek Ponzi scheme mein used hua hai aapki jaankari ke bina.",1
+"We are giving you one final chance to settle this out of court for Rs 20000.",1
+"Sir aapko hamare virtual police station pe online report karna hoga abhi.",1
+"Aapke WhatsApp pe jo media share kiya gaya wo POCSO act ka violation hai.",1
+"This is the immigration department. You overstayed your visa status. Pay fine now.",1
+"Sir aapka naam ek chit fund fraud mein involved persons ki list mein hai.",1
+"Madam is matter ko resolve karne ke liye aapko ek third party account mein transfer karna hoga.",1
+"We have already contacted your local police station. They will arrive soon.",1
+"Sir aapke naam pe ek property loan li gayi hai forged documents se.",1
+"Aapka acount money mule ke roop mein use kiya gaya hai. Explain karo.",1
+"This is officer from ED. We are conducting a raid in your area. Cooperate.",1
+"Sir your family members will also be questioned if you don't comply right now.",1
+"Madam is call ko transfer kar rahe hain senior officer ko. Hold karo.",1
+"Aapko apna photo ID aur address proof WhatsApp pe bhejna hoga verification ke liye.",1
+"Sir the court has given you a 2 hour window to pay or face non-bailable arrest.",1
+"We have CCTV footage of you at the location of the alleged crime.",1
+"Aapka account ek phishing network se connected tha. Turant action lo.",1
+"Sir aap cooperate karo toh hum guarantee dete hain koi case nahi hoga.",1
+"Madam aapki behen ka naam bhi is case mein aa sakta hai agar aap silent rahe.",1
+"This is the cyber police. Your IP was traced to a dark web transaction.",1
+"Sir ek high court judge ne aapke case ki personally supervision le li hai.",1
+"Aapko abhi ek affidavit sign karni hogi over phone. Hum process karenge.",1
+"We are watching your every move. Cooperate or consequences will be severe.",1
+"Sir aapke naam pe registered vehicle ek hit and run case mein involve hai.",1
+"Madam aapka beta kisi gang ke saath involved paya gaya hai. Protect karna hai?",1
+"This is your last chance. After this call we cannot help you anymore.",1
+"Sir aapko abhi WhatsApp video call pe aana hoga virtual court ke liye.",1
+"Aapke account mein jo salary aati hai woh ek money laundering scheme se connected hai.",1
+"We have a signed warrant from the sessions court to access your property.",1
+"Sir aap ek international scam ring ke unwilling participant hain. Cooperate karo.",1
+"Madam agar aapne 30 minute mein transfer nahi kiya toh aapki FIR darj ho jaayegi.",1
+"This is the Narcotics Control Bureau. A package with your details was seized.",1
+"Sir aapki photo ek fraud dating site pe use ho rahi hai. Pay to remove.",1
+"Aap abhi bhi is call pe hain yeh bahut achha hai. Iska matlab aap innocent hain.",1
+"This is the Ministry of Finance. Your bank account is under statutory audit.",1
+"Sir hamara judicial officer aapse baat karna chahte hain. Line pe aayein.",1
+"Madam aapki saari digital assets hum seize kar sakte hain court order ke zariye.",1
+"Aapko ek verification fee Rs 1999 pay karni hogi account restore karne ke liye.",1
+"Sir your GPS location shows you were present at a crime scene last week.",1
+"This is officer Patel. I am personally ensuring your case is handled sensitively.",1
+"Madam hum aapki help karne ki koshish kar rahe hain. Sirf humara saath do.",1
+"Aapke number pe ek international arrest notice circulate ho raha hai.",1
+"Sir this is from the Chief Vigilance Officer. Your department has filed a complaint.",1
+"Your account is the last link in a money trail we have been following for months.",1
+"Sir aapko pata hona chahiye tha ke aapke account mein yeh transactions ho rahe the.",1
+"Madam ek DGP level officer personally monitor kar rahe hain aapka case.",1
+"This is officer speaking on behalf of the Supreme Court Bench.",1
+"Sir we have triangulated your phone signal. Do not attempt to move.",1
+"Aapko ek government helpline number pe call karni hogi. Hum guide karenge.",1
+"Madam your silence on this call is being recorded as admission of guilt.",1
+"Sir is call ke dauran aap legally bound hain apna account number batane ke liye.",1
+"This matter involves national security. We cannot disclose further details on call.",1
+"Aapko apni family ko bata dena chahiye ke aap safe hain aur cooperate kar rahe hain.",1
+"Sir your tax returns from 2019 show unexplained income of Rs 8 lakh.",1
+"Madam ek Interpol notice aapke naam pe generate hua hai aaj subah.",1
+"You have been identified as an accomplice in a major cybercrime operation.",1
+"Sir aapka naam ek gangster ke call records mein 3 baar aaya hai.",1
+"This is the office of the Chief Metropolitan Magistrate. Respond immediately.",1
+"Aapko ek government protected witness banna hoga is case mein.",1
+"Sir we are from Cyber Dost helpline. But we found your number in a crime list.",1
+"Madam aapke naam pe 18 complaints hain on the National Consumer Helpline.",1
+"Your IP address has been identified in connection with an online terrorism forum.",1
+"Sir aapko yeh call sirf isliye ayi hai kyunki hum aapko warn karna chahte the.",1
+"Madam aapka cooperate karna important hai. Sirf ek OTP share karo.",1
+"This is from the Economic Offences Wing. Report to our office within 48 hours.",1
+"Sir aap ek digital honeypot mein phas gaye hain. Hum aapko bachayenge. Paise do.",1
+"Aapke PAN card se ek loan of Rs 50 lakh approved hua hai fraudulently.",1
+"Madam yeh case mein aap victim bhi ho aur suspect bhi. Cooperate karna hoga.",1
+"Sir we have a witness who can place you at the scene of the digital crime.",1
+"Your mobile wallet has been used for transaction worth crores. Explain now.",1
+"Sir aapko court mein appear karne ki zaroorat nahi. Sirf fine bharo online.",1
+"Madam ek political figure ne personally aapke case ki inquiry ki demand ki hai.",1
+"This is officer Nair. I have been assigned specifically to your case.",1
+"Aapko apna Aadhaar OTP share karna hoga for identity confirmation right now.",1
+"Sir the cybercrime court has passed an ex-parte order against you.",1
+"Madam aap agar abhi baat nahi karoge toh hum tumhare employer ko call karenge.",1
+"This call is from the Prime Minister's cybersecurity task force.",1
+"Sir aapka naam ek hawala list mein hai jo we recovered from a raid.",1
+"Aapko aaj raat tak Rs 75000 transfer karne honge warna warrant execute hoga.",1
+"Madam is case ka charge sheet already tayyar hai. Sirf ek step bacha hai.",1
+"Your phone number appeared in a SIM swap fraud affecting 200 victims.",1
+"Sir is case mein aapki property attachment ho sakti hai agar aap cooperate nahi karte.",1
+"Madam aapka beta ek organized crime syndicate ka hissa ban gaya hai.",1
+"This is the Financial Crimes Unit. We have seized accounts linked to yours.",1
+"Sir aapko abhi ek legal undertaking sign karni hogi telephonically.",1
+"Aap dono taraf se phanse hue hain. Victim bhi aur accused bhi. Help karte hain.",1
+"Your case file number is CY-2024-88721. Note it down for your records.",1
+"Sir ek NGO worker ne aapke upar trafficking complaint ki hai.",1
+"Madam aapke phone ka IMEI number ek case mein registered hai.",1
+"This is officer from the Joint Task Force on Cybercrime and Terrorism.",1
+"Sir the digital evidence against you is overwhelming. Settle now.",1
+"Aapko ek virtual hearing room mein join karna hoga abhi ke abhi.",1
+"Madam aapki identity stolen ho gayi hai. Hum protect karenge. Pehle pay karo.",1
+"This is from the Registrar of Companies. Your name in a shell company requires explanation.",1
+"Sir aapko abhi apna phone kisi aur ko dene ki zaroorat nahi hai.",1
+"Madam government ka one time settlement scheme hai. Aaj last date hai.",1
+"Your banking transactions have triggered FEMA violations worth Rs 30 lakh.",1
+"Sir aapka beta ek anti-national activity mein involved paya gaya hai.",1
+"Is case mein hamare paas 3 gawah hain jo aapke khilaf bayan denge.",1
+"Madam aapki company ka GST return fraudulently file hua hai kisi ne.",1
+"This is from NASSCOM cybersecurity division. Your systems were used for phishing.",1
+"Sir abhi ke abhi transfer karo warna hum aapki locality ke police station ko forward karte hain.",1
+"Aapko apna netbanking username share karna hoga verification ke liye.",1
+"Madam aapke naam pe ek immigration fraud case hai. Travel ban lagaya gaya hai.",1
+"Sir we are your well-wishers. Settle this quietly without making it public.",1
+"This is the Adjudicating Authority under PMLA. Appear before us tomorrow.",1
+"Aapko is investigation ke baare mein media ko kuch nahi batana hai.",1
+"Sir your health records show you received treatment for a drug-related illness.",1
+"Madam ek government audit mein aapka naam aaya hai as a tax defaulter.",1
+"You are under obligation to cooperate with the Central Bureau of Investigation.",1
+"Sir aapne ek finance company ko galat documents submit kiye hain.",1
+"Madam aapki property pe ek lien lagaya ja raha hai by the revenue department.",1
+"This is the SFIO. We are investigating your directorship in a fraudulent company.",1
+"Sir aapko ek government issued notice ka jawab dena compulsory hai.",1
+"Aapka case file senior officer ke paas escalate ho gaya hai abhi.",1
+"Madam ek whistleblower ne aapke baare mein information di hai hum logon ko.",1
+"This is from the office of the Lokpal. A complaint has been filed against you.",1
+"Sir you have been identified in biometric records at the crime scene.",1
+"Aapke mobile number pe ek court warrant deliver hone wala hai.",1
+"Madam is case mein aap cooperate karogi toh hum leniency ki sifarish karenge.",1
+"This is officer Singh. I want to help you but you must pay the processing fee.",1
+"Sir aapka PAN number ek defunct company se linked hai.",1
+"Aapko apni wife ko bhi is call pe laana chahiye they are also named.",1
+"Madam hum aapko protect kar rahe hain. Dusre officers bahut strict hain.",1
+"Your landlord has filed a money laundering complaint against you.",1
+"Sir is case mein aapka cooperation hi aapki guarantee hai.",1
+"Madam aapke account se ek hawala payment trace hua hai Dubai ko.",1
+"This is the special operations cell. Your number is under surveillance.",1
+"Sir ek fake Aadhaar card aapke naam pe use hua hai ek bank mein.",1
+"Aapko abhi apna cheque book leker hamare account number pe sign karna hoga.",1
+"Madam yeh last call hai hamare side se. Aage sab kuch court mein hoga.",1
+"Your business partner has named you in a fraud complaint to the police.",1
+"Sir aapko pata nahi tha yeh ho raha tha. Isliye hum warn kar rahe hain.",1
+"Madam is matter mein sirf aap hi hain jo is situation se bahar aa sakte hain.",1
+"This is cybercell officer Kulkarni. We need your cooperation to close this case.",1
+"Sir is case mein bail conditions mein ek financial surety zaroori hai.",1
+"Aap agar is call pe OTP share karo toh hum case close kar sakte hain.",1
+"Madam aapka naam ek prostitution racket ke banking records mein aaya hai.",1
+"This is from the Public Grievance Portal. Your complaint has triggered a probe.",1
+"Sir aapke upar ek civil defamation case bhi filed ho sakta hai.",1
+"Aapka poora digital footprint hamare paas hai last 6 months ka.",1
+"Madam ek courier package aapke naam se seized hua hai foreign exchange ke saath.",1
+"This is from the Election Commission. Your voter ID was misused.",1
+"Sir aapko ek government registered mediator se baat karni chahiye abhi.",1
+"Aap yeh case settle kar sakte hain agar aap abhi ek baar transfer kar do.",1
+"Madam aapke phone number pe cybercell ne red flag lagaya hua hai.",1
+"This is officer from the Ministry of Home Affairs Cyber Division.",1
+"Sir ek high-value scam mein aapka number last dialled number tha.",1
+"Aapko apni beti ka birth certificate aur school records share karne honge.",1
+"Madam we are trying to protect you from a bigger investigation. Help us help you.",1
+"This is the Economic Intelligence Bureau. Cooperate or face public embarrassment.",1
+"Sir abhi 15 minute mein transfer karo. Hamare paas authority hai account seize karne ki.",1
+"Aap jis bank mein account rakhte hain usne bhi red flag kiya hai aapko.",1
+"Madam is case ko close karne ka ek hi rasta hai. Verification fee bharo.",1
+"Your fingerprints were found on a drug package recovered from a raid.",1
+"Sir aapko abhi video verification ke liye apni face scan karni hogi.",1
+"Madam is matter mein ek retired judge bhi involved hain as mediator.",1
+"This is from the Passport Seva Kendra. Your passport has a security alert.",1
+"Sir aapke naam pe ek loan account NPA ho gaya hai without your knowledge.",1
+"Aap is case mein accused nahi hain abhi lekin suspect zaroor hain.",1
+"Madam aapne jo insurance claim kiya tha woh fraudulent transactions se linked hai.",1
+"This is officer Tiwari. I will personally ensure your case is resolved today.",1
+"Sir ek political party ke funds aapke account se pass kiye gaye hain.",1
+"Aapko is call ko hold pe rakhna hoga jab tak senior officer aate hain.",1
+"Madam aapka naam ek list mein hai jo we are about to submit to the court.",1
+"Your health insurance was fraudulently claimed by someone using your identity.",1
+"Sir aapne jo online purchase ki thi woh ek banned website se thi.",1
+"Madam aap agar ek baar cooperate kar lo toh hum guarantee dete hain immunity.",1
+"This is from RBI's financial security cell. Your account shows layering activity.",1
+"Sir aapko sirf ek OTP share karna hai. Iske baad sab kuch clear ho jaayega.",1
+"Aap samajh nahi rahe hain. Yeh bahut serious matter hai. Sunte kyon nahi.",1
+"Madam aapka naam aaya hai ek international drug syndicate ke payment list mein.",1
+"Sir is case mein aapko hamare saath poora cooperation karna hoga without questions.",1
+"This is the Regional Passport Officer. Your travel documents show discrepancies.",1
+"Aapke account mein ek unaccounted credit of Rs 3 lakh tha 6 months pehle.",1
+"Madam aapko hamare safe portal pe register karna hoga to avoid arrest.",1
+"Sir government ki taraf se ek one time waiver hai. Aaj ke baad nahi milega.",1
+"Your business GST filings show turnover mismatch of Rs 45 lakh.",1
+"Sir aapko apna aadhar card number aur OTP share karna mandatory hai is investigation mein.",1
+"Madam ek court appointed receiver aapki property inspect karne aayega kal.",1
+"This is officer from Special Economic Offences Wing. Your case is under review.",1
+"Sir aapka naam ek ponzi scheme victim list mein bhi hai aur accused list mein bhi.",1
+"Aapko ek signed undertaking bhejni hogi ki aap case ke dauran travel nahi karoge.",1
+"Madam hamare paas aapke sab WhatsApp messages hain last 3 months ke.",1
+"Sir is case mein FIR file hone ki timing aap pe depend karti hai.",1
+"Your vehicle was spotted at the location of a robbery. Explain your presence.",1
+"Sir is matter ko police station tak mat jaane do. Settle karo abhi.",1
+"Madam aapko sirf ek digit ka OTP batana hai hamare verification system ke liye.",1
+"This is from the CBI joint director's office. Cooperate unconditionally.",1
+"Sir aapka IP address ek ransomware attack ke source ke roop mein trace hua hai.",1
+"Aap jis department mein kaam karte hain wahaan bhi jaanch shuru hogi.",1
+"Madam hum aapko ek safe house mein shift karna chahte hain. Pehle fee bharo.",1
+"Your stock market account shows unauthorized trades worth Rs 12 lakh.",1
+"Sir aapko pata hona chahiye the ke yeh illegal activity aapke naam pe ho rahi thi.",1
+"Is case mein aapke andar se hi koi leak kar raha hai. Isliye confidential rakhna.",1
+"Madam aapka ek dost aapke khilaf gawah ban gaya hai.",1
+"Sir aapko ek legal protection scheme mein enroll karna hoga Rs 2500 mein.",1
+"This is the Lokayukta office. A corruption complaint involves your name.",1
+"Aapka naam leaked call records mein aaya hai jo police ne intercept kiye hain.",1
+"Madam aapki company ke employees ne aapke khilaf harassment complaint ki hai.",1
+"Your digital wallet shows P2P transactions with blacklisted individuals.",1
+"Sir is situation mein aapka silence aapko aur mushkil mein daal sakta hai.",1
+"Madam is case mein hum tumhare sath hain lekin tumhe bhi hamare saath aana hoga.",1
+"This is from the National Crime Records Bureau. Your biometric is flagged.",1
+"Sir aapko apna current bank balance share karna hoga verification ke liye.",1
+"Aap agar main line pe rahe toh hum aapko complete protection denge.",1
+"Madam aapka case national media mein aa sakta hai agar yeh resolve nahi hua.",1
+"Sir is call ke baad aapko koi call nahi aayegi. Yeh aakhri mauka hai.",1
+"Your recent travel to a foreign country has raised a red flag in our system.",1
+"Sir hum aapko dhamki nahi de rahe. Sirf inform kar rahe hain ke aapke paas time kam hai.",1
+"Madam aapne ek government subsidy fraudulently claim ki hai. Return karo.",1
+"This is from the Chief Information Commissioner's office. Respond to our notice.",1
+"Sir aapka naam ek cryptocurrency exchange fraud mein aaya hai.",1
+"Aapke paas sirf 2 ghante hain is matter ko resolve karne ke liye.",1
+"Madam aapki behen ka account bhi is investigation ke doyre mein hai.",1
+"Your cable connection was hacked and used for illegal broadcasts.",1
+"Sir aapko apna ration card number aur bank account link hona zaroori tha.",1
+"Madam ek officer aapko call karega jiske paas warrant ki copy hai.",1
+"This is from the women's safety cell. A complaint against you is being processed.",1
+"Sir agar aapne ek ghante mein payment nahi ki toh hum aapke bail application oppose karenge.",1
+"Aapka mobile number ek suicide note mein last called number ke roop mein hai.",1
+"Madam aapko court mein appear na karna contempt of court maana jaayega.",1
+"Sir is case mein ek high profile politician ka bhi naam hai. Isliye sensitive hai.",1
+"Your ATM was used at a location 500 km away at the same time you were here.",1
+"Sir aapko ek government portal pe register karke Rs 999 pay karna hoga case file ke liye.",1
+"Madam yeh case mein aapka naam tabhi nahi aayega jab aap cooperate karogi.",1
+"This is from cyber wing of Intelligence Bureau. Your online activity is suspicious.",1
+"Sir aapko 48 ghante mein hume evidence of innocence dena hoga.",1
+"Aapki company ka trade license suspicious transactions ki wajah se suspend hua hai.",1
+"Madam aap yeh call record kar sakti hain. Hum government representative hain.",1
+"Your bank account was used as a transit account in a Rs 2 crore fraud.",1
+"Sir aap ek multinational cybercrime investigation ke peripheral suspect hain.",1
+"Madam aapka aadhar linked mobile number pe ek OTP aayega. Wo share karo.",1
+"This is officer from the Anti Hawala Division. Transaction report against you.",1
+"Sir is case mein ek IPS officer personally interested hain.",1
+"Aapko court mein jaane ki zaroorat nahi. Online settle karo abhi.",1
+"Madam aapne ek property deal mein black money accept ki thi. Records hain hamare paas.",1
+"Your driving license was used to register a vehicle involved in smuggling.",1
+"Sir aapko ek government e-court mein appear karna hoga in the next hour.",1
+"Madam aapka bhai bhi is case mein named hai. Usse bachana chahte ho?",1
+"This is a mandatory verification call from the cyber police department.",1
+"Sir aapke phone location data shows aap ek crime location pe the.",1
+"Aapko apna ration card aur income certificate scan karke bhejne honge.",1
+"Madam is case mein aapko gawah bhi banana ja sakta hai forcibly.",1
+"Your email account was hacked and used to send phishing emails to government officials.",1
+"Sir aap ek money mule network ke unwilling participant the. Cooperate karo.",1
+"Madam ek senior IAS officer ne aapke case mein personal interest liya hai.",1
+"This is from the Department of Telecommunications. Your SIM is misused.",1
+"Sir aapko police station aane ki zaroorat nahi. Sirf online fee bharo.",1
+"Aapke naam pe ek foreign bank account khula hua hai. Kya aapko pata hai?",1
+"Madam is case mein aap prosecute ho sakti hain under PMLA 2002.",1
+"Your PF account has shown withdrawal attempts from an unknown location.",1
+"Sir aapko ek confidential government portal pe login karna hoga.",1
+"Madam aapne ek chit fund company mein invest kiya tha jo illegal thi.",1
+"This is from the Anti-Social Elements Cell of State Police.",1
+"Sir aapke naam pe ek anonymous tip aayi hai jo we are investigating.",1
+"Aapko apne aap ko innocent prove karne ke liye sirf Rs 3000 pay karna hoga.",1
+"Madam ek government witness ne aapka naam liya hai in a statement.",1
+"Your net banking was accessed from a foreign IP. Confirm if it was you.",1
+"Sir aapka ek dost Jo ki suspect hai usne aapka naam liya hai.",1
+"Madam yeh case mein involvement prove nahi hona chahiye aapka. Help karo.",1
+"This is from the Enforcement Directorate eastern zone. Your case is serious.",1
+"Sir aapne ek banned app download ki thi. Yeh criminal offence hai.",1
+"Aapko sirf ek baar hamare online portal pe visit karna hoga aur verification karni hogi.",1
+"Madam is case mein judge ne strict views express kiye hain.",1
+"Your savings account has been linked to a shell company without your knowledge.",1
+"Sir is matter mein aap victim hain lekin victim bhi punishable hota hai is case mein.",1
+"Madam aapko ek sealed envelope hamare address pe send karni hogi with bank details.",1
+"This is from the National Intelligence Grid. Your data shows suspicious patterns.",1
+"Sir aapko is case mein apni innocence prove karni hogi. Rs 5000 processing fee hai.",1
+"Aapke naam pe ek property is district court mein attached hai.",1
+"Madam yeh call main khud DGP sahab se forward karwa sakta hoon agar aap cooperate nahi karte.",1
+"Your social security number equivalent Aadhaar has been compromised severely.",1
+"Sir aapko is case mein ek judicial affidavit submit karni hogi within 24 hours.",1
+"Madam aapke doctor ne bhi ek prescription fraud case mein aapka naam liya hai.",1
+"This is the Pollution Control Board. Your factory shows hazardous waste violations.",1
+"Sir we have a digital trail linking your account to a terrorism financing network.",1
+"Aapko apna phone switch off nahi karna hai. Hum monitor kar rahe hain.",1
+"Madam aapka ek ex-employee ne aapke company pe embezzlement complaint ki hai.",1
+"Your landlord has accused you of subletting to a criminal suspect.",1
+"Sir aapko ek mandatory psychological evaluation ke liye report karna hoga.",1
+"Is case mein hum aapki madad karna chahte hain. Sirf ek baar suno.",1
+"Madam aapke school ka naam bhi ek financial scam mein aa gaya hai.",1
+"This is from CERT-In. Your system was part of a DDoS attack on government servers.",1
+"Sir aapka business partner ne aapke khilaf police mein complaint di hai.",1
+"Aapko apna aadhar card aur phone number link confirm karna hoga abhi.",1
+"Madam is case mein ek NGO worker aapke khilaf gawah hai.",1
+"Your investment in a cooperative society is now under ED investigation.",1
+"Sir aapko is call ke baad kisi bhi app se payment mat karna.",1
+"Madam ek armed officer aapke building mein already hai.",1
+"This is from the Serious Fraud Investigation Office. Your case is being reviewed.",1
+"Sir aapke employee ka PF aapne fraudulently claim kiya hai.",1
+"Aapko ek Rs 500 stamp paper pe affidavit likhni hogi immediately.",1
+"Madam aap agar phone kaati toh aapka case automatically registered ho jaayega.",1
+"Your academic certificates were found to be forged in a background check.",1
+"Sir aapko hamare registered email pe ek NOC send karni hogi within the hour.",1
+"Madam yeh crime branch ka operation hai. Koi media coverage nahi hogi.",1
+"This is from the Registrar of Births and Deaths. Fraud detected in records.",1
+"Sir aapke UPI handle se last month 14 transactions hue hain questionable locations se.",1
+"Aapko apni agreement papers aur property documents share karne honge verification ke liye.",1
+"Madam aapka employer bhi is case mein implicated ho sakta hai.",1
+"Your gas agency records show subsidies were availed fraudulently.",1
+"Sir aapko ek government appointed lawyer se milna hoga. Fee Rs 2000 hai.",1
+"Madam aapne ek government housing scheme ke liye false application di thi.",1
+"This is officer Saxena. I am personally assigned to close your case today.",1
+"Sir aapke paas sirf 45 minutes hain is case ko out of court settle karne ke liye.",1
+"Aapko apni beti ki school certificates aur aadhar share karni hogi.",1
+"Madam is case mein cooperate karna aapke interest mein hai.",1
+"Your mobile number was the last one to contact a deceased fraud victim.",1
+"Sir ek narcotics officer aapke location ke paas hai. Cooperate karo.",1
+"Madam aapke building mein ek suspect rehta hai. Aap involved hain kya?",1
+"This is from the Urban Development Authority. Your property has illegal construction.",1
+"Sir aapka investment portfolio shows round tripping of funds.",1
+"Aap yeh jaanke shocked honge ke aapke naam pe kitna kuch hua hai.",1
+"Madam is case mein high court ka stay order abhi nahi mila hai.",1
+"Your power of attorney was misused to make financial transactions.",1
+"Sir aapke naam se ek e-mail ID banayi gayi hai jo criminal activities mein use hui.",1
+"Madam aapko ek video call pe apni face show karni hogi verification ke liye.",1
+"This is from the Central Depository Services. Your demat account is flagged.",1
+"Sir aap abhi baat kar sakte hain toh case close ho sakta hai. Baad mein nahi hoga.",1
+"Aapko apna internet banking password change karna hoga hamare guidance mein.",1
+"Madam aapke account mein ek crore se zyada ka suspicious credit tha.",1
+"Your property documents have been submitted as collateral in an illegal loan.",1
+"Sir aapko ek government helpline app download karni hogi immediately.",1
+"Madam is case mein sirf aap hi cooperate kar sakti hain apni family ko bachane ke liye.",1
+"This is the Transport Authority. Your DL is linked to a road accident death.",1
+"Sir aapko apni savings aur FD details share karni hongi hamari team ke saath.",1
+"Aap abhi ghabrao mat. Hum aapke saath hain. Sirf paise transfer karo.",1
+"Madam is case mein ek powerful neta ka naam hai isliye yeh sensitive hai.",1
+"Your education loan account shows fund diversion to a third party.",1
+"Sir aapko hamare headquarters pe physically report karna hoga tomorrow morning.",1
+"Madam yeh call hamare DIG sahab ke orders pe hai.",1
+"This is from National Securities Depository. Suspicious trade detected.",1
+"Sir aapke naam pe ek court appointed receiver manage kar raha hai aapki property.",1
+"Aapko apna safe deposit locker ka number batana hoga for audit purposes.",1
+"Madam is case mein 3 independent witnesses hain aapke khilaf.",1
+"Your medical license is under scrutiny for prescription fraud.",1
+"Sir aapko is case mein anticipatory bail ke liye Rs 15000 advance pay karna hoga.",1
+"Madam aapke paas sirf 1 ghanta hai. Uske baad koi option nahi hoga.",1
+"This is from the Inspector General of Registration. Your property sale is under probe.",1
+"Sir aapka phone number ek call center fraud racket se registered tha.",1
+"Aapko apna driving license number aur RC number share karna hoga.",1
+"Madam is matter mein complete media blackout hai. Kisi ko mat batana.",1
+"Your PPF account shows unauthorized nominations changed recently.",1
+"Sir aapne ek banned political organization ko donation diya tha.",1
+"Madam aapki beti ne ek online game mein crores transfer kiye hain.",1
+"This is from the High Court Registry. Your property dispute case has an update.",1
+"Sir aapka naam ek bank fraud involving Rs 4 crore mein aaya hai.",1
+"Aapko apna GST registration certificate share karna hoga for verification.",1
+"Madam is case mein aap agar media se baat ki toh sub judice violation hoga.",1
+"Your name came up in a raid at an illegal casino in your city.",1
+"Sir aapko ek DNA sample dena hoga investigation ke liye. Procedure fee Rs 3000.",1
+"Madam is call ke baad ek official letter aapke address pe bheja jaayega.",1
+"This is from the SEBI Investor Protection Fund. Your portfolio is under review.",1
+"Sir aapka aadhar card ek forged voter list mein use hua hai.",1
+"Aapko is situation se sirf ek tarah nikala ja sakta hai. Cooperate karo.",1
+"Madam aapke naam pe ek credit card 3 cities mein misused hua hai.",1
+"Your father's pension account shows unauthorized withdrawals recently.",1
+"Sir aapko aaj raat tak ek response affidavit submit karni hogi.",1
+"Madam is case mein ek police informer aapke paas se hi information de raha hai.",1
+"This is from the Directorate General of Foreign Trade. EXIM violation detected.",1
+"Sir aapne ek property fraudulently undervalued karke stamp duty bacha li.",1
+"Aapka phone aaj raat 12 baje ke baad suspend ho jaayega agar verification nahi hui.",1
+"Madam is case mein aap cooperate karogi toh aapka naam FIR se remove ho sakta hai.",1
+"Your scholarship was awarded based on false income certificates.",1
+"Sir aapko hamare call center pe ek ticket raise karke Rs 1500 pay karna hoga.",1
+"Madam aap baat karte rehna. Agar call drop hua toh aap guilty maane jaoge.",1
+"This is from the Anti Money Laundering Authority. Immediate action required.",1
+"Sir aapka phone ka IMEI number ek crime scene pe found device se match karta hai.",1
+"Aapko apni wife ka aadhar card aur bank details bhi share karni hongi.",1
+"Madam is case mein conviction rate bahut high hai. Better to settle.",1
+"Your train ticket was booked using a stolen credit card identity.",1
+"Sir aapko ek court fee of Rs 4500 online pay karni hogi to delay arrest.",1
+"Madam yeh matter ab police ke haath se nikal ke court mein ja raha hai.",1
+"This is from the National Food Safety Authority. Your restaurant has violations.",1
+"Sir aapka online bank login 6 unauthorized countries se access hua hai.",1
+"Aapko apna ration card aur electricity bill share karna hoga for identity verification.",1
+"Madam is case mein aapki behen ka naam bhi aa gaya hai as a suspect.",1
+"Your company's import records show undeclared foreign currency transactions.",1
+"Sir aapko ek foreign bank account number share karna hoga for tracing purposes.",1
+"Madam is case mein ek retired judge ne aapke khilaf opinion diya hai.",1
+"This is the Consumer Forum. An ex-employee has filed a case against your business.",1
+"Sir aapko ek mental fitness certificate bhi submit karna hoga investigation ke liye.",1
+"Aapko abhi apne ghar se koi bhi document bahar mat nikalna.",1
+"Madam is case mein high court ne suo motu cognizance le liya hai.",1
+"Hello I wanted to check if you received my invitation for the birthday party this Saturday.",0
+"Hey how are you? It has been so long since we caught up. What is going on with you?",0
+"Mom I will be home by 7 pm tonight. Can you make sure dinner is ready?",0
+"Sir your order has been dispatched and will arrive within 2 business days.",0
+"Hi this is Dr. Patel's clinic calling to confirm your appointment for tomorrow at 11 AM.",0
+"Bhaiya aaj shaam ko cricket khelne aa rahe ho? Ground pe milte hain 5 baje.",0
+"Hello I am calling from HDFC Bank to inform you about our new savings account offer.",0
+"Your food delivery is on the way and will reach you in approximately 20 minutes.",0
+"Mummy kal mera exam hai. Subah 6 baje uthana please.",0
+"Hi this is a reminder that your car service is due next week. Would you like to book a slot?",0
+"Hello congratulations on your job offer! We are pleased to have you on the team.",0
+"Yaar woh movie dekhi kya tune? Kal release hui thi. Bahut acchi hai.",0
+"Sir your electricity bill of Rs 1240 is due this Friday. Please pay on time.",0
+"This is the school principal's office. Your child was absent today. Is everything alright?",0
+"Hey just calling to say happy birthday! Hope you have a great day.",0
+"Didi ghar aa jao. Sab tumhara wait kar rahe hain. Khaana taiyaar hai.",0
+"Hello I am calling from Zomato support. Your refund of Rs 340 has been processed.",0
+"Hi wanted to let you know the meeting has been rescheduled to 3 PM on Wednesday.",0
+"Sir your internet connection complaint has been resolved. Please check connectivity.",0
+"Kal trip ka kya plan hai? Train kitne baje hai hamari?",0
+"Hello is this Mr. Rahul? I am calling from the housing society about the maintenance dues.",0
+"Just checking in on you. How is your health now? Did you visit the doctor?",0
+"Madam your visa application has been approved. Please collect the documents by Friday.",0
+"Sir aapke ghar ki parcel delivery attempt ki thi. Aap kab available honge?",0
+"Hi this is Neha from HR. Can we schedule your onboarding call for Monday morning?",0
+"Bhai petrol khatam ho gaya hai gaadi mein. Thodi help chahiye yaar.",0
+"Hello this is a survey call from Amazon. Would you like to share your recent experience?",0
+"Your subscription to Netflix will auto-renew on the 15th. No action needed.",0
+"Papa main office se der se aaunga aaj. Traffic bahut hai. Khaana mat rokna.",0
+"Hi just wanted to confirm if you got the documents I emailed you yesterday.",0
+"Arey yaar itni raat ko kya kar rahe ho? So jao kal baat karte hain.",0
+"Good morning! This is a wake-up call service reminder. Have a great day ahead.",0
+"Sir aapka loan application approved ho gaya hai. Branch mein aake documents submit karein.",0
+"Hello thank you for calling customer support. How can I help you today?",0
+"Madam your test results are normal. The doctor says no need to worry.",0
+"Hey are you free this weekend? We are planning a small get-together at my place.",0
+"Sir your flight for tomorrow has been confirmed. Check-in opens at 6 AM.",0
+"Bhai kya tum mujhe station tak drop kar sakte ho? Thodi emergency hai.",0
+"Hello we are calling from the blood bank. Your blood group is needed urgently.",0
+"Congratulations! Your scholarship application has been shortlisted for the next round.",0
+"Dost aaj gym nahi aaya tu. Sab pooch rahe the. Sab theek hai?",0
+"Hi this is your landlord. Just wanted to remind you about the rent for this month.",0
+"Madam aapki society mein kal cleaning drive hai. Kripya participate karein.",0
+"This is a reminder that your EMI of Rs 5400 will be deducted tomorrow.",0
+"Sir the package you returned has been received and your refund is being processed.",0
+"Yaar woh assignment complete ki kya? Professor kal maangenge. Help chahiye kya?",0
+"Hello we have a plumber available in your area tomorrow morning if you still need repair.",0
+"Bhai picnic ka plan confirm hua? Kitne log aa rahe hain?",0
+"Hi your gym membership expires at the end of this month. Want to renew?",0
+"Sir aapka PF account update ho gaya hai. Details app mein dekh sakte hain.",0
+"This is a courtesy call from Apollo Hospital. Your annual health checkup is due.",0
+"Mama I reached safely. The train was on time. Will call you in the evening.",0
+"Hello just calling to check if the courier reached you. Please confirm receipt.",0
+"Yaar college festival mein kab aoge? Tickets already booked hain.",0
+"Hi the job interview is confirmed for Thursday at 10 AM. Please bring your documents.",0
+"Sir aapka feedback form bharna zaroori hai scheme ke liye. 2 minute lagenge.",0
+"Hello it is Ravi from the apartment next door. There is a water leakage issue. Can we talk?",0
+"Main market jaa rahi hoon. Kuch chahiye ghar ke liye? List bhejo WhatsApp pe.",0
+"Hi this is a reminder about your child's PTM meeting on Saturday at 9 AM.",0
+"Sir the cricket match tickets you booked are ready for pickup at the counter.",0
+"Bhai bahut dino baad yaad kiya. Kya haal hain? Sab theek to hai na?",0
+"Hello we are calling from the temple trust about the upcoming annual puja arrangements.",0
+"Madam aapka complaint number hai CR-20245. Hum 48 ghante mein resolve karenge.",0
+"Hi I got a new job! Wanted to share the good news with you first.",0
+"Yaar aaj raat study group hai. Library mein 8 baje milna. Confirm karo.",0
+"This is from the municipality. Your area water supply will be interrupted for 3 hours tomorrow.",0
+"Main thodi der mein aata hoon. Darwaza khula rakhna please.",0
+"Hello your insurance policy renewal is due next month. Would you like assistance?",0
+"Sir the painting work at your house is complete. Please do a final inspection.",0
+"Bhai aaj baarish ho rahi hai bahut. Woh match cancel ho gaya kya?",0
+"Hi this is a school bus reminder. The timing has changed to 7:15 AM from Monday.",0
+"Namaste yeh Ramesh ji bol rahe hain. Aapka kal ka appointment confirm hai.",0
+"Hello we are collecting donations for flood relief. Can you contribute anything?",0
+"Sir your online order has been cancelled as requested. Refund in 3-5 working days.",0
+"Kal kitne baje nikaloge ghar se? Saath mein chalte hain office.",0
+"Hi I am from the library. The book you reserved is now available for pickup.",0
+"Madam your cooking gas cylinder has been booked and will be delivered tomorrow.",0
+"Yaar UPSC ka result aa gaya kya? Check kiya tune?",0
+"Hello your package requires a signature. Can you be available between 10 AM and 12 PM?",0
+"Sir hamari company ka new product launch ho raha hai. Aapko invite kiya hai.",0
+"Hey bhai aaj khaana bahar khate hain? Naya restaurant khula hai nearby.",0
+"This is a reminder from your dentist clinic. Your appointment is at 4 PM today.",0
+"Madam aapki society mein CCTV installation hogi kal. Thodi inconvenience hogi.",0
+"Main college hostel pahunch gaya. Room number 204 mila hai. Sab theek hai.",0
+"Hello your mutual fund SIP of Rs 2000 has been successfully deducted this month.",0
+"Bhai kal election hai. Vote dene jaana mat bhoolna.",0
+"Hi this is your child's tutor. She has been making excellent progress this week.",0
+"Sir the WiFi router has been configured. Your new password is on the slip provided.",0
+"Yaar teri behen ki shaadi mein aa sakta hoon na? Date confirm karo.",0
+"Hello we are from the traffic police department with a notice about your challan.",0
+"Madam ghar ke bahar aapka courier hai. Please collect karo.",0
+"Hi there just wanted to confirm our lunch plan for tomorrow at 1 PM.",0
+"Sir your medical insurance claim has been approved for Rs 45000.",0
+"Bhai chess tournament mein participate karna hai? Registration Sunday tak hai.",0
+"Hello this is a courtesy call. Your annual car insurance is expiring in 10 days.",0
+"Main thak gayi hoon aaj. Office mein bahut kaam tha. Baad mein baat karte hain.",0
+"Sir your electricity connection application has been approved by the board.",0
+"Hey did you watch the IPL match last night? That last over was insane!",0
+"Didi tumhara birthday gift bhej diya hai courier se. Kal tak pahunch jayega.",0
+"Hello your complaint about the noise has been registered with building management.",0
+"Sir the school fee receipt has been sent to your registered email address.",0
+"Yaar Goa trip plan ho rahi hai next month. Tum bhi aao. Bahut maza aayega.",0
+"Hi I am calling to check if you are interested in participating in a free health camp.",0
+"Madam aapki society mein lift maintenance kal hogi. Stairs use karni padegi.",0
+"This is from Paytm. Your UPI transaction of Rs 500 was successful.",0
+"Bhai tera laptop theek ho gaya. Service centre se le lo.",0
+"Hello your request for a bank statement has been processed and emailed to you.",0
+"Sir your parking slot has been allotted. Please collect the sticker from the office.",0
+"Yaar bahut dino baad mili hoon tumse. Kaisi chal rahi hai zindagi?",0
+"Hi we are conducting a free eye checkup camp in your area this Sunday.",0
+"Madam aapka ration card ready hai. Office se collect kar lo.",0
+"Hello this is the principal. We are proud to inform you your son won the science olympiad.",0
+"Sir your request for address change in Aadhaar has been accepted successfully.",0
+"Bhai kal traffic jam tha bahut. 2 ghante late pahuncha office.",0
+"Hi your new debit card has been dispatched and will arrive within 5 working days.",0
+"Amma ghar aane mein der ho rahi hai. Raat ka khaana rakh do please.",0
+"This is to inform you that your child has been selected for the state-level drawing competition.",0
+"Sir the carpenter will visit tomorrow morning to fix the wardrobe door.",0
+"Yaar exam ki preparation kaisi chal rahi hai? Main help kar sakta hoon.",0
+"Hello your request for a duplicate PAN card has been submitted successfully.",0
+"Madam aapka naam waitlist pe tha. Ab aapko admission mil sakta hai.",0
+"Hi I just wanted to say thank you for helping me out last week. It meant a lot.",0
+"Sir the event you registered for starts at 5 PM. Please reach by 4:30.",0
+"Bhai kya tum loan ke baare mein kuch jaante ho? Ghar lene ka plan hai.",0
+"Hello your society committee meeting is scheduled for Sunday at 6 PM.",0
+"Main zara baazar se aati hoon. Koi cheez chahiye ghar ke liye?",0
+"Hi this is the HR department. Your salary has been credited to your account.",0
+"Sir your newspaper subscription will expire at the end of this month.",0
+"Yaar kabhi socha nahi tha itni mushkil hogi. Par ab sab theek hai. Tension mat lo.",0
+"Hello your donation to the NGO has been acknowledged. Thank you for your generosity.",0
+"Madam aapka mobile number successfully update ho gaya hai bank mein.",0
+"The delivery partner attempted delivery but you were unavailable. Rescheduling for tomorrow.",0
+"Bhai kitab padhna finish hua kya? Main bhi padhna chahta hoon.",0
+"Hi just a reminder that your passport renewal application needs to be submitted by month-end.",0
+"Sir the plumber could not come today due to an emergency. He will visit first thing tomorrow.",0
+"Main office mein hoon abhi. Baad mein call karta hoon. Important baat hai.",0
+"Yaar woh purani dosti ab bhi zinda hai kya? Bahut miss karta hoon sab ko.",0
+"Sir your insurance nominee update request has been received.",0
+"Kal papa ka birthday hai. Kuch special karte hain. Sab saath aao.",0
+"Hi your gym locker key has been found. Please collect from the front desk.",0
+"Madam school ke baad aapka beta library mein ruka hai. Aap le lo use please.",0
+"Hello we are from the municipal corporation conducting a census survey in your area.",0
+"Bhai tab se tumse baat nahi hui. Sab kaisa chal raha hai ghar mein?",0
+"Sir the EMI bounce fee has been waived as a one-time exception. Please pay the EMI.",0
+"Yaar woh project submit ho gaya? Professor ne kuch bola kya?",0
+"Hi the results of the drawing competition will be announced this Friday at school.",0
+"Madam aapka aarogya card ready hai. Nearest center se le sakte ho.",0
+"Sir I am calling from the welfare association. Are you comfortable in the new locality?",0
+"Bhai kal ke liye kya plan hai? Kuch khaas karte hain please.",0
+"Ghar kab aa rahe ho? Sab intezaar kar rahe hain. Bohot dino se nahi mila.",0
+"Hello your complaint reference number is WR-8821. We will respond within 48 hours.",0
+"Hi could you please review the proposal I sent on email? I need feedback by tomorrow.",0
+"Good morning! Just calling to wish you a happy anniversary.",0
+"Sir your Amazon order has been delivered to your doorstep.",0
+"Bhai match kab shuru ho raha hai? Main aa jaaon kya ghar pe?",0
+"Hello this is Priya from the accounts department. Can we discuss the invoice?",0
+"Didi mummy ki tabiyat thodi theek nahi hai. Doctor ke paas le jaana hai.",0
+"Sir your internet bill for this month is Rs 699. Payment is due by the 10th.",0
+"Hey I just got back from the trip! It was absolutely amazing.",0
+"Bhai teri shaadi mein kaunsa suit pehnu? Help kar yaar.",0
+"Hello the plumber is available tomorrow between 9 and 11 AM. Does that work for you?",0
+"Sir aapka driving licence renewal application approved ho gaya hai.",0
+"Madam aapki society mein ek stray dog issue hai. Meeting hai Sunday ko.",0
+"Hi I am calling to invite you to our startup's product launch event next Friday.",0
+"Papa aaj mere results aa gaye. 87% aaye hain. Bahut khush hoon.",0
+"Hello this is from the blood donation camp. Your appointment is at 10 AM.",0
+"Bhai bahut dino baad sapne mein aaya tu. Sab theek hai na?",0
+"Sir the painting quote you asked for is ready. Can I share it on WhatsApp?",0
+"Madam your laundry is ready for pickup from the dry cleaners.",0
+"Hey our school reunion is next month! Are you coming? It will be so much fun.",0
+"Sir aapka mutual fund ka monthly statement bhej diya hai email pe.",0
+"Hello this is the municipal office. Your application for birth certificate is approved.",0
+"Kal subah yoga class hai. Aao na bahut relaxing hoti hai.",0
+"Hi just a reminder about the potluck dinner at our place this Saturday.",0
+"Sir the tiles you ordered are in stock. Delivery can happen this week.",0
+"Beta khana kha liya kya? Ghar kab aa rahe ho?",0
+"Hello your prescription is ready at the pharmacy.",0
+"Bhai new season of that show drop ho gaya. Binge karte hain kal?",0
+"Sir aapke plot ki registry appointment kal dopahar 2 baje hai.",0
+"Madam aapka naam talent show ke shortlist mein hai. Congratulations.",0
+"Hi I am from the neighborhood watch committee. We are organizing a safety drive.",0
+"Yaar aaj office mein itna kaam tha ki lunch bhi nahi kha paaya.",0
+"Hello the book club meeting is this Thursday. The book is Atomic Habits.",0
+"Sir your eye test is due. Can we schedule an appointment this week?",0
+"Bhai kya tum mujhe airport drop kar sakte ho kal subah 5 baje?",0
+"Madam aapke application form mein ek field empty tha. Please fill karo.",0
+"Hi congratulations on your promotion! Well deserved.",0
+"Papa main hostel mein theek hoon. Khana bhi thoda theek ho gaya hai.",0
+"Hello this is from the community garden. Your plot is ready for planting season.",0
+"Sir the spare parts for your vehicle have arrived at the workshop.",0
+"Bhai kal ki party cancel ho gayi. Rain forecast hai. Sorry yaar.",0
+"Hi I found your wallet near the park. Can we arrange a pickup?",0
+"Madam your child's report card will be shared in the parent app tonight.",0
+"Sir aapka subscription upgrade ho gaya hai. Ab aap premium features use kar sakte ho.",0
+"Hey are you free for a video call this evening? Wanted to catch up properly.",0
+"Dost woh novel padhna shuru kiya kya joh maine suggest kiya tha?",0
+"Hello the cricket coaching camp registrations are open. Interested?",0
+"Sir your request for a bank locker has been approved. Visit the branch this week.",0
+"Bhai kal hartal hai kya? Office jaana chahiye ya nahi?",0
+"Madam aapka delivery attempt hua tha. Kab available hogi aap?",0
+"Hi the project deadline has been extended by one week. Relax a bit.",0
+"Papa main internship ke liye select ho gaya hoon! Bahut excited hoon.",0
+"Hello your complaint about the road has been registered with the civic body.",0
+"Bhai kal ke trip ke liye bag pack karna hai. List share karo.",0
+"Sir your new spectacle lenses are ready for collection.",0
+"Yaar sab log kal park mein mil rahe hain. Aao na tum bhi.",0
+"Hello this is from the school admin. Sports day is next Friday.",0
+"Sir can you share the minutes from last week's meeting?",0
+"Madam aapka blood report normal aaya hai. Koi tension ki baat nahi.",0
+"Hi this is Anita. Remember we met at that workshop? Wanted to reconnect.",0
+"Bhai aaj subah 6 baje ki walk ke liye ready rehna.",0
+"Hello the new season of cricket league starts this weekend.",0
+"Sir your home loan EMI has been processed successfully this month.",0
+"Madam aapki beti ne painting competition mein first prize jeeta.",0
+"Yaar kal interview hai mera. Thoda mock practice karoge mere saath?",0
+"Hi the library is organizing a book fair next week. Thought you'd like to know.",0
+"Sir your vehicle pollution certificate is due for renewal.",0
+"Madam aapka ration quota is month full ho gaya hai. Next month collect karna.",0
+"Hey just saw the sunset from the terrace. It was so beautiful today.",0
+"Bhai kal ki train 20 minutes late hai. Platform check karna.",0
+"Hello this is from the housing board. Your application status has been updated.",0
+"Sir the contractor will begin work on Monday. Please ensure access.",0
+"Yaar aaj bahut baarish hui. Ghar pe reh jaata toh acha hota.",0
+"Hi the vegetable vendor is not coming today. Alternative arrangements made.",0
+"Sir your child's admission form has been successfully submitted.",0
+"Madam aapka mobile data pack khatam hone wala hai. Recharge kar lo.",0
+"Hello this is from the post office. A registered letter is waiting for you.",0
+"Bhai woh movie ke tickets book karo jaldi. Seats bhar rahe hain.",0
+"Hi just wanted to check if you need a ride to the station tomorrow.",0
+"Sir your annual report has been printed and ready for pickup.",0
+"Madam aapke ghar mein pest control service kal aayegi.",0
+"Yaar kya tum mujhe ek reference de sakte ho? Job application ke liye.",0
+"Hello the patient is doing better. Doctor says discharge by Thursday.",0
+"Sir your WiFi speed upgrade has been completed successfully.",0
+"Bhai kal ka match dekh rahe ho? Main aa jaaon kya?",0
+"Hi this is from the housing committee. Annual general meeting this Sunday.",0
+"Sir your package from abroad has cleared customs and is out for delivery.",0
+"Madam kal bacchon ki school picnic hai. Lunch box tyaar rakhna.",0
+"Yaar do saal ho gaye hain. Time flies. Sab theek hai na?",0
+"Hello I am the new neighbor from flat 304. Just wanted to introduce myself.",0
+"Sir your feedback has been recorded. Thank you for calling us.",0
+"Bhai kal subah ki walk pe aana hai. 6:30 sharp.",0
+"Hi this is from the office canteen. Today's special is biryani.",0
+"Sir your tax file has been acknowledged by the department.",0
+"Madam aapka son ka result aa gaya. Usne school mein top kiya.",0
+"Yaar kab miloge? Bahut dino se coffee plan ho raha hai.",0
+"Hello from the reading group. Next session is on Saturday morning.",0
+"Sir the new office supplies have been ordered and will arrive Thursday.",0
+"Bhai kal ki bus booking confirm ho gayi. Seat number 14.",0
+"Hi this is from the building committee. Parking rules updated.",0
+"Sir your vehicle service is complete. Total bill is Rs 3200.",0
+"Madam aapki society mein kal navratri celebration hai. Aao zaroor.",0
+"Yaar socha nahi tha itni jaldi meri transfer ho jaayegi. Miss karoon ga sab ko.",0
+"Hello just wanted to say sorry for missing your call earlier.",0
+"Sir your lab reports are ready. Please collect from reception.",0
+"Bhai kal meri dadi ka birthday hai. Party hai ghar pe. Aana.",0
+"Hi the new project has been assigned to our team. Kickoff Monday.",0
+"Sir your magazine subscription has been renewed for another year.",0
+"Madam aapki car ka tyres check karana chahiye. Garage nearby hai.",0
+"Yaar woh baat jo tune kal kahi thi usne mujhe bahut sochne pe majboor kiya.",0
+"Hello the community hall booking for Saturday has been confirmed.",0
+"Sir your query has been escalated to the technical team.",0
+"Bhai cricket ke baad chai peete hain. Tu bhi aa jaana.",0
+"Hi just checking if you got the test results for your mom.",0
+"Sir your student loan repayment schedule has been updated.",0
+"Madam aapke ghar pe water purifier ka service due hai.",0
+"Yaar kal raat ko hum log rooftop pe baithenge. Aao na please.",0
+"Hello this is from the pharmacy. Your refill prescription is ready.",0
+"Sir your rental agreement has been signed by both parties.",0
+"Bhai woh old photo dekhi kya group mein? Bahut yaadein hain.",0
+"Hi the office is closed on Friday for annual maintenance.",0
+"Sir your health checkup package has been successfully scheduled.",0
+"Madam kal se bachon ki school ka new session shuru ho raha hai.",0
+"Yaar main kal church ja raha hoon. Aana chahoge?",0
+"Hello the building security will be upgraded starting next week.",0
+"Sir your pension disbursement has been processed for this month.",0
+"Bhai yeh naya phone kaisa lag raha hai? Mujhe bhi review chahiye.",0
+"Hi this is from the garden club. Spring planting begins this weekend.",0
+"Sir your account statement for the quarter has been mailed to you.",0
+"Madam aapki beti kal shaam ko ghar late aayegi. Drama practice hai.",0
+"Yaar kal potluck mein kya laoge? List share karo.",0
+"Hello this is from the cooperative society. Dividend has been declared.",0
+"Sir your vehicle registration renewal reminder has been sent.",0
+"Bhai picnic ke liye cricket kit laani padegi. Yaad rakhna.",0
+"Hi just to let you know the neighborhood association meeting was productive.",0
+"Sir your new ATM pin has been set successfully.",0
+"Madam aapke ghar ka paint job next week scheduled hai.",0
+"Yaar sab milke plan karte hain. Kitna accha hoga phir se sab saath.",0
+"Hello this is from the vet clinic. Your pet's vaccination is due.",0
+"Sir your travel insurance for the upcoming trip has been activated.",0
+"Bhai aaj dinner pe kya banana chahiye? Guests aa rahe hain.",0
+"Hi this is from the school committee. Annual prize distribution is next month.",0
+"Sir your wifi password has been reset as requested.",0
+"Madam aapki online grocery order dispatch ho gayi hai.",0
+"Yaar itna kaam hai ke break bhi nahi milta. Par chal theek hai.",0
+"Hello this is the building manager. Lift maintenance done.",0
+"Sir your complaint about the potholes has been forwarded to the roads department.",0
+"Bhai aaj bahut achha din tha yaar. Promotion mili mujhe.",0
+"Hi the tailoring shop called. Your clothes are ready for pickup.",0
+"Sir your appointment with the specialist has been confirmed for next Wednesday.",0
+"Madam aapke college ka alumni meet hai next month. Register karo.",0
+"Yaar woh match mein aaj kya hua. Hamare team ne kamaal kar diya.",0
+"Hello from the volunteer group. Sunday cleanup drive at 8 AM.",0
+"Sir your electricity meter reading has been noted for this month.",0
+"Bhai chai peeni hai? Main 10 minute mein aata hoon.",0
+"Hi the school informed that tomorrow is a holiday due to elections.",0
+"Sir your freelance project payment has been transferred to your account.",0
+"Madam kal subah milkman nahi aayega. Alternative arrange kar lena.",0
+"Yaar woh baat abhi bhi yaad hai jo tune 2 saal pehle kahi thi.",0
+"Hello this is from the tailoring shop. Your saree blouse is stitched.",0
+"Sir your grocery delivery was delayed due to traffic. Arriving in 30 minutes.",0
+"Bhai kal ki meeting mein kya presentation deni hai? Help karoon?",0
+"Hi this is from the municipality. Your property tax receipt is ready.",0
+"Sir your cooking gas subsidy has been credited to your account.",0
+"Madam aapka bhai kal se wapas aa raha hai Dubai se.",0
+"Yaar mere paas time nahi tha lekin tumhare liye zaroor nikaaloonga.",0
+"Hello this is from the stationery shop. Your printing order is ready.",0
+"Sir your vehicle fitness certificate has been issued.",0
+"Bhai kal ka weather kya rahega? Coat laani chahiye kya?",0
+"Hi just wanted to confirm the travel plan for the trip next month.",0
+"Sir your complaint ticket has been resolved. Please rate our service.",0
+"Madam aapka beta swimming class mein bahut achha kar raha hai.",0
+"Yaar woh show recommend kiya tha tune. Main dekh raha hoon. Bahut accha hai.",0
+"Hello this is from the eye clinic. Your glasses order is ready.",0
+"Sir your food allergy test results are normal.",0
+"Bhai kal humari team ke liye bowling karoge na? Match hai.",0
+"Hi this is from the yoga center. New batch starts Monday.",0
+"Sir your home appliance warranty has been extended successfully.",0
+"Madam aapki flying ticket confirm ho gayi hai. Check email.",0
+"Yaar kal bhi aise hi baat karte hain. Aaj thoda busy hoon.",0
+"Hello from the cultural committee. Diwali event planning meeting tomorrow.",0
+"Sir your dental appointment is confirmed for Saturday at 11.",0
+"Bhai yaar raat ko phone pe baat karte hain. Abhi rush mein hoon.",0
+"Hi this is from the children's hospital. Your child's checkup is due.",0
+"Sir your building maintenance charges for this quarter have been billed.",0
+"Madam aapki neighbor ne ek package aapke liye receive kiya hai.",0
+"Yaar aaj itna thak gaya hoon. Bahut kaam tha. Kal baat karte hain.",0
+"Hello this is from the sports complex. Annual membership fee is due.",0
+"Sir your new chequebook has been dispatched to your address.",0
+"Bhai woh dono baat kar rahe the tumhare baare mein. Achhe words the.",0
+"Hi just wanted to let you know the venue for the wedding has changed.",0
+"Sir your rental property inspection is scheduled for this Thursday.",0
+"Madam aapke bacche ne school mein bahut achha kiya today.",0
+"Yaar yeh sardi mein kuch chai bana. Main aa raha hoon.",0
+"Hello this is from the bank. Your fixed deposit has matured.",0
+"Sir your business registration documents are ready for pickup.",0
+"Bhai kuch naya sikha kya recently? Main Python seekh raha hoon.",0
+"Hi this is from the coaching center. Result day is this Saturday.",0
+"Sir your ambulance booking has been confirmed for the patient transfer.",0
+"Madam aapki plant ki delivery kal hogi. Ghar pe rehna.",0
+"Yaar sab kuch sahi ho jaayega. Tension mat le. Main hoon na.",0
+"Hello from the senior citizens club. Monthly gathering this Sunday.",0
+"Sir your e-stamp paper order is ready for download.",0
+"Bhai kal ki party mein kaunsa DJ hai? Pata hai kya?",0
+"Hi this is from the adoption center. Your application has moved to next stage.",0
+"Sir your car loan foreclosure request has been approved.",0
+"Madam aapki saheli ne poochha hai ke aap theek hain.",0
+"Yaar ek kaam karo. Woh document mujhe forward kar do email pe.",0
+"Hello this is from the art gallery. Your painting is on display this week.",0
+"Sir your gym locker renewal is due at the end of this month.",0
+"Bhai teri maa ne halwa banaya hai. Aaja le jaana.",0
+"Hi this is from the music school. Your child's recital is next Sunday.",0
+"Sir your post office savings account interest has been credited.",0
+"Madam ghar pe koi nahi tha toh parcel neighbor ko de diya.",0
+"Yaar kuch din se tumhara phone nahi lag raha. Sab theek to hai?",0
+"Hello from the recycling center. Collection day is Wednesday.",0
+"Sir your annual insurance premium receipt has been emailed.",0
+"Bhai woh match mein zyada mat bhaago. Injury ho sakti hai.",0
+"Hi the new apartment we looked at has one unit left. Interested?",0
+"Sir your document attestation is complete. Please collect from the notary.",0
+"Madam aapki new saree ka blouse kal tak tayyar ho jaayega.",0
+"Yaar kal se office mein naya project shuru ho raha hai. Exciting hai.",0
+"Hello from the Diwali committee. Decoration duty list is out.",0
+"Sir the school transport is delayed by 15 minutes today.",0
+"Bhai woh dono bahut achhe hain. Tumhe unse milwana chahiye.",0
+"Hi this is from the animal shelter. The dog you inquired about is still available.",0
+"Sir your car tires have been balanced and rotated as requested.",0
+"Madam aapka beta kal se naye school mein join karega.",0
+"Yaar aaj ka din bahut produktive tha. Feel good kar raha hoon.",0
+"Hello this is from the courier company. Delivery attempted. Please reschedule.",0
+"Sir the builder has confirmed handover by next month.",0
+"Bhai raat ko khaana bahar khate hain? Family ke saath aao.",0
+"Hi this is from the IELTS center. Your score report is ready.",0
+"Sir your property tax payment has been successfully recorded.",0
+"Madam aapki bahu ka bacha healthy hai. Mother and baby dono theek hain.",0
+"Yaar kal ek motivational speaker aa raha hai college mein. Chaloge?",0
+"Hello the office will remain closed on Monday for a national holiday.",0
+"Sir your complaint about the billing error has been resolved.",0
+"Bhai yaar is baar trip pe pakka aana. Last time miss kar diya.",0
+"Hi this is from the community center. Zumba class starts this week.",0
+"Sir your car insurance claim has been approved and amount will be credited.",0
+"Madam aapka subscription renewal successful raha hai.",0
+"Yaar bahut time ho gaya baat kiye. Sunday ko milte hain pakka.",0
+"Hello this is from the hardware store. Your order is ready for pickup.",0
+"Sir your blood pressure readings are within normal range.",0
+"Bhai kal ki flight mein window seat milegi kya? Check karo please.",0
+"Hi this is from the kindergarten. Open house is this Saturday.",0
+"Sir the annual society picnic will be held at Lonavala next month.",0
+"Madam aapka mobile insurance claim approved ho gaya hai.",0
+"Yaar yeh naya restaurant try karte hain. Saturday ko plan karte hain.",0
+"Hello this is from the NGO. Thank you for your volunteer work last week.",0
+"Sir your printing job is complete. 200 copies ready for pickup.",0
+"Bhai woh coding problem solve ho gayi kya jis pe kaam kar rahe the?",0
+"Hi this is from the fitness app. You completed a 30-day streak. Congratulations!",0
+"Sir your rental agreement has been extended for another 11 months.",0
+"Madam aapka pan card dispatch ho gaya hai. 3-5 din mein aayega.",0
+"Yaar kitna accha laga kal milke. Bahut dino baad hasa itna.",0
+"Hello this is from the bank helpdesk. Your query has been resolved.",0
+"Sir your new credit card limit has been enhanced as requested.",0
+"Bhai kal test hai. Raat ko padhne baithna hoga.",0
+"Hi this is from the school. Student council nominations are open.",0
+"Sir your annual leave encashment has been processed.",0
+"Madam aapki building society ka annual meeting kal hai.",0
+"Yaar mujhe ek achha barber suggest karo. Naya area hai mera.",0
+"Hello this is from the post office. Your speed post has been delivered.",0
+"Sir your freelance payment has been processed and will reflect in 2 days.",0
+"Bhai woh kaam ho gaya jo tune bola tha. Kal le jaana file.",0
+"Hi this is from the legal firm. Your documentation work is complete.",0
+"Sir your vehicle road tax has been paid and receipt emailed.",0
+"Madam aapki society mein new rules implement ho rahe hain parking ke liye.",0
+"Yaar bahut time se mila nahi. Kab free ho tum? Coffee chalega.",0
+"Hello this is from the travel agent. Your hotel booking is confirmed.",0
+"Sir your scholarship has been renewed for the next academic year.",0
+"Bhai kya tumhara wifi share kar sakte ho thodi der ke liye?",0
+"Hi this is from the community library. Your reserved book has arrived.",0
+"Sir your factory inspection report has been submitted to the authority.",0
+"Madam aapka ghar ka vastu check karwana hai toh Sunday ko expert aa sakte hain.",0
+"Yaar yeh duniya mein sab kuch itna fast change ho raha hai.",0
+"Hello this is from the toy store. Your order is out for delivery.",0
+"Sir your health certificate for the job has been attested.",0
+"Bhai ek kaam tha. Kya tum mujhe airport se pick kar sakte ho?",0
+"Hi this is from the sports academy. Your ward has been selected for district team.",0
+"Sir your account payee cheque has been cleared successfully.",0
+"Madam kal subah 7 baje society ki garden mein yoga hai. Aana.",0
+"Yaar woh kaam karte waqt jo gana sun raha tha. Kya tha uska naam?",0
+"Hello from the cultural club. Holi event planning is underway.",0
+"Sir your NOC for property sale has been issued by the society.",0
+"Bhai main office mein ek ghante mein aata hoon. Baith ke wait karo.",0
+"Hi this is from the school canteen. New menu launched from Monday.",0
+"Sir your gas meter reading has been recorded for billing.",0
+"Madam aapke liye ek parcel aaya hai. Kaun lega?",0
+"Yaar itna sochte kyun ho. Sab theek ho jaayega.",0
+"Hello this is from the cooperative bank. Your loan statement is ready.",0
+"Sir the annual tree plantation drive is this Sunday. Join us.",0
+"Bhai kal raat ko khaana mere ghar pe. Mummy ne bulaya hai.",0
+"Hi this is from the tour operator. Final payment for the trip is due this week.",0
+"Sir your factory safety audit has been completed. Report sent to email.",0
+"Madam aapka passport size photo tayaar ho gaya hai studio mein.",0
+"Yaar aaj bahut accha weather hai. Bahar nikalo thodi der.",0
+"Hello from the school parents group. Field trip permission slip due Friday.",0
+"Sir your dividend from the cooperative society has been credited.",0
+"Bhai woh assignment ki deadline extend ho gayi hai. Aaram se karo.",0
+"Hi this is from the club. Swimming pool maintenance done. Open from tomorrow.",0
+"Sir your UPI limit has been increased as requested.",0
+"Madam aapke ghar ke paas naya bakery khula hai. Try karna chahiye.",0
+"Yaar sab milke ek surprise party plan kar rahe hain uske liye.",0
+"Hello this is from the interior designer. Samples have arrived for review.",0
+"Sir your nominee update in insurance policy is complete.",0
+"Bhai kal ki exam ke liye best of luck. Tu kar lega.",0
+"Hi this is from the wedding planner. Your booking is confirmed.",0
+"Sir your car parking sticker has been renewed for this year.",0
+"Madam aapki daughter ne audition mein select ho gayi hai. Badhai ho.",0
+"Yaar woh dono aaj bhi usi jagah milte hain. Kuch nahi badla.",0
+"Hello this is from the cooperative housing society. AGM minutes shared.",0
+"Sir your employee ID card is ready for collection from HR.",0
+"Bhai yeh sardi mein trip plan karte hain pahaadon ki. Kaisa lage?",0
+"Hi this is from the bakery. Your birthday cake order is confirmed.",0
+"Sir your pending dues have been waived off as a goodwill gesture.",0
+"Madam aapka bhai kal pahunch raha hai. Airport pe jaana hai kya?",0
+"Yaar main tumhare liye kuch bhi kar sakta hoon. Dost hoon na.",0
+"Hello this is from the security agency. Your CCTV installation is done.",0
+"Sir your income certificate application has been approved.",0
+"Bhai kal match mein poora support dena. Team ko zaroorat hai.",0
+"Hi this is from the eye bank. Your appointment is confirmed.",0
+"Sir your subscription to the magazine has been extended free of cost.",0
+"Madam aapki mummy ki dawa ki delivery ho gayi hai.",0
+"Yaar aaj main bahut emotional tha. Par ab theek hoon. Baat karte hain kal.",0
+"Hello from the city library. Book exhibition is on all week.",0
+"Sir your online return filing has been successfully completed.",0
+"Bhai woh car mein mera charger chhoot gaya. De dena kal.",0
+"Hi this is from the language school. Your batch starts this Monday.",0
+"Sir your pension account nomination has been updated.",0
+"Madam aapke building mein naya dustbin system install hua hai.",0
+"Yaar tumhara smile bahut contagious hai. Khush rehna.",0
+"Hello this is from the hardware store. Your order will be delivered tomorrow.",0
+"Sir your GST registration certificate is ready for download.",0
+"Bhai main kal early aa jaata hoon. Saath mein breakfast karte hain.",0
+"Hi this is from the school. Annual sports day is on the 15th.",0
+"Sir your car test drive booking is confirmed for Saturday.",0
+"Madam aapke ghar ke paas naya park banaya ja raha hai.",0
+"Yaar woh project mein jo idea diya tha tumne bilkul sahi tha.",0
+"Hello from the tech club. Hackathon registrations are open.",0
+"Sir your utility bills for the month have all been received.",0
+"Bhai aaj office mein presentation di. Boss bahut khush tha.",0
+"Hi this is from the tutoring center. Mock tests start this week.",0
+"Sir your accident insurance payout has been processed.",0
+"Madam aapke ghar ki interior work Monday se shuru hogi.",0
+"Yaar itna kuch sikha is saal. Life mein bahut kuch badla.",0
+"Hello this is a friendly reminder that your club subscription is due.",0
+"Sir your passport photo attestation is done. Please collect.",0
+"Bhai kal ki test match ke liye good luck.",0
+"Hi this is from the community FM. Your request song will play tonight.",0
+"Sir your school fee concession application has been approved.",0
+"Madam aapka bhai ka wedding reception kal hai na? Dress ready hai?",0
+"Yaar sab kuch sahi ho raha hai abhi. Life acchi chal rahi hai.",0
+"Hello this is from the apartment association. New committee formed.",0
+"Sir your driving test appointment is tomorrow at 9 AM.",0
+"Bhai aaj ka game cancel kiya kya? Koi bola nahi mujhe.",0
+"Hi this is from the school. Your daughter got full marks in maths.",0
+"Sir your mobile insurance claim has been settled.",0
+"Madam aapki sister ki delivery date near hai. Kuch help chahiye?",0
+"Yaar kal bahut funny video dekhi. Share karunga tujhe.",0
+"Hello this is from the housing authority. Your flat allotment letter is ready.",0
+"Sir your biometric attendance registration is done.",0
+"Bhai kal kaam nahi hai. Ghumne chalte hain kuch.",0
+"Hi this is from the meditation center. Weekend retreat registrations open.",0
+"Sir your annual appraisal letter has been sent to your email.",0
+"Madam aapka beta aaj school mein bahut accha behave kiya.",0
+"Yaar bahut dino baad sab saath milenge. Bahut excited hoon.",0

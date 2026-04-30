@@ -57,34 +57,32 @@
 import whisper
 import joblib
 
-# Load Whisper model
+
 print("Loading Whisper model...")
 whisper_model = whisper.load_model("small")   # use "small" for better accuracy
 
-# Load scam detection model
+
 print("Loading scam detection model...")
 model = joblib.load("models/scam_model.pkl")
 vectorizer = joblib.load("models/vectorizer.pkl")
 
 print("\nSystem Ready!")
 
-# Transcribe audio file
+
 result = whisper_model.transcribe("sample.wav", fp16=False)
 text = result["text"]
 
 print("\nTranscription:")
 print(text)
 
-# Convert text into vector for ML model
+
 text_vec = vectorizer.transform([text])
 
-# ML prediction
+
 prediction = model.predict(text_vec)[0]
 probability = model.predict_proba(text_vec)[0][1]
 
-# -------------------------------
-# Keyword detection layer
-# -------------------------------
+
 
 danger_keywords = [
     "digital arrest",
@@ -122,9 +120,7 @@ for word in danger_keywords:
 # Combine ML probability + keyword score
 final_score = probability + keyword_score
 
-# -------------------------------
-# Final Decision
-# -------------------------------
+
 
 print("\nDetection Result:")
 
