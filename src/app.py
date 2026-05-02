@@ -682,9 +682,9 @@ with right_col:
             html = ""
             for e in reversed(st.session_state.history[-20:]):
                 sp = int(e['score'] * 100)
-                if e['score'] > 0.47:
+                if e['score'] > 0.38:
                     tc, badge = "danger-tag", f"⚠ HIGH RISK — {sp}%"
-                elif e['score'] > 0.25:
+                elif e['score'] > 0.22:
                     tc, badge = "warn-tag",   f"⚡ SUSPICIOUS — {sp}%"
                 else:
                     tc, badge = "safe-tag",   f"✓ SAFE — {sp}%"
@@ -829,11 +829,11 @@ if st.session_state.running:
         # ── Update UI ──
         gauge_ph.plotly_chart(render_gauge(new_score), use_container_width=True)
 
-        if new_score > 0.47:
+        if new_score > 0.38:
             status_ph.markdown(
                 '<div class="status-danger">⚠ &nbsp; HIGH FRAUD RISK DETECTED</div>',
                 unsafe_allow_html=True)
-        elif new_score > 0.25:
+        elif new_score > 0.22:
             status_ph.markdown(
                 '<div class="status-warning">⚡ &nbsp; SUSPICIOUS ACTIVITY</div>',
                 unsafe_allow_html=True)
@@ -842,7 +842,7 @@ if st.session_state.running:
                 '<div class="status-safe">✓ &nbsp; CONVERSATION SAFE</div>',
                 unsafe_allow_html=True)
 
-        render_mic(new_score > 0.25)
+        render_mic(new_score > 0.22)
 
         # Emotion badges
         if emotions:
@@ -865,7 +865,7 @@ if st.session_state.running:
         formula_line = (
             f'ML({round(probability,2)}) + 0.15×KW({round(keyword_score,2)})'
             f' + ESC(+{round(st.session_state.escalation_bonus,2)})'
-            f' = {round(new_score,2)}  [thresh:0.47]'
+            f' = {round(new_score,2)}  [thresh:0.38]'
         )
         groups_line = ", ".join(sorted(groups_hit)) if groups_hit else "none"
         combo_line  = f'⚡ COMBO: {combo_name}' if combo_name else ""

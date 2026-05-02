@@ -1080,7 +1080,7 @@ ml_accuracy = accuracy_score(y_test, y_pred)
 
 # Final score: ML primary + keyword booster, threshold 0.52
 # Slightly stricter than before to reduce false positives on neutral speech
-THRESHOLD = 0.52
+THRESHOLD = 0.38
 kw_scores_test = X_num_test['kw_score'].values
 texts_test     = X_text_test.values
 
