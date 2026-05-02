@@ -388,10 +388,12 @@
 
 # def final_score(ml_prob, keyword_score):
 #     """
-#     Final score formula as specified:
-#     final = 0.7 * ml_score + 0.3 * keyword_score
+#     Keyword is a BOOSTER only — never reduces ML score.
+#     final = min(ml_prob + 0.15 * keyword_score, 1.0)
+#     Keywords push borderline cases over threshold; cannot pull high-ML scores down.
 #     """
-#     return 0.7 * ml_prob + 0.3 * keyword_score
+#     boost = 0.15 * keyword_score
+#     return min(ml_prob + boost, 1.0)
 
 
 # # ─────────────────────────────────────────────
@@ -492,21 +494,25 @@
 # # Pure ML accuracy
 # ml_accuracy = accuracy_score(y_test, y_pred)
 
-# # Final score evaluation (0.7 ML + 0.3 keyword)
+# # Final score: ML as primary + keyword as booster, threshold 0.47
+# # Lower threshold improves recall (catches more scams) at slight precision cost
+# THRESHOLD = 0.47
 # kw_scores_test = X_num_test['kw_score'].values
 # final_scores   = np.array([
 #     final_score(p, k) for p, k in zip(y_pred_prob, kw_scores_test)
 # ])
-# final_preds    = (final_scores >= 0.5).astype(int)
+# final_preds    = (final_scores >= THRESHOLD).astype(int)
 # final_accuracy = accuracy_score(y_test, final_preds)
 
 # print("\n" + "="*50)
 # print("EVALUATION RESULTS")
 # print("="*50)
-# print(f"ML-only Accuracy:     {ml_accuracy:.4f} ({ml_accuracy*100:.2f}%)")
-# print(f"Final Score Accuracy: {final_accuracy:.4f} ({final_accuracy*100:.2f}%)")
+# print(f"ML-only Accuracy:          {ml_accuracy:.4f} ({ml_accuracy*100:.2f}%)")
+# print(f"Final Score Accuracy:      {final_accuracy:.4f} ({final_accuracy*100:.2f}%)")
+# print(f"Threshold used:            {THRESHOLD}")
+# print(f"Formula: ml_prob + 0.15 * keyword_score (capped at 1.0)")
 # try:
-#     print(f"ROC-AUC Score:        {roc_auc_score(y_test, y_pred_prob):.4f}")
+#     print(f"ROC-AUC Score:             {roc_auc_score(y_test, y_pred_prob):.4f}")
 # except:
 #     pass
 # print("\nClassification Report (Final Score):")
@@ -515,6 +521,10 @@
 # cm = confusion_matrix(y_test, final_preds)
 # print(f"  TN={cm[0][0]}  FP={cm[0][1]}")
 # print(f"  FN={cm[1][0]}  TP={cm[1][1]}")
+# fn_rate = cm[1][0] / (cm[1][0] + cm[1][1]) * 100
+# fp_rate = cm[0][1] / (cm[0][0] + cm[0][1]) * 100
+# print(f"  False Negative Rate: {fn_rate:.1f}%  (missed scams)")
+# print(f"  False Positive Rate: {fp_rate:.1f}%  (false alarms)")
 # print("="*50)
 
 # # ─────────────────────────────────────────────
@@ -930,11 +940,44 @@ def compute_keyword_score(text):
 def final_score(ml_prob, keyword_score):
     """
     Keyword is a BOOSTER only — never reduces ML score.
-    final = min(ml_prob + 0.15 * keyword_score, 1.0)
-    Keywords push borderline cases over threshold; cannot pull high-ML scores down.
+    final = min(ml_prob + 0.10 * keyword_score, 1.0)
+    Reduced to 0.10 — keywords have less influence, ML leads.
     """
-    boost = 0.15 * keyword_score
+    boost = 0.10 * keyword_score
     return min(ml_prob + boost, 1.0)
+
+
+# Safe context words — neutral/greeting utterances that should never be flagged
+SAFE_CONTEXT = {
+    "hello","hi","hey","okay","ok","yes","no","sure","bye","thanks",
+    "thank you","good morning","good night","good evening","happy birthday",
+    "hmm","right","alright","fine","got it","will do","take care","later",
+    "haan","theek hai","bilkul","nahin","shukriya","namaste","achha",
+    "thik hai","chal","koi baat nahi","chalta hai","haan ji","sahi hai",
+    "congrats","congratulations","welcome","no problem","my pleasure",
+    "good","great","nice","wonderful","amazing","fantastic","perfect",
+    "hold on","one second","just a moment","coming","on my way","reached",
+    "sorry","pardon","excuse me","my bad","oops","nevermind","forget it",
+    "see you","catch you later","talk soon","peace","ciao","tata","bye bye",
+}
+MIN_CONFIDENCE = 0.35   # ML must be at least this to flag anything
+MIN_TEXT_LEN   = 4      # ignore texts shorter than 4 chars
+
+
+def is_safe_context(text):
+    """
+    Returns True if text is too short or dominated by safe/neutral words.
+    Prevents hello, okay, happy birthday etc from being flagged.
+    """
+    text = text.strip()
+    if len(text) < MIN_TEXT_LEN:
+        return True
+    words = set(text.lower().split())
+    if words.issubset(SAFE_CONTEXT):
+        return True
+    if len(words) <= 5 and len(words & SAFE_CONTEXT) / max(len(words), 1) >= 0.7:
+        return True
+    return False
 
 
 # ─────────────────────────────────────────────
@@ -1035,14 +1078,21 @@ y_pred_prob = model.predict_proba(X_test_combined)[:, 1]
 # Pure ML accuracy
 ml_accuracy = accuracy_score(y_test, y_pred)
 
-# Final score: ML as primary + keyword as booster, threshold 0.47
-# Lower threshold improves recall (catches more scams) at slight precision cost
-THRESHOLD = 0.47
+# Final score: ML primary + keyword booster, threshold 0.52
+# Slightly stricter than before to reduce false positives on neutral speech
+THRESHOLD = 0.52
 kw_scores_test = X_num_test['kw_score'].values
-final_scores   = np.array([
-    final_score(p, k) for p, k in zip(y_pred_prob, kw_scores_test)
-])
-final_preds    = (final_scores >= THRESHOLD).astype(int)
+texts_test     = X_text_test.values
+
+final_scores = []
+for prob, kw, txt in zip(y_pred_prob, kw_scores_test, texts_test):
+    if is_safe_context(str(txt)) or prob < MIN_CONFIDENCE:
+        final_scores.append(0.0)   # force safe for neutral/short text
+    else:
+        final_scores.append(final_score(prob, kw))
+
+final_scores = np.array(final_scores)
+final_preds  = (final_scores >= THRESHOLD).astype(int)
 final_accuracy = accuracy_score(y_test, final_preds)
 
 print("\n" + "="*50)
@@ -1051,7 +1101,7 @@ print("="*50)
 print(f"ML-only Accuracy:          {ml_accuracy:.4f} ({ml_accuracy*100:.2f}%)")
 print(f"Final Score Accuracy:      {final_accuracy:.4f} ({final_accuracy*100:.2f}%)")
 print(f"Threshold used:            {THRESHOLD}")
-print(f"Formula: ml_prob + 0.15 * keyword_score (capped at 1.0)")
+print(f"Formula: ml_prob + 0.10 * keyword_score (capped at 1.0)")
 try:
     print(f"ROC-AUC Score:             {roc_auc_score(y_test, y_pred_prob):.4f}")
 except:
