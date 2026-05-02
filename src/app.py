@@ -1,3 +1,5 @@
+
+
 # import streamlit as st
 # import whisper
 # import joblib
@@ -8,6 +10,7 @@
 # import plotly.express as px
 # import time
 # import datetime
+# from scipy.sparse import hstack, csr_matrix
 
 # # ---------------------------
 # # Page Config
@@ -221,74 +224,220 @@
 # whisper_model, model, vectorizer = load_models()
 
 # # ---------------------------
-# # Keywords — English + Hinglish + Hindi
+# # Cialdini Keyword Groups + Combination Scoring
+# # Based on: Ferreira et al. (2015) "Principles of Persuasion in Social Engineering"
 # # ---------------------------
-# danger_keywords = [
-#     # English — authority
-#     "digital arrest","arrest","arrested","police","officer","inspector",
-#     "cyber crime","cybercrime","cbi","enforcement directorate","ed officer",
-#     "narcotics","customs officer","trai","telecom department",
-#     # English — investigation
-#     "investigation","fir","case registered","complaint filed",
-#     "fraud investigation","law enforcement","case number","inquiry",
-#     # English — financial coercion
-#     "money laundering","transfer money","send money","transfer funds",
-#     "wire transfer","frozen account","account blocked","account suspended",
-#     "financial crime","financial scrutiny","black money",
-#     # English — legal threats
-#     "legal action","warrant","arrest warrant","non-bailable",
-#     "legal consequences","court order","jail","prison","legal notice",
-#     # English — verification scams
-#     "verification","identity verification","aadhar verification",
-#     "pan verification","kyc verification","otp","share your otp",
-#     # English — secrecy/urgency
-#     "do not tell anyone","keep this confidential","do not inform",
-#     "within 24 hours","immediately","urgent","last warning",
-#     "cyber enforcement","fraud complaint","investigation officer",
-#     "screen share","stay on call","do not disconnect",
 
-#     # Hinglish / Hindi-English mix
-#     "digital giraftari","giraftari","girtaari",
-#     "aapko arrest kiya jayega","aap arrested hain",
-#     "aapka account freeze","account band ho jayega",
-#     "turant transfer karo","abhi paise bhejo",
-#     "aadhaar suspend","pan card block",
-#     "court order aaya hai","court ne order diya",
-#     "aapke upar fir darj","fir darj hogi",
-#     "kisi ko mat batao","kisi se baat mat karo",
-#     "24 ghante mein","abhi cooperate karo",
-#     "bail ke liye paise","fine bharna hoga",
-#     "non bailable warrant","giraftari ka warrant",
-#     "aapka number blacklist","number band hoga",
-#     "aapke naam pe case","case darj hai aapke",
-#     "cbi officer","cid officer","enforcement officer",
-#     "money laundering case","hawala ka case",
-#     "illegal transaction","suspicious transaction",
-#     "aap monitored hain","aap surveillance mein",
-#     "darr mat","ghabrana mat","yeh serious matter",
-#     "last chance hai","yeh aakhri mauka hai",
-#     "jail bheja jayega","prison mein jaoge",
-#     "aapki beti arrested","aapka beta case mein",
-#     "drug trafficking","drugs mila hai",
-#     "kisi ko inform mat karo","family ko mat batao",
+# CIALDINI_GROUPS = {
+#     "authority": {
+#         "score": 0.30,
+#         "keywords": [
+#             "cbi officer","cyber crime department","enforcement directorate",
+#             "income tax officer","trai officer","rbi officer","narcotics",
+#             "anti terrorism squad","national investigation agency",
+#             "financial intelligence unit","economic offences wing",
+#             "serious fraud investigation office","sebi officer",
+#             "ministry of home affairs","supreme court","high court",
+#             "sessions court","magistrate","central vigilance commission",
+#             "inspector general","deputy commissioner","superintendent of police",
+#             "cid officer","joint director","directorate of revenue intelligence",
+#             "sfio","lokayukta","lokpal","cert-in","intelligence bureau",
+#             "national crime records bureau","interpol","ed officer",
+#             "anti corruption bureau","election commission","dcp",
+#             "nia officer","crime branch","vigilance officer","police officer",
+#             "government officer","court appointed","judicial officer",
+#             "senior officer","investigation officer","cyber cell",
+#             "national cyber crime","treasury officer",
+#             "jaanch adhikaari","sarkaari adhikaari","vibhaag se",
+#             "cbi se hain","police vibhaag","court ka order",
+#         ]
+#     },
+#     "urgency": {
+#         "score": 0.30,
+#         "keywords": [
+#             "within 24 hours","immediately","right now","last chance",
+#             "final notice","last warning","within 2 hours","60 minutes",
+#             "30 minutes","45 minutes","tonight","today only",
+#             "no time left","before midnight","by end of day",
+#             "abhi","turant","abhi ke abhi","24 ghante mein",
+#             "ek ghante mein","2 ghante mein","aaj raat tak",
+#             "aaj tak","jaldi karo","der mat karo","aakhri mauka",
+#             "last date","deadline","act now","do not delay",
+#             "final opportunity","last moment","running out of time",
+#         ]
+#     },
+#     "scarcity": {
+#         "score": 0.25,
+#         "keywords": [
+#             "one time settlement","one time waiver","limited time offer",
+#             "only chance","cannot be extended","no second chance",
+#             "this offer expires","rare opportunity","special window",
+#             "last opportunity","after this call","ek baar ka mauka",
+#             "yeh mauka nahi milega","aakhri baar","ab nahi hoga",
+#             "sirf aaj","only today","out of court settle",
+#             "settlement window","after today no help",
+#             "cannot help after this","government scheme aaj tak",
+#         ]
+#     },
+#     "warrant": {
+#         "score": 0.25,
+#         "keywords": [
+#             "arrest warrant","non-bailable warrant","look-out notice",
+#             "court order","fir registered","fir darj","legal notice",
+#             "summons","court summons","attachment order","seizure order",
+#             "warrant execute","warrant issued","bailable warrant",
+#             "anticipatory bail","preventive detention","section 420",
+#             "pmla","fema violation","ipc section","contempt of court",
+#             "sub judice","ex-parte order","charge sheet","bail rejected",
+#             "giraftaari ka warrant","court notice","girtaari ka aadesh",
+#             "non bailable","warrant aayega","notice aayega",
+#         ]
+#     },
+#     "money": {
+#         "score": 0.30,
+#         "keywords": [
+#             "transfer money","send money","pay immediately","transfer funds",
+#             "wire transfer","pay fine","security deposit","processing fee",
+#             "verification fee","settlement amount","clearance fee",
+#             "pay the penalty","pay or face","deposit amount",
+#             "escrow account","secret account","government account",
+#             "paise transfer karo","abhi paise bhejo","turant transfer",
+#             "fine bharo","fees bharo","payment karo","jama karo",
+#             "amount bhejo","rupees transfer","lakh transfer",
+#             "hawala payment","cash deposit","online payment karo",
+#             "neft karo","rtgs karo","upi se bhejo",
+#         ]
+#     },
+#     "reciprocity": {
+#         "score": 0.20,
+#         "keywords": [
+#             "we are trying to help you","we want to protect you",
+#             "i am on your side","we are your well-wishers",
+#             "helping you out","doing you a favour","personally ensuring",
+#             "i will personally","guarantee your safety","protect your family",
+#             "immunity from prosecution","clean chit guarantee",
+#             "case close karenge","aapko bachayenge","aapki help kar rahe hain",
+#             "aapke saath hain","aapka bhala chahte hain",
+#             "personally handle karunga","sifarish karenge",
+#             "leniency dilaayenge","aapko protect karenge",
+#             "hum guarantee dete hain","aapke liye kuch kar sakte hain",
+#         ]
+#     },
+#     "threat": {
+#         "score": 0.30,
+#         "keywords": [
+#             "face arrest","you will be arrested","arrested tonight",
+#             "jail bheja jayega","prison mein jaoge","aapko pakad lenge",
+#             "raid padegi","police aayegi","officer aa raha hai",
+#             "property seized","assets frozen","account blocked",
+#             "media mein aayega","employer ko batayenge","family ko involve",
+#             "aapki beti arrested","aapka beta case mein","family member named",
+#             "reputation destroy","public embarrassment","nationwide notice",
+#             "travel ban","passport blacklisted","criminal record",
+#             "dhamki","khatre mein","consequences severe",
+#             "will not be able to help","cannot save you after this",
+#         ]
+#     },
+#     "account": {
+#         "score": 0.20,
+#         "keywords": [
+#             "share your otp","otp batao","account number share",
+#             "net banking credentials","atm card number","cvv number",
+#             "pin number","share bank details","verify account",
+#             "aadhaar number share","pan number verify","account verification",
+#             "kyc update","kyc verify karo","biometric verify",
+#             "screen share karo","remote access","aadhar otp share",
+#             "netbanking username","password share","login details",
+#             "account details share","banking details","debit card details",
+#             "credit card number","ifsc share","account froze",
+#             "account suspend","aapka account block","frozen account",
+#         ]
+#     },
+#     "distraction": {
+#         "score": 0.25,
+#         "keywords": [
+#             "sealed case","confidential investigation","classified matter",
+#             "national security","media blackout","nda sign karo",
+#             "do not tell anyone","kisi ko mat batao","keep this confidential",
+#             "do not contact lawyer","do not inform family",
+#             "this is a secret operation","sub judice matter",
+#             "sensitive case","high profile matter","sealed envelope",
+#             "stay on the line","do not hang up","do not disconnect",
+#             "aap monitored hain","call record ho rahi hai",
+#             "yeh recorded call hai","evidence ke roop mein",
+#         ]
+#     },
+#     "social_proof": {
+#         "score": 0.20,
+#         "keywords": [
+#             "multiple complaints against you","47 complaints",
+#             "23 complaints","witnesses against you","3 witnesses",
+#             "your neighbor reported","your employee reported",
+#             "your business partner named you","your friend is a witness",
+#             "your family member named","anonymous complaint",
+#             "whistleblower aayi hai","gawah hain aapke khilaf",
+#             "3 independent witnesses","complaints received",
+#             "national portal par complaints","public complaints",
+#         ]
+#     },
+#     "commitment": {
+#         "score": 0.20,
+#         "keywords": [
+#             "you already agreed","you said you would cooperate",
+#             "stay on call","remain on line","do not move from location",
+#             "you have acknowledged","legal obligation","legally bound",
+#             "mandatory compliance","you must cooperate",
+#             "aap agree kar chuke hain","aapko cooperate karna hoga",
+#             "aap legally bound hain","aapko comply karna hoga",
+#             "aap pe legal obligation hai","undertaking sign karni hogi",
+#             "affidavit deni hogi","you are obligated","cooperation mandatory",
+#         ]
+#     },
+# }
+
+# COMBINATIONS = [
+#     {"groups":["commitment","reciprocity","distraction"], "bonus":0.35},
+#     {"groups":["authority","urgency","threat"],           "bonus":0.40},
+#     {"groups":["authority","money","commitment"],         "bonus":0.35},
+#     {"groups":["authority","warrant","urgency"],          "bonus":0.38},
+#     {"groups":["threat","money","scarcity"],              "bonus":0.33},
+#     {"groups":["distraction","account","authority"],      "bonus":0.30},
+#     {"groups":["social_proof","authority","threat"],      "bonus":0.28},
+#     {"groups":["reciprocity","commitment","money"],       "bonus":0.28},
+#     {"groups":["urgency","scarcity","money"],             "bonus":0.25},
+#     {"groups":["distraction","warrant","commitment"],     "bonus":0.25},
+#     {"groups":["authority","urgency"],                    "bonus":0.20},
+#     {"groups":["authority","money"],                      "bonus":0.20},
+#     {"groups":["threat","urgency"],                       "bonus":0.20},
+#     {"groups":["account","urgency"],                      "bonus":0.18},
+#     {"groups":["distraction","money"],                    "bonus":0.15},
 # ]
 
-# HIGH_WEIGHT = {
-#     "digital arrest":0.40, "digital giraftari":0.40,
-#     "arrested":0.35, "aapko arrest kiya jayega":0.40,
-#     "arrest warrant":0.40, "giraftari ka warrant":0.40,
-#     "money laundering":0.35, "money laundering case":0.35,
-#     "do not tell anyone":0.40, "kisi ko mat batao":0.40,
-#     "keep this confidential":0.35, "kisi se baat mat karo":0.35,
-#     "frozen account":0.30, "aapka account freeze":0.30,
-#     "non-bailable":0.40, "non bailable warrant":0.40,
-#     "within 24 hours":0.25, "24 ghante mein":0.25,
-#     "transfer money":0.30, "abhi paise bhejo":0.30,
-#     "send money":0.30, "turant transfer karo":0.30,
-#     "wire transfer":0.30, "account blocked":0.28,
-#     "share your otp":0.45, "screen share":0.35,
-#     "drug trafficking":0.38, "drugs mila hai":0.35,
-# }
+# # Flat list for history display
+# danger_keywords = [
+#     kw for g in CIALDINI_GROUPS.values() for kw in g["keywords"]
+# ]
+
+# def compute_keyword_score(text):
+#     """Returns (keyword_score capped at 1.0, groups_hit set, combo_name or None)"""
+#     text_lower = text.lower()
+#     groups_hit = set()
+#     base_score  = 0.0
+#     for group_name, group_data in CIALDINI_GROUPS.items():
+#         for kw in group_data["keywords"]:
+#             if kw in text_lower:
+#                 if group_name not in groups_hit:
+#                     base_score += group_data["score"]
+#                     groups_hit.add(group_name)
+#                 break
+#     combo_bonus = 0.0
+#     combo_name  = None
+#     for combo in COMBINATIONS:
+#         if set(combo["groups"]).issubset(groups_hit):
+#             if combo["bonus"] > combo_bonus:
+#                 combo_bonus = combo["bonus"]
+#                 combo_name  = "+".join(combo["groups"])
+#     return min(base_score + combo_bonus, 1.0), groups_hit, combo_name
 
 # # ---------------------------
 # # Emotion Detection
@@ -540,11 +689,15 @@
 #                 else:
 #                     tc, badge = "safe-tag",   f"✓ SAFE — {sp}%"
 
-#                 kws = [k for k in danger_keywords if k in e['text'].lower()]
 #                 kw_html = (
 #                     f'<div style="font-size:0.62rem;color:#aa0033;margin-top:2px;">'
-#                     f'🔑 {", ".join(kws[:4])}</div>'
-#                 ) if kws else ""
+#                     f'🔑 {", ".join(list(e.get("groups",set()))[:4])}</div>'
+#                 ) if e.get("groups") else ""
+
+#                 combo_html = (
+#                     f'<div style="font-size:0.62rem;color:#cc0044;margin-top:1px;">'
+#                     f'⚡ {e["combo"]}</div>'
+#                 ) if e.get("combo") else ""
 
 #                 emo_html = ""
 #                 for emo, ecls, eico in e.get('emotions', []):
@@ -555,7 +708,7 @@
 #                     '<div class="history-entry">'
 #                     f'<div class="history-time">{e["time"]}</div>'
 #                     f'<div class="history-text">{safe_text}</div>'
-#                     f'{kw_html}{emo_html}'
+#                     f'{kw_html}{combo_html}{emo_html}'
 #                     f'<div class="{tc}">{badge}</div>'
 #                     '</div>'
 #                 )
@@ -599,34 +752,52 @@
 #             continue
 
 #         # ── ML Prediction ──
-#         text_vec    = vectorizer.transform([text])
-#         probability = model.predict_proba(text_vec)[0][1]
+#         # text_vec    = vectorizer.transform([text])
+#         # probability = model.predict_proba(text_vec)[0][1]
+#         text_vec = vectorizer.transform([text])
+#         kw_score, groups_hit, combo_name = compute_keyword_score(text)
+#         kw_groups = len(groups_hit)
+#         kw_combo = 1 if combo_name else 0
+#         kw_flags = []
+#         for group_name in CIALDINI_GROUPS.keys():
+#             flag = 1 if any(
+#                 kw in text.lower()
+#                  for kw in CIALDINI_GROUPS[group_name]['keywords']
+#                  ) else 0
+#             kw_flags.append(flag)
+#         numeric_features = [kw_score, kw_groups, kw_combo] + kw_flags
+#         num_vec = csr_matrix([numeric_features])
+#         final_input = hstack([text_vec, num_vec])
+#         print(final_input.shape)
+#         probability = model.predict_proba(final_input)[0][1]
 
-#         # ── Weighted Keyword Scoring ──
-#         text_lower    = text.lower()
-#         keyword_score = 0.0
-#         hits_this_chunk = 0
-#         for word in danger_keywords:
-#             if word in text_lower:
-#                 keyword_score += HIGH_WEIGHT.get(word, 0.15)
-#                 hits_this_chunk += 1
-#         keyword_score = min(keyword_score, 0.6)
+
+
+        
+
+
+#         # ── Cialdini Keyword Score (capped at 1.0) ──
+#         keyword_score, groups_hit, combo_name = compute_keyword_score(text)
 
 #         # ── Escalation Memory ──
-#         # Each chunk with 2+ keyword hits adds to escalation bonus
+#         # Builds up if multiple Cialdini groups triggered
+#         hits_this_chunk = len(groups_hit)
 #         if hits_this_chunk >= 2:
 #             st.session_state.keyword_hit_count += hits_this_chunk
 #             st.session_state.escalation_bonus = min(
-#                 st.session_state.escalation_bonus + 0.05 * hits_this_chunk, 0.4
+#                 st.session_state.escalation_bonus + 0.04 * hits_this_chunk, 0.35
 #             )
 #         else:
-#             # Slowly decay escalation if no hits
 #             st.session_state.escalation_bonus = max(
 #                 st.session_state.escalation_bonus - 0.02, 0.0
 #             )
 
-#         # ── Final Score ──
-#         raw_score = min(probability + keyword_score + st.session_state.escalation_bonus, 1.0)
+#         # ── Final Score: 0.7 * ML + 0.3 * keyword (spec formula) ──
+#         # Then apply escalation memory on top, capped at 1.0
+#         base_final = 0.7 * probability + 0.3 * keyword_score
+#         raw_score  = min(base_final + st.session_state.escalation_bonus, 1.0)
+
+#         # Smooth transition (fast up, slow down)
 #         prev      = st.session_state.current_score
 #         new_score = prev + (raw_score - prev) * (0.8 if raw_score > prev else 0.3)
 #         st.session_state.current_score = new_score
@@ -639,12 +810,14 @@
 
 #         # ── Save to history ──
 #         st.session_state.history.append({
-#             'time':    datetime.datetime.now().strftime("%H:%M:%S"),
-#             'text':    text,
-#             'score':   new_score,
-#             'ml':      probability,
-#             'keywords':keyword_score,
-#             'emotions':emotions,
+#             'time':     datetime.datetime.now().strftime("%H:%M:%S"),
+#             'text':     text,
+#             'score':    new_score,
+#             'ml':       probability,
+#             'keywords': keyword_score,
+#             'groups':   groups_hit,
+#             'combo':    combo_name,
+#             'emotions': emotions,
 #         })
 
 #         # ── Save to timeline ──
@@ -688,12 +861,22 @@
 #             f'<div class="transcript-box">{text}</div>',
 #             unsafe_allow_html=True)
 
+#         # Score formula breakdown
+#         formula_line = (
+#             f'0.7×ML({round(probability,2)}) + 0.3×KW({round(keyword_score,2)})'
+#             f' + ESC(+{round(st.session_state.escalation_bonus,2)})'
+#             f' = {round(new_score,2)}'
+#         )
+#         groups_line = ", ".join(sorted(groups_hit)) if groups_hit else "none"
+#         combo_line  = f'⚡ COMBO: {combo_name}' if combo_name else ""
+
 #         detail_ph.markdown(
-#             f'<div style="font-family:Share Tech Mono,monospace;font-size:0.65rem;'
-#             f'color:#2a3044;text-align:center;letter-spacing:1px;margin-top:2px;">'
-#             f'ML:{round(probability,2)} | KW:{round(keyword_score,2)} '
-#             f'| ESC:+{round(st.session_state.escalation_bonus,2)} '
-#             f'| Final:{round(new_score,2)}</div>',
+#             f'<div style="font-family:Share Tech Mono,monospace;font-size:0.62rem;'
+#             f'color:#2a3044;text-align:center;letter-spacing:1px;margin-top:2px;line-height:1.6;">'
+#             f'{formula_line}<br>'
+#             f'<span style="color:#1a2a44;">Groups: {groups_line}</span>'
+#             + (f'<br><span style="color:#cc0044;">{combo_line}</span>' if combo_line else "")
+#             + '</div>',
 #             unsafe_allow_html=True)
 
 #         render_metrics()
@@ -1257,7 +1440,7 @@ with left_col:
 
     def render_metrics():
         sp = int(st.session_state.current_score * 100)
-        sc = "red" if sp > 60 else ("orange" if sp > 30 else "green")
+        sc = "red" if sp > 47 else ("orange" if sp > 25 else "green")
         rc = "red" if st.session_state.high_risk_count > 0 else "green"
         eb = int(st.session_state.escalation_bonus * 100)
         ec = "red" if eb > 20 else "orange" if eb > 10 else "green"
@@ -1278,15 +1461,15 @@ with left_col:
     # ── Gauge ──
     def render_gauge(score):
         val = score * 100
-        if val > 60:
+        if val > 47:
             bc, nc = "#cc0000", "#ff2200"
-            steps = [('#001a06',0,30),('#1a0c00',30,60),('#2a0000',60,100)]
-        elif val > 30:
+            steps = [('#001a06',0,25),('#1a0c00',25,47),('#2a0000',47,100)]
+        elif val > 25:
             bc, nc = "#cc6600", "#ff8800"
-            steps = [('#001a06',0,30),('#1a0c00',30,60),('#1a0000',60,100)]
+            steps = [('#001a06',0,25),('#1a0c00',25,47),('#1a0000',47,100)]
         else:
             bc, nc = "#00aa44", "#00cc55"
-            steps = [('#001a06',0,30),('#0a1a00',30,60),('#180000',60,100)]
+            steps = [('#001a06',0,25),('#0a1a00',25,47),('#180000',47,100)]
 
         fig = go.Figure(go.Indicator(
             mode="gauge+number",
@@ -1322,13 +1505,13 @@ with left_col:
 
         times  = [t[0] for t in tl]
         scores = [t[1]*100 for t in tl]
-        colors = ["#cc0000" if s > 60 else "#ff8800" if s > 30 else "#00cc55" for s in scores]
+        colors = ["#cc0000" if s > 47 else "#ff8800" if s > 25 else "#00cc55" for s in scores]
 
         fig = go.Figure()
         # Shaded zones — use rgba() not 8-digit hex (Plotly doesn't support 8-digit hex)
-        fig.add_hrect(y0=0,  y1=30,  fillcolor="rgba(0,204,85,0.06)",   line_width=0)
-        fig.add_hrect(y0=30, y1=60,  fillcolor="rgba(255,136,0,0.06)",  line_width=0)
-        fig.add_hrect(y0=60, y1=100, fillcolor="rgba(204,0,0,0.07)",    line_width=0)
+        fig.add_hrect(y0=0,  y1=25,  fillcolor="rgba(0,204,85,0.06)",   line_width=0)
+        fig.add_hrect(y0=25, y1=47,  fillcolor="rgba(255,136,0,0.06)",  line_width=0)
+        fig.add_hrect(y0=47, y1=100, fillcolor="rgba(204,0,0,0.07)",    line_width=0)
         # Line
         fig.add_trace(go.Scatter(
             x=times, y=scores,
@@ -1339,8 +1522,8 @@ with left_col:
             fillcolor='rgba(30,111,255,0.07)'
         ))
         # Threshold lines — rgba() format
-        fig.add_hline(y=30, line=dict(color="rgba(255,136,0,0.3)",  width=1, dash="dot"))
-        fig.add_hline(y=60, line=dict(color="rgba(204,0,0,0.3)",    width=1, dash="dot"))
+        fig.add_hline(y=25, line=dict(color="rgba(255,136,0,0.3)",  width=1, dash="dot"))
+        fig.add_hline(y=47, line=dict(color="rgba(204,0,0,0.3)",    width=1, dash="dot"))
 
         fig.update_layout(
             paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)',
@@ -1386,9 +1569,9 @@ with right_col:
             html = ""
             for e in reversed(st.session_state.history[-20:]):
                 sp = int(e['score'] * 100)
-                if e['score'] > 0.6:
+                if e['score'] > 0.47:
                     tc, badge = "danger-tag", f"⚠ HIGH RISK — {sp}%"
-                elif e['score'] > 0.3:
+                elif e['score'] > 0.25:
                     tc, badge = "warn-tag",   f"⚡ SUSPICIOUS — {sp}%"
                 else:
                     tc, badge = "safe-tag",   f"✓ SAFE — {sp}%"
@@ -1477,7 +1660,7 @@ if st.session_state.running:
 
 
 
-        
+
 
 
         # ── Cialdini Keyword Score (capped at 1.0) ──
@@ -1496,9 +1679,9 @@ if st.session_state.running:
                 st.session_state.escalation_bonus - 0.02, 0.0
             )
 
-        # ── Final Score: 0.7 * ML + 0.3 * keyword (spec formula) ──
-        # Then apply escalation memory on top, capped at 1.0
-        base_final = 0.7 * probability + 0.3 * keyword_score
+        # ── Final Score: keyword as booster only, never reduces ML ──
+        # formula: final = min(ml_prob + 0.15 * keyword_score, 1.0)
+        base_final = min(probability + 0.15 * keyword_score, 1.0)
         raw_score  = min(base_final + st.session_state.escalation_bonus, 1.0)
 
         # Smooth transition (fast up, slow down)
@@ -1506,7 +1689,7 @@ if st.session_state.running:
         new_score = prev + (raw_score - prev) * (0.8 if raw_score > prev else 0.3)
         st.session_state.current_score = new_score
         st.session_state.total_chunks += 1
-        if new_score > 0.6:
+        if new_score > 0.47:   # matches training threshold
             st.session_state.high_risk_count += 1
 
         # ── Emotion Detection ──
@@ -1533,11 +1716,11 @@ if st.session_state.running:
         # ── Update UI ──
         gauge_ph.plotly_chart(render_gauge(new_score), use_container_width=True)
 
-        if new_score > 0.6:
+        if new_score > 0.47:
             status_ph.markdown(
                 '<div class="status-danger">⚠ &nbsp; HIGH FRAUD RISK DETECTED</div>',
                 unsafe_allow_html=True)
-        elif new_score > 0.3:
+        elif new_score > 0.25:
             status_ph.markdown(
                 '<div class="status-warning">⚡ &nbsp; SUSPICIOUS ACTIVITY</div>',
                 unsafe_allow_html=True)
@@ -1546,7 +1729,7 @@ if st.session_state.running:
                 '<div class="status-safe">✓ &nbsp; CONVERSATION SAFE</div>',
                 unsafe_allow_html=True)
 
-        render_mic(new_score > 0.3)
+        render_mic(new_score > 0.25)
 
         # Emotion badges
         if emotions:
@@ -1567,9 +1750,9 @@ if st.session_state.running:
 
         # Score formula breakdown
         formula_line = (
-            f'0.7×ML({round(probability,2)}) + 0.3×KW({round(keyword_score,2)})'
+            f'ML({round(probability,2)}) + 0.15×KW({round(keyword_score,2)})'
             f' + ESC(+{round(st.session_state.escalation_bonus,2)})'
-            f' = {round(new_score,2)}'
+            f' = {round(new_score,2)}  [thresh:0.47]'
         )
         groups_line = ", ".join(sorted(groups_hit)) if groups_hit else "none"
         combo_line  = f'⚡ COMBO: {combo_name}' if combo_name else ""
