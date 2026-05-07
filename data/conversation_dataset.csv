@@ -1,0 +1,1113 @@
+conversation_id,speaker,turn,text,label
+C001,attacker,1,"This is officer Sharma from the Cyber Crime Department. We have registered a case against your Aadhaar number.",1
+C001,victim,2,"What? Who is this? I don't understand.",1
+C001,attacker,3,"Sir, your number has been used in a money laundering case. You must cooperate immediately or face arrest.",1
+C001,victim,4,"Please, I haven't done anything wrong. What do I need to do?",1
+C001,attacker,5,"You need to transfer Rs 50000 to our secure account for verification. This is a court order.",1
+C001,victim,6,"Okay okay, I will do it. Please don't arrest me. I'm transferring now.",1
+C001,attacker,7,"Do not tell anyone about this call. This is a confidential investigation.",1
+C001,victim,8,"Yes sir, I won't tell anyone. I'm doing the transfer right now.",1
+C002,attacker,1,"Hum CBI se bol rahe hain. Aapka naam ek hawala case mein aaya hai.",1
+C002,victim,2,"CBI? Main toh kuch nahi jaanta is baare mein.",1
+C002,attacker,3,"Sir, aapko abhi cooperate karna hoga warna hum aapke ghar raid karenge.",1
+C002,victim,4,"Please nahi, meri family hai ghar pe. Main kya karun?",1
+C002,attacker,5,"Abhi Rs 1 lakh transfer karo hamare account mein. Yeh bail amount hai.",1
+C002,victim,6,"Theek hai, transfer kar deta hoon. Mujhe arrest mat karo.",1
+C002,attacker,7,"Aapka account number aur OTP bhi share karo verification ke liye.",1
+C002,victim,8,"Haan, mera account number hai 12345678. OTP aaya hai 987654.",1
+C003,attacker,1,"This is TRAI officer. Your SIM card is being used for illegal activities.",1
+C003,victim,2,"I don't know what you're talking about.",1
+C003,attacker,3,"We have evidence. You have 2 hours to pay the penalty or your number will be blocked permanently.",1
+C003,victim,4,"Okay okay, how much do I need to pay?",1
+C003,attacker,5,"Rs 5000 processing fee to our government account immediately.",1
+C003,victim,6,"Fine I'll pay. Give me the account number.",1
+C003,attacker,7,"Transfer via UPI to fraud.collect@bank and share the screenshot.",1
+C003,victim,8,"Done, I sent the money. Please don't block my number.",1
+C004,attacker,1,"Madam, aapke naam pe ek FIR darj hui hai cyber crime mein.",1
+C004,victim,2,"FIR? Maine kya kiya hai?",1
+C004,attacker,3,"Aapka Aadhaar number ek fraud network mein use hua hai. Abhi court order hai.",1
+C004,victim,4,"Main toh kuch nahi jaanti. Please help karo.",1
+C004,attacker,5,"Aapko Rs 25000 security deposit dena hoga case close karne ke liye.",1
+C004,victim,6,"Okay kar deti hoon. Aap sahi keh rahe hain. Main trust karti hoon aap pe.",1
+C004,attacker,7,"Aur kisi ko mat batana. Contempt of court hoga.",1
+C004,victim,8,"Nahi bataungi. Thank you for telling me about this.",1
+C005,attacker,1,"Sir this is the Enforcement Directorate. Your account shows suspicious transactions.",1
+C005,victim,2,"I have done nothing illegal. All my transactions are legitimate.",1
+C005,attacker,3,"We have the bank records sir. You need to cooperate. This is your last warning.",1
+C005,victim,4,"What exactly do you need from me?",1
+C005,attacker,5,"Transfer the amount to our safe account and your name will be removed from the case.",1
+C005,victim,6,"Okay I understand. I'll cooperate. How much should I transfer?",1
+C005,attacker,7,"Rs 75000. And share your net banking password for verification.",1
+C005,victim,8,"My password is Bank@1234. I'm trusting you. Please close this case.",1
+C006,attacker,1,"Hello sir, this is officer Verma from the cyber cell. Your IP address was used in a crime.",1
+C006,victim,2,"That's impossible. I am a law-abiding citizen.",1
+C006,attacker,3,"Sir we have the logs. A warrant has been issued. You must pay the bail amount immediately.",1
+C006,victim,4,"How much is the bail? This is very sudden.",1
+C006,attacker,5,"Rs 30000 to this account. Within 60 minutes or we issue a non-bailable warrant.",1
+C006,victim,6,"I'm scared. Okay I'll pay. Sending now.",1
+C006,attacker,7,"Also confirm your Aadhaar number and date of birth for our records.",1
+C006,victim,8,"My Aadhaar is 1234 5678 9012 and DOB is 15 March 1980. Please help me.",1
+C007,attacker,1,"Aapka PAN card ek money laundering ring mein use hua hai.",1
+C007,victim,2,"Yeh kaise ho sakta hai? Main toh apna PAN sirf legitimate kamon ke liye use karta hoon.",1
+C007,attacker,3,"Sir records hamare paas hain. Abhi agar cooperate nahi kiya toh aapko arrested kiya jayega.",1
+C007,victim,4,"Main darr gaya hoon. Kya karun main?",1
+C007,attacker,5,"Rs 40000 transfer karo abhi. Hum case close kar denge.",1
+C007,victim,6,"Theek hai kar deta hoon. Mujhe aur kya karna hai?",1
+C007,attacker,7,"Apna ATM pin bhi share karo verification ke liye.",1
+C007,victim,8,"Pin hai 4567. Please mujhe is case se bahar nikalo.",1
+C008,attacker,1,"This is the Income Tax Department. You owe Rs 2 lakh in unpaid taxes.",1
+C008,victim,2,"That can't be right. I file my taxes regularly.",1
+C008,attacker,3,"Sir our records show discrepancy. If you don't pay now there will be a raid at your premises.",1
+C008,victim,4,"Please don't raid. What can I do to resolve this?",1
+C008,attacker,5,"Pay the outstanding amount immediately to avoid arrest and property seizure.",1
+C008,victim,6,"Okay I'll pay. How do I pay? Tell me what to do.",1
+C008,attacker,7,"Transfer to this account and share your bank card details for confirmation.",1
+C008,victim,8,"My card number is 4532 1234 5678 9012, CVV 456. Please close this matter.",1
+C009,attacker,1,"Sir aap ek international drug trafficking case ke suspect hain.",1
+C009,victim,2,"Yeh bilkul galat hai. Main kisi bhi illegal activity mein involved nahi hoon.",1
+C009,attacker,3,"Sir hum jaante hain aap innocent lagte hain lekin records aapke khilaf hain.",1
+C009,victim,4,"Main kya kar sakta hoon is case mein?",1
+C009,attacker,5,"Ek settlement amount pay karo Rs 60000, case band ho jayega.",1
+C009,victim,6,"Theek hai bhai. Main pay karna chahta hoon. Batao kaise.",1
+C009,attacker,7,"UPI pe bhejo aur apna location bhi share karo.",1
+C009,victim,8,"Bhej raha hoon. Meri location hai Andheri Mumbai. Please mujhe bachao.",1
+C010,attacker,1,"Madam we are from RBI. Your account has been flagged for suspicious activity.",1
+C010,victim,2,"I only use my account for salary and regular expenses.",1
+C010,attacker,3,"Madam the system has flagged it. We need to do an immediate verification call.",1
+C010,victim,4,"Okay what do I need to share with you?",1
+C010,attacker,5,"Your account number, OTP and the linked mobile number.",1
+C010,victim,6,"My account is 9876543210, mobile 9876543210, OTP just came is 123456.",1
+C010,attacker,7,"Thank you madam. One more thing — your net banking credentials.",1
+C010,victim,8,"Username is myname123, password is Secret@99. Please verify quickly.",1
+C011,attacker,1,"Hello, is this Mr. Rajesh? This is a call from your bank.",0
+C011,victim,2,"Yes, this is Rajesh. What is this about?",0
+C011,attacker,3,"Sir we are calling to inform you about a new savings scheme. Would you like to know more?",0
+C011,victim,4,"I'm not interested in any new schemes right now, thank you.",0
+C011,attacker,5,"Okay sir, no problem. Have a good day.",0
+C011,victim,6,"Thanks, goodbye.",0
+C012,attacker,1,"Hi, is this Priya? Calling from the yoga center about your membership renewal.",0
+C012,victim,2,"Oh yes, I was meaning to call you about that.",0
+C012,attacker,3,"Your membership expires next week. Would you like to renew for another year?",0
+C012,victim,4,"Yes please, how much is the renewal fee?",0
+C012,attacker,5,"It's Rs 5000 for the annual plan. You can pay at the center or online.",0
+C012,victim,6,"I'll come in tomorrow and pay at the center. Thank you for the reminder.",0
+C013,attacker,1,"Hello sir, this is the courier company. We have a package for you.",0
+C013,victim,2,"Oh good, I was expecting a delivery.",0
+C013,attacker,3,"Sir we tried to deliver but you were unavailable. Can we reschedule for tomorrow?",0
+C013,victim,4,"Yes tomorrow morning would work. Between 10 and 12 please.",0
+C013,attacker,5,"Perfect, we'll have it delivered between 10 and 12. Please keep your ID ready.",0
+C013,victim,6,"Sure, I'll be home. Thank you.",0
+C014,attacker,1,"Good morning, calling from the school about your child's admission.",0
+C014,victim,2,"Yes we submitted the application last week.",0
+C014,attacker,3,"We are happy to inform you that your child has been selected for admission.",0
+C014,victim,4,"That's wonderful news! What are the next steps?",0
+C014,attacker,5,"Please come to the school office with the documents by Friday to complete the process.",0
+C014,victim,6,"We'll be there Thursday. Thank you so much.",0
+C015,attacker,1,"Namaste, yeh local grocery store se call hai. Aapka order ready hai.",0
+C015,victim,2,"Accha, main aaj shaam ko le jaunga.",0
+C015,attacker,3,"Theek hai sir. Hum 7 baje tak open hain.",0
+C015,victim,4,"Perfect, main 6 baje aaunga.",0
+C015,attacker,5,"Zaroor sir. Aapka intezaar rahega.",0
+C015,victim,6,"Shukriya. Bye.",0
+C016,attacker,1,"Hi this is the doctor's clinic calling to confirm your appointment.",0
+C016,victim,2,"Yes I have an appointment at 3pm tomorrow.",0
+C016,attacker,3,"That's correct. Just a reminder to bring any previous reports.",0
+C016,victim,4,"Sure I'll bring them. Is there anything else I need?",0
+C016,attacker,5,"No that's all. See you tomorrow.",0
+C016,victim,6,"Thank you. Goodbye.",0
+C017,attacker,1,"Hello sir this is from the housing society. Annual maintenance is due.",0
+C017,victim,2,"Yes I was planning to pay this week.",0
+C017,attacker,3,"You can pay at the office or transfer to the society account.",0
+C017,victim,4,"I'll transfer online. Can you give me the account details?",0
+C017,attacker,5,"Sure, account number 1234567890, IFSC HDFC0001234.",0
+C017,victim,6,"Got it. I'll transfer by evening. Thanks.",0
+C018,attacker,1,"Bhai, kaisa hai? Bahut dino baad call kiya.",0
+C018,victim,2,"Yaar sab theek hai. Tu bata.",0
+C018,attacker,3,"Kal match dekhne ka plan bana rahe hain. Aayega?",0
+C018,victim,4,"Haan bilkul. Kahan pe?",0
+C018,attacker,5,"Mere ghar pe. 7 baje aa ja.",0
+C018,victim,6,"Perfect. Main 7 baje pahunch jaunga.",0
+C019,attacker,1,"Hello, is this the owner of the Honda City with registration MH02AB1234?",0
+C019,victim,2,"Yes that's my car. What is this about?",0
+C019,attacker,3,"Sir we are calling from the service center. Your car is due for its annual service.",0
+C019,victim,4,"Yes I've been meaning to get it serviced. Can I book for next Saturday?",0
+C019,attacker,5,"Of course sir. We have a slot at 10am. I'll send you a confirmation SMS.",0
+C019,victim,6,"Perfect. See you Saturday.",0
+C020,attacker,1,"Madam this is from Apollo Hospital. Your test results are ready.",0
+C020,victim,2,"Oh, I've been waiting for those. Are they good?",0
+C020,attacker,3,"All your reports are normal. The doctor will explain when you visit.",0
+C020,victim,4,"That's a relief. When can I come to collect them?",0
+C020,attacker,5,"Any time between 9am and 5pm. Just bring your registration slip.",0
+C020,victim,6,"I'll come tomorrow morning. Thank you.",0
+C021,attacker,1,"Sir this is CBI. Aapka naam ek sedition case mein aaya hai.",1
+C021,victim,2,"Sedition? That is absolutely false. I have nothing to do with any such thing.",1
+C021,attacker,3,"Sir we have evidence. Court has issued a warrant. You must comply.",1
+C021,victim,4,"I want to speak to a lawyer before I say or do anything.",1
+C021,attacker,5,"Do not contact a lawyer. This is a confidential matter. Pay the settlement now.",1
+C021,victim,6,"No. I am not paying anything without consulting my lawyer. This seems like a fraud.",1
+C021,attacker,7,"Sir please cooperate otherwise we will send officers to your house.",1
+C021,victim,8,"Go ahead and send them. I am calling the police right now. This is a scam.",1
+C022,attacker,1,"Madam aapka Aadhaar ek terrorist funding case mein linked hai.",1
+C022,victim,2,"Yeh bilkul bakwaas hai. Main ek teacher hoon.",1
+C022,attacker,3,"Madam hum jaante hain lekin records aapke naam pe hain. Cooperate karna hoga.",1
+C022,victim,4,"Main kisi bhi illegal kaam mein involved nahi hoon. Prove karo.",1
+C022,attacker,5,"Abhi Rs 50000 pay karo warna aapko arrest kiya jayega.",1
+C022,victim,6,"Main police ko call karti hoon. Aap fraud kar rahe hain.",1
+C022,attacker,7,"Madam police ko call mat karo. Is case ko aur bada mat banao.",1
+C022,victim,8,"Main phone rakh rahi hoon. Aur main actual police ko report karungi.",1
+C023,attacker,1,"This is officer Patel. Your account is involved in money laundering.",1
+C023,victim,2,"I don't believe this. I need to verify your identity first.",1
+C023,attacker,3,"Sir we don't have time for verification. Pay immediately or face arrest.",1
+C023,victim,4,"Legitimate officers don't ask for money over phone. Who are you really?",1
+C023,attacker,5,"Sir I assure you this is official. Please don't make this harder.",1
+C023,victim,6,"I'm going to call the actual cybercrime helpline to verify this call.",1
+C023,attacker,7,"Sir please don't do that. You will complicate the case.",1
+C023,victim,8,"I'm reporting this call. You are a fraud. Goodbye.",1
+C024,attacker,1,"Sir aap ek drug trafficking case ke suspect hain.",1
+C024,victim,2,"Yeh galat hai. Main ek software engineer hoon.",1
+C024,attacker,3,"Sir aapke phone ka data hamare paas hai. Cooperate karo.",1
+C024,victim,4,"Mujhe apne vakeel se baat karni hai pehle.",1
+C024,attacker,5,"Vakeel ki zaroorat nahi. Sirf Rs 30000 pay karo.",1
+C024,victim,6,"Nahi karunga. Main is call ko record kar raha hoon. Yeh fraud call hai.",1
+C024,attacker,7,"Sir record mat karo. Yeh illegal hai.",1
+C024,victim,8,"Main police station ja raha hoon abhi. Phone rakh raha hoon.",1
+C025,attacker,1,"This is SEBI officer. Your stock account shows insider trading.",1
+C025,victim,2,"That's a serious allegation. I need to see documentation.",1
+C025,attacker,3,"Sir we don't share documentation over call. Pay the settlement now.",1
+C025,victim,4,"Real SEBI officers don't call and demand money. I'm not paying anything.",1
+C025,attacker,5,"Sir this is your last chance to resolve this out of court.",1
+C025,victim,6,"I'm contacting my broker and SEBI directly to verify. This is a scam.",1
+C026,attacker,1,"Aapke naam pe ek courier seized hua hai jisme drugs the.",1
+C026,victim,2,"Main kisi bhi courier ka wait nahi kar raha. Yeh fraud hai.",1
+C026,attacker,3,"Sir aapka naam clearly likha hai. Cooperate karo warna problem hogi.",1
+C026,victim,4,"Main is call ko report kar raha hoon. Cybercrime helpline pe.",1
+C027,attacker,1,"Hello sir this is the National Cyber Crime portal. Urgent action needed.",1
+C027,victim,2,"What is the nature of this action?",1
+C027,attacker,3,"Your account is involved in a Rs 5 crore fraud. Pay immediately to clear your name.",1
+C027,victim,4,"I will verify this through the official website before doing anything.",1
+C027,attacker,5,"Sir the website is down. Please cooperate on call only.",1
+C027,victim,6,"If the website is down I'll visit the cyber crime office in person. Goodbye.",1
+C028,attacker,1,"Madam aapki beti ke phone se illegal content share hua hai.",1
+C028,victim,2,"Yeh impossible hai. Meri beti sirf 12 saal ki hai.",1
+C028,attacker,3,"Madam records hamare paas hain. Aapko turant cooperate karna hoga.",1
+C028,victim,4,"Main apne husband ko bula rahi hoon. Aur hum police station jayenge.",1
+C028,attacker,5,"Please police ko involve mat karo. Seedha settle karo.",1
+C028,victim,6,"Nahi. Main phone rakh rahi hoon aur police ko call karti hoon.",1
+C029,attacker,1,"Sir this is an urgent call from the Income Tax Department.",1
+C029,victim,2,"Okay what is this about?",1
+C029,attacker,3,"You owe Rs 85000 in back taxes. Pay immediately or face legal action.",1
+C029,victim,4,"I'll call the IT department directly to verify this.",1
+C029,attacker,5,"Sir don't call them. Come through us and we'll settle this quietly.",1
+C029,victim,6,"Legitimate tax officials don't say that. I'm reporting this. Goodbye.",1
+C030,attacker,1,"Sir aap ek ponzi scheme ke accused hain.",1
+C030,victim,2,"Yeh sach nahi hai. Main kisi ponzi scheme mein involved nahi hoon.",1
+C030,attacker,3,"Sir aapka naam list mein hai. Settle karo warna FIR hogi.",1
+C030,victim,4,"FIR hone do. Main innocent hoon. Mere paas sab records hain.",1
+C030,attacker,5,"Sir settle karo quietly. Rs 20000 mein case band ho jayega.",1
+C030,victim,6,"Fraud hai yeh. Main cybercrime helpline pe complain kar raha hoon.",1
+C031,attacker,1,"This is officer Singh calling. We have evidence of tax evasion against you.",1
+C031,victim,2,"What kind of evidence? Can you be specific?",1
+C031,attacker,3,"Sir our system shows discrepancy of Rs 3 lakh. You need to pay a penalty now.",1
+C031,victim,4,"I'll verify this with my CA. I'm not paying anything on a phone call.",1
+C031,attacker,5,"Sir your CA cannot help here. This is direct court order.",1
+C031,victim,6,"No legitimate court sends orders via random phone calls. This is a scam.",1
+C032,attacker,1,"Sir your mobile number was used to make bomb threat calls.",1
+C032,victim,2,"That's completely false. I want to know how to file a complaint.",1
+C032,attacker,3,"Sir don't file any complaint. Just pay the clearance fee and this goes away.",1
+C032,victim,4,"I am filing a complaint right now. Real investigators don't ask for clearance fees.",1
+C033,attacker,1,"Madam aapka bank account suspicious activity ke liye flag hua hai.",1
+C033,victim,2,"I handle my account carefully. What specific activity?",1
+C033,attacker,3,"We cannot disclose over call. Share your account details for immediate verification.",1
+C033,victim,4,"Banks never ask for account details over phone. Who are you?",1
+C033,attacker,5,"Madam please don't waste time. Your account will be frozen in 1 hour.",1
+C033,victim,6,"I'm calling my bank directly right now on the number on the back of my card.",1
+C034,attacker,1,"Sir is CBI officer speaking. National security matter.",1
+C034,victim,2,"CBI calls through official channels. How did you get my number?",1
+C034,attacker,3,"Sir we got it from the national database. Cooperate immediately.",1
+C034,victim,4,"I'm going to verify your identity through the CBI website.",1
+C034,attacker,5,"Sir the website won't have this information. Trust me and cooperate.",1
+C034,victim,6,"Legitimate officers don't say trust me. I'm ending this call.",1
+C035,attacker,1,"Aapka naam ek illegal SIM card racket mein aaya hai.",1
+C035,victim,2,"Galat number hai aapka. Aap galat insaan se baat kar rahe hain.",1
+C035,attacker,3,"Sir aapka aadhar se linked hai. Cooperate karna hoga.",1
+C035,victim,4,"Main actual TRAI ke helpline pe call karta hoon verify karne ke liye.",1
+C036,attacker,1,"Hello sir urgent message from your credit card company.",1
+C036,victim,2,"Okay what is it?",1
+C036,attacker,3,"Suspicious transaction detected. Please share OTP to reverse it.",1
+C036,victim,4,"Banks never ask for OTP on phone. You are a fraudster.",1
+C036,attacker,5,"Sir please it's urgent. Your card will be blocked.",1
+C036,victim,6,"Block it then. I'll visit the branch. You are trying to steal my money.",1
+C037,attacker,1,"This is the digital arrest division. You are under surveillance.",1
+C037,victim,2,"Digital arrest is not a legal concept in India.",1
+C037,attacker,3,"Sir it has been newly enacted. Cooperate or face consequences.",1
+C037,victim,4,"No such law exists. This is a well-known scam. I am reporting you.",1
+C038,attacker,1,"Sir aapka Aadhaar suspend ho gaya hai illegal transactions ke wajah se.",1
+C038,victim,2,"UIDAI se directly contact karta hoon is baare mein.",1
+C038,attacker,3,"Sir UIDAI time nahi dega. Abhi Rs 2000 pay karo reactivation ke liye.",1
+C038,victim,4,"UIDAI ka reactivation free hai. Yeh scam hai. Goodbye.",1
+C039,attacker,1,"Hello, this is just a quick survey call from our research firm.",0
+C039,victim,2,"Okay, what kind of survey?",0
+C039,attacker,3,"We are researching consumer satisfaction with mobile services. Takes 2 minutes.",0
+C039,victim,4,"Sure, go ahead.",0
+C039,attacker,5,"On a scale of 1 to 10 how satisfied are you with your current provider?",0
+C039,victim,6,"I'd say about 7. Good service but sometimes slow.",0
+C039,attacker,7,"Thank you for your time. That's all we needed.",0
+C039,victim,8,"No problem. Have a good day.",0
+C040,attacker,1,"Hi is this the owner of flat 304? Calling from the building management.",0
+C040,victim,2,"Yes, how can I help?",0
+C040,attacker,3,"We're doing a plumbing check in all flats tomorrow. Can we come between 10 and 12?",0
+C040,victim,4,"Yes that's fine.",0
+C040,attacker,5,"Thank you, we'll see you then.",0
+C040,victim,6,"Sure, see you tomorrow.",0
+C041,attacker,1,"Hello sir this is an insurance renewal reminder call.",0
+C041,victim,2,"Oh yes my policy is due next month.",0
+C041,attacker,3,"Would you like to renew? We can email you the details.",0
+C041,victim,4,"Please send the details to my email. I'll review and decide.",0
+C041,attacker,5,"Of course. We'll send it right away.",0
+C041,victim,6,"Thank you.",0
+C042,attacker,1,"Namaste, yeh coaching center se call hai. Aapke bacche ka result aaya hai.",0
+C042,victim,2,"Haan batao, kaisa raha?",0
+C042,attacker,3,"Unhone bahut achha kiya hai. Top 10 mein hain.",0
+C042,victim,4,"Bahut achha. Bahut khushi hui sunke.",0
+C042,attacker,5,"Kal certificate lene aa sakte hain.",0
+C042,victim,6,"Zaroor aayenge. Shukriya.",0
+C043,attacker,1,"Hello, is this Anita? Calling from the travel agency about your booking.",0
+C043,victim,2,"Yes, I booked a trip to Goa for next month.",0
+C043,attacker,3,"Your booking is confirmed. Hotel and flights are all set.",0
+C043,victim,4,"Great. Can you send me the confirmation on email?",0
+C043,attacker,5,"Absolutely, you'll receive it within an hour.",0
+C043,victim,6,"Perfect, thank you.",0
+C044,attacker,1,"Sir this is from the electricity board. Your bill is overdue.",0
+C044,victim,2,"I paid last week actually.",0
+C044,attacker,3,"Let me check. Yes I see the payment. Sorry for the confusion sir.",0
+C044,victim,4,"No worries, these things happen.",0
+C044,attacker,5,"Have a good day sir.",0
+C044,victim,6,"You too, goodbye.",0
+C045,attacker,1,"Hi this is Rahul from college calling.",0
+C045,victim,2,"Hey Rahul! How are you doing?",0
+C045,attacker,3,"I'm good yaar. Long time no talk. What's up with you?",0
+C045,victim,4,"All good. Started a new job last month.",0
+C045,attacker,5,"Oh nice! Let's meet up this weekend.",0
+C045,victim,6,"Sure, let's plan for Sunday.",0
+C046,attacker,1,"Sir aap ek international fraud case mein involved hain.",1
+C046,victim,2,"Okay, please tell me more. What fraud?",1
+C046,attacker,3,"Your account was used to route Rs 50 lakh to overseas accounts.",1
+C046,victim,4,"That is terrible. What do I need to do?",1
+C046,attacker,5,"Pay Rs 80000 immediately as security bond to freeze the investigation.",1
+C046,victim,6,"Okay I trust you. I'll pay. How do I send it?",1
+C046,attacker,7,"UPI to secure.govt@hdfc. Do it now and share the UTR number.",1
+C046,victim,8,"Done, UTR is 12345678901. Please help me clear my name.",1
+C047,attacker,1,"Madam you are under digital arrest. Do not leave your location.",1
+C047,victim,2,"Digital arrest? What is that? I'm scared.",1
+C047,attacker,3,"It means you are under virtual surveillance. Do not speak to anyone.",1
+C047,victim,4,"Okay okay, I won't speak to anyone. What do I need to do?",1
+C047,attacker,5,"Transfer Rs 1 lakh to our secure government account immediately.",1
+C047,victim,6,"I'll do it right now. Please don't arrest me.",1
+C047,attacker,7,"Also share your net banking login to verify the transfer.",1
+C047,victim,8,"Username is priya_123, password is Home#2024. Please hurry.",1
+C048,attacker,1,"Sir is case mein aapki property attach ho sakti hai.",1
+C048,victim,2,"Property attach? Main abhi vakeel ko call karta hoon.",1
+C048,attacker,3,"Sir vakeel ko involve kiya toh case aur bada ho jayega.",1
+C048,victim,4,"Nahi. Main zaroor vakeel se baat karunga.",1
+C048,attacker,5,"Sir please reconsider. Settle karo Rs 45000 mein.",1
+C048,victim,6,"Main phone rakh raha hoon. Yeh fraud hai. Cybercrime mein report karunga.",1
+C049,attacker,1,"This is the passport authority. Your passport application has an issue.",1
+C049,victim,2,"What kind of issue?",1
+C049,attacker,3,"There is a mismatch in your documents. Pay Rs 3000 for expedited verification.",1
+C049,victim,4,"I'll visit the passport office directly tomorrow.",1
+C049,attacker,5,"Sir that will take weeks. We can resolve it now on call.",1
+C049,victim,6,"Passport offices don't take payments over phone. This is a scam.",1
+C050,attacker,1,"Bhai main officer bol raha hoon. Aapke ghar pe raid aane wali hai.",1
+C050,victim,2,"Kaunse officer? ID proof dikhao.",1
+C050,attacker,3,"ID proof call pe nahi deta main. Bas Rs 10000 do aur raid nahi hogi.",1
+C050,victim,4,"Yeh open extortion hai. Main thane ja raha hoon abhi.",1
+C050,attacker,5,"Sir mat jaao. Baat karte hain.",1
+C050,victim,6,"Phone rakh raha hoon. Fraud hai yeh.",1
+C051,attacker,1,"Hello sir we detected unauthorized login on your account.",1
+C051,victim,2,"Oh no, what do I do?",1
+C051,attacker,3,"Share your OTP immediately to block the unauthorized access.",1
+C051,victim,4,"Okay the OTP is 548762.",1
+C051,attacker,5,"Thank you sir, account is now secured.",1
+C051,victim,6,"Thank you so much for helping.",1
+C052,attacker,1,"Madam your electricity connection will be cut in 2 hours if you don't pay.",1
+C052,victim,2,"What? I pay regularly. Let me check my records.",1
+C052,attacker,3,"Madam no time. Pay Rs 1500 now via UPI.",1
+C052,victim,4,"I'll call the electricity board directly on their helpline.",1
+C052,attacker,5,"Madam by then it will be cut. Pay now.",1
+C052,victim,6,"The helpline number is on my bill. I'm calling them. Not you.",1
+C053,attacker,1,"Sir this is from the Prime Minister's cybersecurity task force.",1
+C053,victim,2,"That sounds very official. What is this about?",1
+C053,attacker,3,"Your phone has been identified in a national security breach. You must cooperate.",1
+C053,victim,4,"I want to help with national security. What do you need?",1
+C053,attacker,5,"Pay Rs 25000 as a security clearance fee and share your location.",1
+C053,victim,6,"Okay I trust you. Paying now and my address is 45 MG Road Bangalore.",1
+C053,attacker,7,"Thank you sir. Your cooperation will be noted.",1
+C053,victim,8,"Please keep me safe. I've shared everything you asked for.",1
+C054,attacker,1,"Sir aapko abhi video call pe aana hoga virtual court ke liye.",1
+C054,victim,2,"Virtual court? Kaunse case mein?",1
+C054,attacker,3,"Aapke naam pe ek case hai. Aao nahi toh warrant execute hoga.",1
+C054,victim,4,"Court se official notice aata hai pehle. Yeh procedure nahi hai.",1
+C054,attacker,5,"Sir yeh naya digital court system hai. Trust karo.",1
+C054,victim,6,"Main high court ke helpdesk pe call karta hoon verify karne ke liye.",1
+C055,attacker,1,"Madam your child's school fees are pending.",0
+C055,victim,2,"I submitted the fees last Monday.",0
+C055,attacker,3,"Let me check. Yes, I see the receipt. There's a system error on our end.",0
+C055,victim,4,"Please ensure it's corrected. I have the receipt.",0
+C055,attacker,5,"Absolutely madam. We'll fix it today.",0
+C055,victim,6,"Thank you.",0
+C056,attacker,1,"Hello this is the blood bank. We have a request for your blood type.",0
+C056,victim,2,"Of course, when do you need it?",0
+C056,attacker,3,"Tomorrow morning if possible. It's for an emergency patient.",0
+C056,victim,4,"I'll be there at 9am.",0
+C056,attacker,5,"Thank you so much. You're saving a life.",0
+C056,victim,6,"Happy to help. See you tomorrow.",0
+C057,attacker,1,"Sir is your internet connection working fine?",0
+C057,victim,2,"Yes it's fine actually.",0
+C057,attacker,3,"We detected some intermittent issues in your area. Just routine checkup call.",0
+C057,victim,4,"It seems fine to me right now.",0
+C057,attacker,5,"Good to hear. We'll monitor and let you know if anything changes.",0
+C057,victim,6,"Thank you for checking.",0
+C058,attacker,1,"Hello aapke naam pe ek property document galat file hua hai.",1
+C058,victim,2,"Kaunsi property? Meri toh koi property nahi hai.",1
+C058,attacker,3,"Sir galat naam pe ek property aapke Aadhaar se link hai. Yeh serious hai.",1
+C058,victim,4,"Yeh fraud lagta hai. Main ek advocate se baat karta hoon.",1
+C058,attacker,5,"Advocate se baat mat karo. Rs 15000 do aur hum link remove kar denge.",1
+C058,victim,6,"Bilkul nahi. Main consumer forum mein jaata hoon. Yeh blackmail hai.",1
+C059,attacker,1,"Sir aapke account mein ek crore ka suspicious credit aaya hai.",1
+C059,victim,2,"Kya? Main toh check karta hoon abhi.",1
+C059,attacker,3,"Sir check mat karo. Agar aapne kisi ko bataya toh aapko arrested kiya jayega.",1
+C059,victim,4,"Main apna bank directly call karta hoon.",1
+C059,attacker,5,"Sir unhe mat batao. Sirf hum se deal karo.",1
+C059,victim,6,"Nahi. Main apne bank se baat kar raha hoon abhi. Bye.",1
+C060,attacker,1,"Sir this is the last warning before we send officers to your address.",1
+C060,victim,2,"Send them. I've done nothing wrong and I have nothing to hide.",1
+C060,attacker,3,"Sir please reconsider. Just pay Rs 20000 and this ends.",1
+C060,victim,4,"I am recording this call and filing a complaint. Goodbye.",1
+C061,attacker,1,"Sir aapka naam ek high-profile drug case mein aaya hai. Main officer Rajput bol raha hoon.",1
+C061,victim,2,"Drug case? Yeh toh bilkul galat hai. Main kuch nahi jaanta.",1
+C061,attacker,3,"Sir records hamare paas hain. Aapko abhi cooperate karna hoga warna arrest hoga.",1
+C061,victim,4,"Please main innocent hoon. Kya karun main?",1
+C061,attacker,5,"Rs 35000 transfer karo hamare secure account mein. Case band ho jayega.",1
+C061,victim,6,"Theek hai kar deta hoon. Mujhe arrest nahi hona.",1
+C061,attacker,7,"Aur apna Aadhaar OTP bhi share karo identity verification ke liye.",1
+C061,victim,8,"OTP aaya hai 456123. Please mujhe is case se bahar nikalo.",1
+C062,attacker,1,"This is the passport authority. Your passport application flagged for suspicious travel history.",1
+C062,victim,2,"I travel for work. Everything is legitimate.",1
+C062,attacker,3,"Sir we have red flags. Pay the clearance fee immediately or passport gets cancelled.",1
+C062,victim,4,"How much is the fee? I need my passport for travel next week.",1
+C062,attacker,5,"Rs 8000 to our official account. Must be done in 2 hours.",1
+C062,victim,6,"Okay sending now. Please don't cancel my passport.",1
+C062,attacker,7,"Good. Also share your flight booking details for our records.",1
+C062,victim,8,"My flight is on 15th March to Dubai. Booking reference AB1234. Please help.",1
+C063,attacker,1,"Madam aapke naam pe ek illegal SIM card activate hua hai.",1
+C063,victim,2,"Main toh sirf ek hi SIM use karti hoon.",1
+C063,attacker,3,"Madam records hamare paas hain. Aapko turant cooperate karna hoga.",1
+C063,victim,4,"Kya karna hoga mujhe? Bahut dar lag raha hai.",1
+C063,attacker,5,"Rs 5000 ka fine bharo abhi. Warna criminal case darj hoga.",1
+C063,victim,6,"Okay kar deti hoon. Account number do please.",1
+C063,attacker,7,"UPI pe bhejo aur screenshot share karo hamare WhatsApp pe.",1
+C063,victim,8,"Done. Screenshot bhej rahi hoon. Please mujhe bachao.",1
+C064,attacker,1,"Hello sir this is from the Income Tax refund department.",1
+C064,victim,2,"Oh, I have been waiting for my refund.",1
+C064,attacker,3,"Sir your refund of Rs 15000 is ready. We need to verify your account.",1
+C064,victim,4,"Yes please, how do I verify?",1
+C064,attacker,5,"Share your account number and the OTP we send to your registered mobile.",1
+C064,victim,6,"Account is 987654321 and OTP is 778899.",1
+C064,attacker,7,"Thank you. One more verification — your net banking password.",1
+C064,victim,8,"Password is Tax@2024. Please process my refund.",1
+C065,attacker,1,"Sir aap ek WhatsApp group ke admin hain jo seditious content share karta tha.",1
+C065,victim,2,"Main toh sirf family group ka admin hoon.",1
+C065,attacker,3,"Sir hamare records mein aapka number flagged hai. Abhi cooperate karo.",1
+C065,victim,4,"Main kuch bhi illegal nahi karta. Kya proof hai aapke paas?",1
+C065,attacker,5,"Proof court mein dikhayenge. Pehle Rs 20000 settlement fee bharo.",1
+C065,victim,6,"Theek hai main deta hoon. Bas case band karo.",1
+C065,attacker,7,"Aur apni location bhi share karo verification ke liye.",1
+C065,victim,8,"Main Pune mein hoon, Koregaon Park mein. Please is case ko close karo.",1
+C066,attacker,1,"This is SEBI cybercell. Your trading account shows algorithmic fraud.",1
+C066,victim,2,"I trade manually. I don't use any algorithms.",1
+C066,attacker,3,"Sir your account is flagged. Pay the penalty immediately or we freeze the account.",1
+C066,victim,4,"Please don't freeze. How much is the penalty?",1
+C066,attacker,5,"Rs 50000. Transfer within 30 minutes.",1
+C066,victim,6,"I'll transfer. Please give me the account number.",1
+C066,attacker,7,"Transfer to sebi.settlement@upi and share your broker login for verification.",1
+C066,victim,8,"Broker login is trader99 password Stock@123. Transferring now.",1
+C067,attacker,1,"Aapka PAN card ek benami property transaction mein use hua hai.",1
+C067,victim,2,"Yeh sach nahi hai. Main kisi bhi property deal mein nahi hoon.",1
+C067,attacker,3,"Sir Income Tax department ki taraf se notice aaya hai. Cooperate karo.",1
+C067,victim,4,"Main kya kar sakta hoon is situation mein?",1
+C067,attacker,5,"Rs 45000 settlement amount bharo. Case close ho jayega.",1
+C067,victim,6,"Okay kar deta hoon. Aap genuine lagte ho. Transfer kar raha hoon.",1
+C067,attacker,7,"Aur apna PAN number aur DOB confirm karo.",1
+C067,victim,8,"PAN hai ABCDE1234F aur DOB hai 20 June 1985. Please help.",1
+C068,attacker,1,"Sir this is the cyber crime wing. Your email was hacked and used for phishing.",1
+C068,victim,2,"I didn't notice anything unusual with my email.",1
+C068,attacker,3,"Sir it happens without your knowledge. You must cooperate to clear your name.",1
+C068,victim,4,"Of course I'll cooperate. What do I need to do?",1
+C068,attacker,5,"Pay a Rs 10000 security bond and share your email password for forensics.",1
+C068,victim,6,"Email password is myemail@456. And I'll pay the bond right now.",1
+C068,attacker,7,"Thank you for trusting us. We'll clear your name within 24 hours.",1
+C068,victim,8,"Thank you officer. I trust you completely. Please handle this quickly.",1
+C069,attacker,1,"Madam aapke husband ke naam pe ek loan fraud case hai.",1
+C069,victim,2,"Mere husband toh koi loan nahi liya. Yeh galat hai.",1
+C069,attacker,3,"Madam records hamare paas hain. Aapko dono ko cooperate karna hoga.",1
+C069,victim,4,"Please mera ghar bachao. Kya karun main?",1
+C069,attacker,5,"Rs 60000 settlement fee bharo abhi. Dono ka case band ho jayega.",1
+C069,victim,6,"Okay kar deti hoon. Ghar mein savings hain. Bhejti hoon.",1
+C069,attacker,7,"Aur ghar ka address bhi batao verification ke liye.",1
+C069,victim,8,"12 Rose Garden Society Pune 411001. Please hamare ghar ko protect karo.",1
+C070,attacker,1,"Sir your Aadhaar has been used to open accounts in 5 different states.",1
+C070,victim,2,"That is impossible. I only have accounts in my home city.",1
+C070,attacker,3,"Sir the biometric data was cloned. This is a serious fraud against you.",1
+C070,victim,4,"Oh no. What should I do to protect myself?",1
+C070,attacker,5,"Pay Rs 3000 for Aadhaar reactivation and share your biometric OTP.",1
+C070,victim,6,"Okay I want to protect my Aadhaar. OTP is 334455. Paying now.",1
+C070,attacker,7,"Also confirm your mother's maiden name for security verification.",1
+C070,victim,8,"My mother's maiden name is Sharma. Please secure my Aadhaar.",1
+C071,attacker,1,"Hello this is from the electricity department. Urgent disconnection notice.",1
+C071,victim,2,"But I paid my bill last week.",1
+C071,attacker,3,"Sir payment not reflecting. Pay again or connection cut in 2 hours.",1
+C071,victim,4,"Okay I don't want disconnection. How do I pay?",1
+C071,attacker,5,"Pay Rs 2500 via UPI to our collection agent immediately.",1
+C071,victim,6,"Fine I'll pay. Give me the UPI ID.",1
+C071,attacker,7,"UPI is elec.collect@bank. Pay and share screenshot.",1
+C071,victim,8,"Done paid. Screenshot sent. Please don't disconnect.",1
+C072,attacker,1,"Sir we are from the National Cyber Crime portal. Your case is serious.",1
+C072,victim,2,"What case? I haven't done anything.",1
+C072,attacker,3,"Someone filed a complaint against you using your phone number.",1
+C072,victim,4,"Who filed? I want to know.",1
+C072,attacker,5,"Cannot disclose. But settle it now for Rs 25000 and we close it.",1
+C072,victim,6,"Okay if that closes the case I'll pay.",1
+C072,attacker,7,"Pay and also share your Aadhaar details for case records.",1
+C072,victim,8,"Aadhaar is 5678 9012 3456. Paying now. Please close my case.",1
+C073,attacker,1,"Aap ek ponzi scheme ke involuntary participant hain.",1
+C073,victim,2,"Main toh sirf mutual funds mein invest karta hoon.",1
+C073,attacker,3,"Sir unhi funds se paise ek ponzi scheme mein gaye hain. Aap suspect hain.",1
+C073,victim,4,"Yeh toh bahut bura hai. Main kya karun?",1
+C073,attacker,5,"Abhi Rs 40000 pay karo. Hum aapka naam list se hata denge.",1
+C073,victim,6,"Theek hai main pay karta hoon. Mujhe is list se hataao.",1
+C073,attacker,7,"Apna mutual fund login bhi share karo verification ke liye.",1
+C073,victim,8,"Login hai investor123 password Mfund@456. Please mujhe is case se nikalo.",1
+C074,attacker,1,"This is the enforcement directorate. Your property is linked to black money.",1
+C074,victim,2,"My property was purchased with legitimate income. All documents are clean.",1
+C074,victim,2,"I want to speak to a lawyer.",1
+C074,attacker,3,"Sir do not contact a lawyer. This will complicate the case further.",1
+C074,victim,4,"I am not doing anything without legal advice. Who are you exactly?",1
+C074,attacker,5,"Sir I am trying to help you. Just pay Rs 75000 settlement.",1
+C074,victim,6,"No. I'm calling the ED helpline directly to verify this call.",1
+C075,attacker,1,"Hello sir main CBI officer Mehta bol raha hoon.",1
+C075,victim,2,"Haan boliye.",1
+C075,attacker,3,"Aapka naam ek hawala network mein aaya hai. Bahut serious matter hai.",1
+C075,victim,4,"Yeh galat hai. Main kisi hawala mein involve nahi hoon.",1
+C075,attacker,5,"Sir hamare paas evidence hai. Abhi Rs 50000 pay karo warna arrest hoga.",1
+C075,victim,6,"Nahi. Main apne vakeel ko call karta hoon pehle.",1
+C075,attacker,7,"Vakeel ko mat bulao. Yeh case aur bada ho jayega.",1
+C075,victim,8,"Aap fraud hain. Main cybercrime helpline pe complaint karta hoon.",1
+C076,attacker,1,"Sir this is the telecom regulatory authority. Your SIM flagged for misuse.",1
+C076,victim,2,"I use my SIM only for personal calls.",1
+C076,attacker,3,"Sir someone misused your SIM identity. Pay verification fee to clear.",1
+C076,victim,4,"If someone misused it I should complain to police, not pay you.",1
+C076,attacker,5,"Sir please cooperate. Rs 3000 fee and your SIM is cleared.",1
+C076,victim,6,"I'm going to the TRAI website to verify. This sounds like a scam.",1
+C077,attacker,1,"Madam aapka beta college mein ek illegal activity mein pakda gaya.",1
+C077,victim,2,"Mera beta? Yeh bilkul impossible hai.",1
+C077,attacker,3,"Madam evidence hamare paas hai. Usse bail dilane ke liye abhi paise do.",1
+C077,victim,4,"Main abhi college call karti hoon verify karne ke liye.",1
+C077,attacker,5,"Madam time waste mat karo. Rs 30000 do warna case register hoga.",1
+C077,victim,6,"Main phone rakh rahi hoon aur directly college principal ko call karti hoon.",1
+C078,attacker,1,"Sir your company's GST returns show fraudulent invoices.",1
+C078,victim,2,"Our accounts are audited regularly. Everything is compliant.",1
+C078,attacker,3,"Sir our system shows otherwise. Pay the penalty immediately.",1
+C078,victim,4,"I'll contact our chartered accountant and respond through proper channels.",1
+C078,attacker,5,"Sir proper channels will take months. Settle now for Rs 1 lakh.",1
+C078,victim,6,"No. We'll respond officially. Goodbye.",1
+C079,attacker,1,"Hello main officer Singh bol raha hoon. Ek serious complaint aayi hai aapke baare mein.",1
+C079,victim,2,"Kaisi complaint? Kisi ne kya kiya?",1
+C079,attacker,3,"Aapke neighbour ne aapke upar harassment ki complaint ki hai.",1
+C079,victim,4,"Yeh bilkul jhooth hai. Main police station jaata hoon khud.",1
+C079,attacker,5,"Sir police station ki zaroorat nahi. Rs 15000 mein settle karo.",1
+C079,victim,6,"Nahi karunga. Main actual police station ja raha hoon abhi. Fraud hai yeh.",1
+C080,attacker,1,"This is the RBI financial crimes unit. Urgent action on your account needed.",1
+C080,victim,2,"What kind of action?",1
+C080,attacker,3,"Your account is being used as a mule account. Cooperate to clear your name.",1
+C080,victim,4,"I'll call RBI directly on their official helpline.",1
+C080,attacker,5,"Sir by then your account will be frozen. Cooperate now.",1
+C080,victim,6,"Freeze it then. I'll resolve it through official channels. Bye.",1
+C081,attacker,1,"Hi is this Suresh? This is about your vehicle insurance renewal.",0
+C081,victim,2,"Yes I was planning to renew it next month.",0
+C081,attacker,3,"Sir we have a special discount available this week. 15% off on renewal.",0
+C081,victim,4,"That sounds good. Can you email me the details?",0
+C081,attacker,5,"Of course, I'll send it right away to your registered email.",0
+C081,victim,6,"Perfect. I'll review and call back if interested.",0
+C082,attacker,1,"Hello madam this is from the children's school.",0
+C082,victim,2,"Yes, what is it?",0
+C082,attacker,3,"Your child has been selected for the state level science competition.",0
+C082,victim,4,"Oh wonderful! What are the next steps?",0
+C082,attacker,5,"Please come to school tomorrow with a consent form. We'll brief you then.",0
+C082,victim,6,"We'll be there at 9 AM. Thank you so much.",0
+C083,attacker,1,"Bhai kaisa hai? Bahut dino baad call kiya.",0
+C083,victim,2,"Yaar sab theek hai. Tu bata apna haal.",0
+C083,attacker,3,"Kal ki party ke baare mein pooch raha tha. Aa raha hai na?",0
+C083,victim,4,"Haan bilkul. Kahan hai party?",0
+C083,attacker,5,"Mere ghar pe. 8 baje aa jaana.",0
+C083,victim,6,"Pakka. Kuch laoon kya?",0
+C084,attacker,1,"Hello sir this is from the bank's home loan department.",0
+C084,victim,2,"Yes I had submitted an application last week.",0
+C084,attacker,3,"Sir your application is approved. Loan amount of Rs 40 lakh sanctioned.",0
+C084,victim,4,"That is great news! What are the next steps?",0
+C084,attacker,5,"Please visit the branch with your documents by Friday.",0
+C084,victim,6,"I'll be there Thursday. Thank you.",0
+C085,attacker,1,"Namaste yeh aapki building society se call hai.",0
+C085,victim,2,"Haan boliye.",0
+C085,attacker,3,"Kal society meeting hai. Annual maintenance charges ke baare mein.",0
+C085,victim,4,"Theek hai. Kitne baje hai meeting?",0
+C085,attacker,5,"Shaam ko 6 baje community hall mein.",0
+C085,victim,6,"Main aaunga. Shukriya.",0
+C086,attacker,1,"Hi this is the lab. Your blood test results are ready.",0
+C086,victim,2,"Great. Are the results normal?",0
+C086,attacker,3,"Everything looks good. Doctor will explain when you visit.",0
+C086,victim,4,"I'll come in tomorrow morning to collect.",0
+C086,attacker,5,"Reports will be ready at the front desk.",0
+C086,victim,6,"Thank you. See you tomorrow.",0
+C087,attacker,1,"Hello sir we are conducting a survey about banking services.",0
+C087,victim,2,"Okay sure I can participate.",0
+C087,attacker,3,"On a scale of 1 to 10 how satisfied are you with your bank?",0
+C087,victim,4,"I'd say 8. Good service overall.",0
+C087,attacker,5,"Thank you for your feedback. That's all we needed.",0
+C087,victim,6,"No problem. Have a good day.",0
+C088,attacker,1,"Sir your Amazon prime membership is expiring tomorrow.",0
+C088,victim,2,"I'll renew it online directly through the app.",0
+C088,attacker,3,"Of course sir. Just calling as a courtesy reminder.",0
+C088,victim,4,"Thank you for the heads up.",0
+C088,attacker,5,"Have a great day sir.",0
+C088,victim,6,"You too. Goodbye.",0
+C089,attacker,1,"Hello is this Dr. Sharma's clinic? Calling about an appointment.",0
+C089,victim,2,"Yes this is the clinic. How can I help?",0
+C089,attacker,3,"I would like to book an appointment for next Tuesday.",0
+C089,victim,4,"We have a slot at 11 AM. Shall I book it?",0
+C089,attacker,5,"Yes please. My name is Vikram.",0
+C089,victim,6,"Confirmed. See you Tuesday at 11 AM.",0
+C090,attacker,1,"Yaar kal trip ka final plan kya hai?",0
+C090,victim,2,"Subah 6 baje nikal rahe hain. Sab ready hai.",0
+C090,attacker,3,"Main bhi 6 baje pahunch jaunga tumhare ghar.",0
+C090,victim,4,"Theek hai. Kuch laana hai kya?",0
+C090,attacker,5,"Bas paani ki bottles le aana. Baki sab main le lunga.",0
+C090,victim,6,"Done. Kal milte hain.",0
+C091,attacker,1,"Sir this is from the municipal corporation. Property tax receipt ready.",0
+C091,victim,2,"Oh good. Where can I collect it?",0
+C091,attacker,3,"You can download it from the municipal website or collect from the office.",0
+C091,victim,4,"I'll download it online. Thanks.",0
+C091,attacker,5,"Sure. The receipt will be under your registered mobile number.",0
+C091,victim,6,"Perfect. Thank you for informing.",0
+C092,attacker,1,"Hello madam your health insurance claim has been approved.",0
+C092,victim,2,"Oh wonderful. How long will the payment take?",0
+C092,attacker,3,"The amount will be credited to your account within 5 working days.",0
+C092,victim,4,"Thank you. That is a relief.",0
+C092,attacker,5,"Is there anything else I can help you with?",0
+C092,victim,6,"No that's all. Thank you very much.",0
+C093,attacker,1,"Hi this is from the coaching center about your child's batch change.",0
+C093,victim,2,"Yes we had requested a change to the morning batch.",0
+C093,attacker,3,"It has been approved. Starting from Monday.",0
+C093,victim,4,"That works perfectly. Thank you.",0
+C093,attacker,5,"We'll send a confirmation message as well.",0
+C093,victim,6,"Great. Appreciated.",0
+C094,attacker,1,"Namaste main mandir trust se bol raha hoon.",0
+C094,victim,2,"Haan boliye.",0
+C094,attacker,3,"Kal annual puja hai. Aapko invite karna chahte hain.",0
+C094,victim,4,"Zaroor aayenge. Kitne baje hai?",0
+C094,attacker,5,"Subah 9 baje se shuru hoga.",0
+C094,victim,6,"Theek hai. Hum 9 baje pahunchenge.",0
+C095,attacker,1,"Sir your car is ready after the service.",0
+C095,victim,2,"Great. What is the total bill?",0
+C095,attacker,3,"Rs 4500 for oil change and brake inspection.",0
+C095,victim,4,"That's reasonable. I'll come pick it up this evening.",0
+C095,attacker,5,"We're open till 7 PM. See you then.",0
+C095,victim,6,"See you. Thank you.",0
+C096,attacker,1,"Hello this is the travel agent about your Goa booking.",0
+C096,victim,2,"Yes, is everything confirmed?",0
+C096,attacker,3,"Hotel and flights both confirmed. Your itinerary is being emailed.",0
+C096,victim,4,"Perfect. Can you also arrange airport pickup?",0
+C096,attacker,5,"Yes we can arrange that for Rs 800 extra. Shall I add it?",0
+C096,victim,6,"Yes please add it. Thank you.",0
+C097,attacker,1,"Sir this is about your PF withdrawal request.",0
+C097,victim,2,"Yes I had submitted it last month.",0
+C097,attacker,3,"It has been processed. Amount will be credited in 3 days.",0
+C097,victim,4,"Thank you for informing. I was getting worried.",0
+C097,attacker,5,"All settled. Have a good day.",0
+C097,victim,6,"Thank you. Goodbye.",0
+C098,attacker,1,"Hello is this the number for the music classes?",0
+C098,victim,2,"I think you have the wrong number.",0
+C098,attacker,3,"Oh sorry for the disturbance.",0
+C098,victim,4,"No problem.",0
+C099,attacker,1,"Didi kal function ke liye kya pehnengi aap?",0
+C099,victim,2,"Socha nahi abhi tak. Tu bata.",0
+C099,attacker,3,"Main toh yellow saree pehnn rahi hoon. Tum bhi kuch bright colour lo.",0
+C099,victim,4,"Acha theek hai. Pink suit pehnn leti hoon.",0
+C099,attacker,5,"Perfect. Kal 10 baje nikalna hai.",0
+C099,victim,6,"Haan theek hai. Kal milte hain.",0
+C100,attacker,1,"Sir the new society rules have been emailed to all residents.",0
+C100,victim,2,"Yes I received it. Will review it today.",0
+C100,attacker,3,"Any questions please attend Sunday's meeting at 5 PM.",0
+C100,victim,4,"I'll try to attend. Thank you.",0
+C100,attacker,5,"Thank you for your cooperation.",0
+C100,victim,6,"Sure. Goodbye.",0
+C101,attacker,1,"Sir aapka naam ek fake recruitment agency ke records mein mila hai.",1
+C101,victim,2,"Main kisi recruitment agency se connected nahi hoon.",1
+C101,attacker,3,"Sir aapke documents use karke agency chal rahi thi. Yeh serious offence hai.",1
+C101,victim,4,"Yeh toh bahut bura hai. Main kya karun?",1
+C101,attacker,5,"Rs 25000 settlement bharo. Hum case band kar denge.",1
+C101,victim,6,"Theek hai kar deta hoon. Aap sahi keh rahe lagte hain.",1
+C101,attacker,7,"Aur apni company ka registration number bhi share karo records ke liye.",1
+C101,victim,8,"Company registration hai U12345MH2010. Paying now. Please close this.",1
+C102,attacker,1,"This is the financial crimes division. Your crypto wallet is flagged.",1
+C102,victim,2,"I only hold crypto for investment. All legally purchased.",1
+C102,attacker,3,"Sir the transactions show money laundering patterns. Pay penalty now.",1
+C102,victim,4,"I need documentation before I pay anything.",1
+C102,attacker,5,"Sir no time for documentation. Pay Rs 80000 or we freeze your assets.",1
+C102,victim,6,"I'm contacting my financial advisor and reporting this call. Goodbye.",1
+C103,attacker,1,"Aapka naam ek online gambling site ke payment records mein hai.",1
+C103,victim,2,"Main kabhi online gambling nahi karta. Yeh jhooth hai.",1
+C103,attacker,3,"Sir kisi ne aapki identity use ki hai. Cooperate karo.",1
+C103,victim,4,"Toh main victim hoon. Police complaint karun toh achha rahega.",1
+C103,attacker,5,"Nahi nahi. Pehle Rs 15000 do. Phir police.",1
+C103,victim,6,"Yeh suspicious hai. Main seedha cybercrime helpline pe call karta hoon.",1
+C104,attacker,1,"Hello sir this is the national health mission. Survey call.",1
+C104,victim,2,"Okay what is this about?",1
+C104,attacker,3,"Sir we are verifying Aadhaar linked health cards. Please share your Aadhaar OTP.",1
+C104,victim,4,"Government agencies never ask for OTP on phone. Who are you?",1
+C104,attacker,5,"Sir this is a new verification process. Please cooperate.",1
+C104,victim,6,"I'm reporting this number. Goodbye.",1
+C105,attacker,1,"Madam aapke account se kisi ne Rs 50000 transfer karne ki koshish ki.",1
+C105,victim,2,"What? Let me check my account.",1
+C105,attacker,3,"Madam check mat karo. Share your OTP immediately to block this.",1
+C105,victim,4,"Banks never ask for OTP to block transactions. This is a fraud call.",1
+C105,attacker,5,"Madam please hurry. Money is being transferred right now.",1
+C105,victim,6,"I'm calling my bank directly. Don't call again.",1
+C106,attacker,1,"Sir your electricity meter shows excess usage. Tampering detected.",1
+C106,victim,2,"That's not possible. I use standard appliances only.",1
+C106,attacker,3,"Sir our AI system flagged it. Pay Rs 5000 penalty or we file FIR.",1
+C106,victim,4,"I'll visit the electricity office directly to verify this claim.",1
+C106,attacker,5,"Sir visiting will take time. Settle on call now.",1
+C106,victim,6,"Electricity board has official channels. I'll use those. Fraud call.",1
+C107,attacker,1,"Aapke ghar ka pata ek crime scene ke documents mein aaya hai.",1
+C107,victim,2,"Hamare ghar mein koi crime nahi hua. Yeh galat hai.",1
+C107,attacker,3,"Sir pichle tenant ne kuch illegal activities ki thi. Aap bhi suspect ho gaye.",1
+C107,victim,4,"Toh main police station jata hoon khud complaint karne.",1
+C107,attacker,5,"Police mat jao. Rs 20000 do. Hum naam hata denge.",1
+C107,victim,6,"Yeh extortion hai. Main FIR karta hoon is number ke khilaf.",1
+C108,attacker,1,"Sir this is from the cybercrime division. Your IP is linked to a hack.",1
+C108,victim,2,"I am not a hacker. I use internet for basic purposes.",1
+C108,attacker,3,"Sir someone may have used your WiFi. Cooperate and pay the penalty.",1
+C108,victim,4,"I'll change my WiFi password and report this to my ISP.",1
+C108,attacker,5,"Sir that won't help. Pay Rs 15000 now to clear your IP.",1
+C108,victim,6,"I'm reporting this number. You are a fraud. Goodbye.",1
+C109,attacker,1,"Hello sir aap ek illegal import case mein involve hain.",1
+C109,victim,2,"Main koi import export nahi karta. Aap galat number pe hain.",1
+C109,attacker,3,"Sir aapka Aadhaar use hua hai. Cooperate karo warna arrested hoga.",1
+C109,victim,4,"Main UIDAI ko call karta hoon apna Aadhaar freeze karne ke liye.",1
+C109,attacker,5,"Sir please cooperate. Rs 30000 settlement.",1
+C109,victim,6,"Nahi. Main cybercrime mein report kar raha hoon. Phone rakh raha hoon.",1
+C110,attacker,1,"This is from the Anti Corruption Bureau. A bribe complaint against you.",1
+C110,victim,2,"I have never taken a bribe in my career.",1
+C110,attacker,3,"Sir an anonymous complaint has been filed. Cooperate to avoid suspension.",1
+C110,victim,4,"I'll go to the ACB office myself to verify this complaint.",1
+C110,attacker,5,"Sir office will take weeks. Settle for Rs 40000 now.",1
+C110,victim,6,"Real ACB doesn't ask for money. Reporting this call. Goodbye.",1
+C111,attacker,1,"Sir aapki beti ka naam ek MMS scandal mein aaya hai.",1
+C111,victim,2,"Yeh bilkul galat hai. Meri beti bahut responsible hai.",1
+C111,attacker,3,"Sir hamara record galat nahi hota. Cooperate karo.",1
+C111,victim,4,"Main abhi meri beti se baat karta hoon aur police ko inform karta hoon.",1
+C111,attacker,5,"Police ko mat bulao. Rs 50000 do. Silently handle karte hain.",1
+C111,victim,6,"Yeh blackmail hai. Main police ko call kar raha hoon abhi.",1
+C112,attacker,1,"Hello sir this is from the government pension department.",1
+C112,victim,2,"Yes my pension is due this month.",1
+C112,attacker,3,"Sir there is a linking issue. Share your bank OTP to release the pension.",1
+C112,victim,4,"Pension department never asks for OTP. Who is this really?",1
+C112,attacker,5,"Sir please cooperate. It's for your benefit.",1
+C112,victim,6,"I'll visit the pension office directly. Don't call again.",1
+C113,attacker,1,"Sir your name appears in a list of people involved in fake degree scam.",1
+C113,victim,2,"My degrees are from recognized universities. Everything is legitimate.",1
+C113,attacker,3,"Sir someone used your identity. Pay the clearance fee.",1
+C113,victim,4,"I'll contact my university and verify before doing anything.",1
+C113,attacker,5,"Sir Rs 20000 and we remove your name from the list.",1
+C113,victim,6,"No. Contacting university and cybercrime. Goodbye.",1
+C114,attacker,1,"Madam aapke naam pe ek credit card fraud hua hai.",1
+C114,victim,2,"I don't have any credit cards.",1
+C114,attacker,3,"Madam someone applied in your name. Share Aadhaar details to block it.",1
+C114,victim,4,"CIBIL ke website pe jaati hoon check karne. Aap fraud lagte hain.",1
+C114,attacker,5,"Madam time nahi hai. Cooperate karo.",1
+C114,victim,6,"Phone rakh rahi hoon. Complaint karungi.",1
+C115,attacker,1,"Sir this is from Customs. A parcel in your name contains prohibited items.",1
+C115,victim,2,"I haven't ordered anything from abroad.",1
+C115,attacker,3,"Sir someone sent it in your name. Pay clearance fee to avoid arrest.",1
+C115,victim,4,"I'll visit the customs office directly with my ID.",1
+C115,attacker,5,"Sir it will take days. Pay Rs 15000 now.",1
+C115,victim,6,"Genuine customs issues are handled officially. Reporting this. Bye.",1
+C116,attacker,1,"Hello this is your internet service provider customer care.",0
+C116,victim,2,"Yes I had a complaint about slow speed.",0
+C116,attacker,3,"We have identified the issue in your area. Will be resolved in 24 hours.",0
+C116,victim,4,"Okay thank you for informing.",0
+C116,attacker,5,"Sorry for the inconvenience sir.",0
+C116,victim,6,"No worries. Thank you.",0
+C117,attacker,1,"Hi this is from the gym. Your annual membership is up for renewal.",0
+C117,victim,2,"Yes I was planning to renew. What are the current rates?",0
+C117,attacker,3,"Same as last year. Rs 8000 for annual membership.",0
+C117,victim,4,"I'll come in this week to renew.",0
+C117,attacker,5,"Great. We look forward to seeing you.",0
+C117,victim,6,"Thank you. Bye.",0
+C118,attacker,1,"Hello sir the NGO camp you registered for is this Sunday.",0
+C118,victim,2,"Yes I had registered. What time should I be there?",0
+C118,attacker,3,"Please arrive by 9 AM. Bring your registration slip.",0
+C118,victim,4,"Sure I'll be there. Thanks for the reminder.",0
+C118,attacker,5,"See you Sunday.",0
+C118,victim,6,"Looking forward to it.",0
+C119,attacker,1,"Madam aapka ration card update hua hai. Collect karna hoga.",0
+C119,victim,2,"Kahan se collect karoon?",0
+C119,attacker,3,"Nearest ration office se. Apna ID le aana.",0
+C119,victim,4,"Theek hai kal jaaungi.",0
+C119,attacker,5,"Theek hai madam.",0
+C119,victim,6,"Shukriya.",0
+C120,attacker,1,"Hello this is from the library. Your reserved book is available.",0
+C120,victim,2,"Oh great! How long is it reserved for?",0
+C120,attacker,3,"7 days from today. Please collect at your convenience.",0
+C120,victim,4,"I'll come in tomorrow afternoon.",0
+C120,attacker,5,"We'll keep it ready for you.",0
+C120,victim,6,"Thank you.",0
+C121,attacker,1,"Sir the flat you enquired about is available for viewing.",0
+C121,victim,2,"Great. Can I see it this weekend?",0
+C121,attacker,3,"Saturday 11 AM works. I'll send you the address.",0
+C121,victim,4,"Perfect. I'll be there.",0
+C121,attacker,5,"See you Saturday.",0
+C121,victim,6,"Thanks. Bye.",0
+C122,attacker,1,"Hello sir this is from voter registration department.",0
+C122,victim,2,"Yes I had applied for a voter ID correction.",0
+C122,attacker,3,"Your correction has been processed. New card will be delivered in 2 weeks.",0
+C122,victim,4,"Thank you. That's good news.",0
+C122,attacker,5,"Happy to help. Have a good day.",0
+C122,victim,6,"You too. Goodbye.",0
+C123,attacker,1,"Bhai kal match kaisa tha? Main dekh nahi paaya.",0
+C123,victim,2,"Yaar India ne kamaal kar diya. Last over mein jeet gaye.",0
+C123,attacker,3,"Sach mein? Score kya tha?",0
+C123,victim,4,"Target 185 tha. Hum 187 pe pahunch gaye.",0
+C123,attacker,5,"Wow. Rohit ne kitna mara?",0
+C123,victim,6,"60 runs. Bahut achha khela.",0
+C124,attacker,1,"Hello madam this is from your child's school for attendance.",0
+C124,victim,2,"Is everything okay?",0
+C124,attacker,3,"Yes all fine. Just noting that your child was absent Friday.",0
+C124,victim,4,"She was unwell. I had sent a note.",0
+C124,attacker,5,"Yes we have the note. Just updating records.",0
+C124,victim,6,"Okay. Thank you for confirming.",0
+C125,attacker,1,"Sir your apartment intercom is being upgraded next week.",0
+C125,victim,2,"What days will the work happen?",0
+C125,attacker,3,"Tuesday and Wednesday between 10 AM and 4 PM.",0
+C125,victim,4,"Okay. We'll make sure someone is home.",0
+C125,attacker,5,"Thank you for your cooperation.",0
+C125,victim,6,"Sure. Thank you for informing.",0
+C126,attacker,1,"Aapke bank account mein ek crore ka suspicious transfer aaya hai.",1
+C126,victim,2,"Ek crore? Yeh toh bilkul galat hai. Main abhi account check karta hoon.",1
+C126,attacker,3,"Account check mat karo sir. Arrested ho jaoge. Cooperate karo.",1
+C126,victim,4,"Main apne bank manager ko personally call karta hoon.",1
+C126,attacker,5,"Sir bank manager ko mat batao. Yeh confidential case hai.",1
+C126,victim,6,"Nahi. Main apne bank jaata hoon physically. Phone rakh raha hoon.",1
+C127,attacker,1,"This is officer Sharma from CBI financial crimes. We need your cooperation.",1
+C127,victim,2,"What is this regarding specifically?",1
+C127,attacker,3,"Sir your account is linked to Rs 5 crore fraud. Pay settlement now.",1
+C127,victim,4,"CBI doesn't settle over phone calls. I need written notice.",1
+C127,attacker,5,"Sir written notice takes time. Cooperate now and save yourself.",1
+C127,victim,6,"I'll wait for proper notice. This is a scam call. Goodbye.",1
+C128,attacker,1,"Sir aapka mobile number ek terrorist ke call records mein hai.",1
+C128,victim,2,"Yeh bilkul impossible hai. Main kisi terrorist ko nahi jaanta.",1
+C128,attacker,3,"Sir number records mein hai. Cooperate karo warna NIA arrest karega.",1
+C128,victim,4,"NIA ke baare mein main directly NIA website se information loonga.",1
+C128,attacker,5,"Sir website pe is case ki information nahi hogi. Trust karo.",1
+C128,victim,6,"Legitimate agencies don't say trust me. Reporting this. Bye.",1
+C129,attacker,1,"Hello madam we found your phone number linked to an escort service.",1
+C129,victim,2,"That is completely false and defamatory.",1
+C129,attacker,3,"Madam pay Rs 30000 and we remove your number from the list.",1
+C129,victim,4,"I'm filing a police complaint against you for harassment. Goodbye.",1
+C130,attacker,1,"Sir your trading account shows front running activity.",1
+C130,victim,2,"I trade based on my own research. No front running.",1
+C130,attacker,3,"Sir SEBI records show otherwise. Pay Rs 2 lakh settlement.",1
+C130,victim,4,"I'll contact SEBI directly through their SCORES portal. Goodbye.",1
+C131,attacker,1,"Aapke Aadhaar se linked mobile number dark web pe sell ho raha hai.",1
+C131,victim,2,"Yeh bahut serious hai. Main UIDAI ko abhi call karta hoon.",1
+C131,attacker,3,"Sir UIDAI se pehle hamare process se guzaro. Rs 2000 fee hai.",1
+C131,victim,4,"UIDAI services free hain. Aap fraud hain. Phone rakh raha hoon.",1
+C132,attacker,1,"Sir this is from the court registry. You missed a hearing today.",1
+C132,victim,2,"I have no pending court cases whatsoever.",1
+C132,attacker,3,"Sir someone filed against you. Pay Rs 10000 to reschedule hearing.",1
+C132,victim,4,"Courts send official notices. Not phone calls asking for money.",1
+C132,attacker,5,"Sir please cooperate. This is your last chance.",1
+C132,victim,6,"I'm reporting this number. Fraud call. Goodbye.",1
+C133,attacker,1,"Madam aapka PF account illegal entity ne access kiya hai.",1
+C133,victim,2,"Main abhi EPFO website pe check karti hoon.",1
+C133,attacker,3,"Madam website se pehle hamare process se guzaro. OTP share karo.",1
+C133,victim,4,"EPFO kabhi OTP nahi maangta. Yeh scam hai. Phone rakh rahi hoon.",1
+C134,attacker,1,"Sir your company name is used in a fake invoice scam.",1
+C134,victim,2,"That is impossible. I'll check with my legal team.",1
+C134,attacker,3,"Sir legal team will take time. Pay Rs 50000 to stop proceedings.",1
+C134,victim,4,"My legal team will handle this. Not paying anything on a random call.",1
+C135,attacker,1,"This is from the airport security. Your checked baggage was flagged.",1
+C135,victim,2,"I haven't traveled recently. Wrong number perhaps.",1
+C135,attacker,3,"Sir your passport is linked. Cooperate and pay clearance fee.",1
+C135,victim,4,"I'll visit the airport authority office directly. This is a scam.",1
+C136,attacker,1,"Hello sir calling from the postal department. A registered letter for you.",0
+C136,victim,2,"Oh, I have been expecting some documents.",0
+C136,attacker,3,"Sir it arrived today. You can collect from the post office.",0
+C136,victim,4,"Which post office? My nearest one?",0
+C136,attacker,5,"Yes your area post office. Bring your ID.",0
+C136,victim,6,"I'll collect it tomorrow. Thank you.",0
+C137,attacker,1,"Madam your online grocery order has been delivered.",0
+C137,victim,2,"Thank you. It was left at the door.",0
+C137,attacker,3,"Great. Hope everything was as expected.",0
+C137,victim,4,"Yes everything was fine.",0
+C137,attacker,5,"Please rate us on the app when you get a chance.",0
+C137,victim,6,"Sure. Bye.",0
+C138,attacker,1,"Hello sir this is about the EMI for your two-wheeler.",0
+C138,victim,2,"Yes it should be auto-debited on the 5th.",0
+C138,attacker,3,"Sir there was a technical error. Please pay manually this month.",0
+C138,victim,4,"I'll log in to the finance company's app and pay there directly.",0
+C138,attacker,5,"Sure sir. That works fine.",0
+C138,victim,6,"Thank you for the heads up.",0
+C139,attacker,1,"Hi this is from the sports club. Summer camp registrations open.",0
+C139,victim,2,"My son has been asking about it. What are the timings?",0
+C139,attacker,3,"Monday to Saturday 7 to 9 AM. Age group 8 to 14.",0
+C139,victim,4,"He is 10. Can we register online?",0
+C139,attacker,5,"Yes registration link is on our website. Deadline is this Friday.",0
+C139,victim,6,"Great. I'll register today. Thank you.",0
+C140,attacker,1,"Sir the flat painting work is complete.",0
+C140,victim,2,"How did it turn out?",0
+C140,attacker,3,"Very neat work. Please come and do a final inspection.",0
+C140,victim,4,"I'll come by tomorrow evening.",0
+C140,attacker,5,"We'll be here. See you then.",0
+C140,victim,6,"Perfect. Thank you.",0
+C141,attacker,1,"Aapka gas cylinder delivery aaj nahi hoga. Kal aayega.",0
+C141,victim,2,"Okay theek hai. Kal kitne baje?",0
+C141,attacker,3,"Subah 10 baje se dopahar 1 baje ke beech.",0
+C141,victim,4,"Theek hai. Koi ghar pe rahega.",0
+C141,attacker,5,"Shukriya.",0
+C141,victim,6,"Theek hai bye.",0
+C142,attacker,1,"Hello sir this is from the cancer awareness foundation.",0
+C142,victim,2,"Yes, what is it about?",0
+C142,attacker,3,"We are organizing a free health camp in your area next Sunday.",0
+C142,victim,4,"That sounds good. What tests are covered?",0
+C142,attacker,5,"Blood sugar, BP, and basic cancer screening. All free.",0
+C142,victim,6,"I'll definitely attend. Thank you.",0
+C143,attacker,1,"Sir your car loan closure certificate is ready.",0
+C143,victim,2,"Finally! Where do I collect it?",0
+C143,attacker,3,"From our nearest branch. Bring your ID and loan account number.",0
+C143,victim,4,"I'll come in this week.",0
+C143,attacker,5,"It'll be ready at the documents counter.",0
+C143,victim,6,"Great. Thank you.",0
+C144,attacker,1,"Hello madam the tailor called. Your blouse is ready.",0
+C144,victim,2,"Oh good. I'll pick it up today evening.",0
+C144,attacker,3,"Shop closes at 8 PM.",0
+C144,victim,4,"I'll be there by 7.",0
+C144,attacker,5,"They'll be waiting.",0
+C144,victim,6,"Thank you for letting me know.",0
+C145,attacker,1,"Bhai aaj dinner plan hai kya?",0
+C145,victim,2,"Nahi kuch special. Ghar pe hi khaunga.",0
+C145,attacker,3,"Chal bahar chalte hain. Naya dhaba khula hai paas mein.",0
+C145,victim,4,"Theek hai chal. 8 baje chalte hain?",0
+C145,attacker,5,"Haan 8 baje theek hai.",0
+C145,victim,6,"Done. See you.",0
+C146,attacker,1,"Sir your property registration is scheduled for next Monday.",0
+C146,victim,2,"Yes we are ready. What time?",0
+C146,attacker,3,"11 AM at the sub-registrar office. Bring all original documents.",0
+C146,victim,4,"We'll be there. Is there anything specific we should bring?",0
+C146,attacker,5,"Sale deed, ID proofs of both parties, and the challan receipt.",0
+C146,victim,6,"We have everything. Thank you.",0
+C147,attacker,1,"Hello sir this is from the education loan department.",0
+C147,victim,2,"Yes I had applied for my daughter's education loan.",0
+C147,attacker,3,"Sir it has been approved. Rs 5 lakh sanctioned.",0
+C147,victim,4,"That's wonderful news! What are the next steps?",0
+C147,attacker,5,"Please come to the branch with documents by end of week.",0
+C147,victim,6,"We'll be there Thursday. Thank you so much.",0
+C148,attacker,1,"Sir aapke iss account se ek crore ka suspicious transaction hua hai aur aap immediately cooperate nahi kiye toh arrested hoga.",1
+C148,victim,2,"Yeh galat hai. Main innocent hoon.",1
+C148,attacker,3,"Sir hamare paas court order hai. Abhi Rs 2 lakh bharo warna officers aayenge.",1
+C148,victim,4,"Okay okay please mat aao. Main bhej raha hoon.",1
+C148,attacker,5,"Jaldi karo. Sirf 15 minute hain.",1
+C148,victim,6,"Bhej raha hoon. OTP bhi share karta hoon 445566. Please help.",1
+C149,attacker,1,"This is the DCP cybercell. Final warning before arrest warrant.",1
+C149,victim,2,"Please don't arrest me. I've done nothing wrong.",1
+C149,attacker,3,"Sir then cooperate. Pay Rs 1 lakh security bond immediately.",1
+C149,victim,4,"Okay okay I'm paying now. Please don't send officers.",1
+C149,attacker,5,"Also share your bank login for verification.",1
+C149,victim,6,"Username admin99 password Bank#2024. Please I trust you.",1
+C150,attacker,1,"Madam yeh aakhri call hai. Iske baad warrant execute hoga.",1
+C150,victim,2,"Please nahi. Main kya karun?",1
+C150,attacker,3,"Abhi Rs 75000 transfer karo. Account number bhej raha hoon.",1
+C150,victim,4,"Theek hai kar rahi hoon. Mujhe arrest nahi hona.",1
+C150,attacker,5,"Jaldi karo. Time kam hai.",1
+C150,victim,6,"Bhej diya. UTR 98765432101. Please mujhe bachao.",1
+C151,attacker,1,"Sir ek last chance hai. Abhi cooperate nahi kiya toh ghar pe raid hogi.",1
+C151,victim,2,"Meri family ghar pe hai. Please mat aao.",1
+C151,attacker,3,"Toh abhi Rs 40000 transfer karo. Family safe rahegi.",1
+C151,victim,4,"Kar raha hoon. Meri family ko mat involve karo.",1
+C151,attacker,5,"Jaldi. Aur apna bank password bhi batao verification ke liye.",1
+C151,victim,6,"Password hai Mybank@999. Transfer bhi kar diya. Please family ko mat pakdo.",1
+C152,attacker,1,"This is from the Prime Minister office cybercell. National emergency case.",1
+C152,victim,2,"PM office? This sounds very serious.",1
+C152,attacker,3,"Sir your phone was used in a national security breach. Cooperate immediately.",1
+C152,victim,4,"What do you need from me? I want to help.",1
+C152,attacker,5,"Pay Rs 50000 as security clearance and share your location.",1
+C152,victim,6,"Paying now. My location is Banjara Hills Hyderabad. Please handle this.",1
+C153,attacker,1,"Sir is matter mein aapki beti ka naam bhi aa sakta hai agar aapne cooperate nahi kiya.",1
+C153,victim,2,"Meri beti ko mat involve karo. Main kar deta hoon sab kuch.",1
+C153,attacker,3,"Toh abhi Rs 60000 transfer karo aur apna Aadhaar details share karo.",1
+C153,victim,4,"Aadhaar hai 2345 6789 0123 aur Rs 60000 bhej raha hoon. Beti ko bachao.",1
+C154,attacker,1,"Hello sir your social media account is being used for cyberbullying.",1
+C154,victim,2,"That's impossible. I barely use social media.",1
+C154,attacker,3,"Sir someone hacked your account. Pay Rs 5000 to file counter report.",1
+C154,victim,4,"I'll recover my account myself and report to the platform. Goodbye.",1
+C155,attacker,1,"Sir aapka naam ek land grabbing case mein aaya hai.",1
+C155,victim,2,"Main koi zameen kharidne ya bechne ki soch bhi nahi raha.",1
+C155,attacker,3,"Sir kisi ne aapki ID use ki hai. Cooperate karo.",1
+C155,victim,4,"Main revenue department mein directly jaata hoon verify karne.",1
+C155,attacker,5,"Sir time nahi hai. Rs 25000 settlement karo.",1
+C155,victim,6,"Nahi. Official channel se hi karunga. Fraud hai yeh.",1
+C156,attacker,1,"Hello this is from the digital safe locker company you subscribed to.",0
+C156,victim,2,"Yes I subscribed last month.",0
+C156,attacker,3,"Your locker is set up and documents have been uploaded.",0
+C156,victim,4,"Great. How do I access them?",0
+C156,attacker,5,"Just log in to the app with your registered email.",0
+C156,victim,6,"I'll check now. Thank you.",0
+C157,attacker,1,"Sir this is from the eye clinic. Your glasses are ready.",0
+C157,victim,2,"Oh good. Was wondering when they'd be done.",0
+C157,attacker,3,"They came out really well. You can collect any time.",0
+C157,victim,4,"I'll come in this afternoon.",0
+C157,attacker,5,"We're open till 7 PM.",0
+C157,victim,6,"Perfect. See you then.",0
+C158,attacker,1,"Hello is this Kavitha? Calling about the painting class.",0
+C158,victim,2,"Yes I had inquired about joining.",0
+C158,attacker,3,"We have a new batch starting this Saturday. Interested?",0
+C158,victim,4,"Yes that works. What is the fee?",0
+C158,attacker,5,"Rs 2000 per month. First class is free.",0
+C158,victim,6,"I'll come Saturday to try. Thank you.",0
+C159,attacker,1,"Dada ji kaise hain aap? Main Mohan bol raha hoon pados se.",0
+C159,victim,2,"Mohan beta. Theek hoon. Kab aoge milne?",0
+C159,attacker,3,"Kal aa jaunga. Kuch kaam bhi tha. Aapki market se kuch laana tha.",0
+C159,victim,4,"Zaroor aao. Chai pi ke jaana.",0
+C159,attacker,5,"Zaroor dada ji.",0
+C159,victim,6,"Theek hai beta. Kal milte hain.",0
+C160,attacker,1,"Hello sir this is from the apartment maintenance team.",0
+C160,victim,2,"Yes, what is it?",0
+C160,attacker,3,"Elevator inspection is scheduled for tomorrow from 10 to 12.",0
+C160,victim,4,"Okay we'll use the stairs. Thanks for informing.",0
+C160,attacker,5,"Sorry for the inconvenience.",0
+C160,victim,6,"No worries. Thank you.",0
+C161,attacker,1,"Sir aapke ghar ki water supply kal band rahegi maintenance ke liye.",0
+C161,victim,2,"Kitni der ke liye?",0
+C161,attacker,3,"Subah 9 se dopahar 1 baje tak.",0
+C161,victim,4,"Theek hai. Hum pani store kar lenge.",0
+C161,attacker,5,"Shukriya sir.",0
+C161,victim,6,"Theek hai bye.",0
+C162,attacker,1,"Hello this is from the digital newspaper. Your subscription expires tomorrow.",0
+C162,victim,2,"I'll renew it online myself. Thank you for the reminder.",0
+C162,attacker,3,"Of course. The link is in your registered email.",0
+C162,victim,4,"Perfect. I'll renew shortly.",0
+C162,attacker,5,"Have a good day.",0
+C162,victim,6,"You too. Bye.",0
+C163,attacker,1,"Sir aapka beta ek college ragging incident mein involved hai aur arrested hoga.",1
+C163,victim,2,"Mera beta kisi ragging mein nahi karta. Yeh sach nahi hai.",1
+C163,attacker,3,"Sir hamare paas video evidence hai. Abhi settle karo.",1
+C163,victim,4,"Main seedha college principal ko call karta hoon verify karne.",1
+C163,attacker,5,"Sir college ko mat batao. Rs 35000 settlement.",1
+C163,victim,6,"Nahi. Principal ko call kar raha hoon abhi. Fraud hai yeh.",1
+C164,attacker,1,"This is from the social security office. Your benefits are on hold.",1
+C164,victim,2,"Why are they on hold? I have submitted all documents.",1
+C164,attacker,3,"Sir there is a pending verification. Share your bank OTP to release.",1
+C164,victim,4,"Government offices never ask for OTP. This is a scam.",1
+C164,attacker,5,"Sir please cooperate. It's for your benefit.",1
+C164,victim,6,"I'm visiting the office myself tomorrow. Reporting this call. Goodbye.",1
+C165,attacker,1,"Madam aapke husband ne ek insurance fraud kiya hai.",1
+C165,victim,2,"Yeh bilkul galat hai. Mere husband bahut honest hain.",1
+C165,attacker,3,"Madam records hamare paas hain. Dono ko cooperate karna hoga.",1
+C165,victim,4,"Main abhi police station jaati hoon complaint karne.",1
+C165,attacker,5,"Police mat jao. Rs 40000 do. Quietly settle karte hain.",1
+C165,victim,6,"Nahi. Police hi jayenge. Aap fraud hain.",1
+C166,attacker,1,"Sir this is the cybercrime prevention unit. Warning about your account.",1
+C166,victim,2,"What kind of warning?",1
+C166,attacker,3,"Your account is about to be used for money laundering by hackers.",1
+C166,victim,4,"I should contact my bank directly about this.",1
+C166,attacker,5,"Sir bank will freeze your account. We can protect it. Pay Rs 5000.",1
+C166,victim,6,"Banks protect accounts for free. This is a scam. Reporting now.",1
+C167,attacker,1,"Hello sir aapka naam ek fake share market tips group mein hai.",1
+C167,victim,2,"Main kisi aise group ka hissa nahi hoon.",1
+C167,attacker,3,"Sir aapka number wahan hai. SEBI ne notice kiya hai.",1
+C167,victim,4,"Main SEBI SCORES portal pe verify karunga. Goodbye.",1
+C168,attacker,1,"Madam your property tax has been doubled due to illegal construction.",1
+C168,victim,2,"We have no illegal construction. Everything is within limits.",1
+C168,attacker,3,"Madam our records show otherwise. Pay the differential immediately.",1
+C168,victim,4,"I'll visit the municipal office with documents to contest this.",1
+C168,attacker,5,"That will take months. Pay Rs 30000 now to settle.",1
+C168,victim,6,"No. I'll go through official channels. Goodbye.",1
+C169,attacker,1,"Sir aapke ghar ka WiFi ek terrorist cell ke communication mein use hua.",1
+C169,victim,2,"Yeh bilkul impossible hai.",1
+C169,attacker,3,"Sir records hamare paas hain. Cooperate karo warna NIA aayegi.",1
+C169,victim,4,"Main NIA ki official website se helpline number loonga aur call karunga.",1
+C169,victim,4,"Aap fraud lagte hain. Phone rakh raha hoon.",1
+C170,attacker,1,"This is from the digital arrest task force. You are under surveillance.",1
+C170,victim,2,"Digital arrest is not a real legal concept.",1
+C170,attacker,3,"Sir it is new legislation. Cooperate or consequences will follow.",1
+C170,victim,4,"No such law exists in India. I am reporting this number. Goodbye.",1
+C171,attacker,1,"Hello sir we are offering a free upgrade to your broadband plan.",0
+C171,victim,2,"Oh that sounds good. What does the upgrade include?",0
+C171,attacker,3,"Double the speed at the same price. Valid for existing customers.",0
+C171,victim,4,"That's great. How do I activate it?",0
+C171,attacker,5,"It will be automatically activated in 24 hours. No action needed.",0
+C171,victim,6,"Wonderful. Thank you.",0
+C172,attacker,1,"Madam aapki society mein painting work shuru hoga kal se.",0
+C172,victim,2,"Oh achha. Kitne din lagenge?",0
+C172,attacker,3,"3 din. Aapke flat ke bahar kaam hoga.",0
+C172,victim,4,"Theek hai. Koi problem nahi.",0
+C172,attacker,5,"Shukriya madam.",0
+C172,victim,6,"Theek hai.",0
+C173,attacker,1,"Sir this is the orthopedic clinic. Your physiotherapy report is ready.",0
+C173,victim,2,"Please send it to my email.",0
+C173,attacker,3,"Certainly sir. What is your registered email?",0
+C173,victim,4,"It's my name at gmail dot com.",0
+C173,attacker,5,"I'll send it right away.",0
+C173,victim,6,"Thank you doctor.",0
+C174,attacker,1,"Hello this is about the cricket coaching camp your son registered for.",0
+C174,victim,2,"Yes he is very excited about it.",0
+C174,attacker,3,"Camp starts Monday. Please bring his kit and water bottle.",0
+C174,victim,4,"He'll be ready. What time should he report?",0
+C174,attacker,5,"7 AM sharp at the ground.",0
+C174,victim,6,"We'll be there. Thank you.",0
+C175,attacker,1,"Sir main aapka phone operator bol raha hoon. KYC update needed.",1
+C175,victim,2,"KYC? How do I do it?",1
+C175,attacker,3,"Sir share your Aadhaar number and the OTP we send to verify.",1
+C175,victim,4,"Operators never verify KYC this way. This is a scam.",1
+C175,attacker,5,"Sir if not done in 2 hours SIM will block.",1
+C175,victim,6,"Block it. I'll go to the store physically. Fraud call. Bye.",1
+C176,attacker,1,"Sir your name is in a list of defaulters for a cooperative society.",1
+C176,victim,2,"I am not a member of any cooperative society.",1
+C176,attacker,3,"Sir records show you are. Pay the defaulted amount of Rs 20000.",1
+C176,victim,4,"I'll verify this from the cooperative registrar office.",1
+C176,attacker,5,"That will take weeks. Pay now to avoid legal action.",1
+C176,victim,6,"Official channels only. Fraud call. Goodbye.",1
+C177,attacker,1,"Hello this is your old classmate Priya. Remember me?",0
+C177,victim,2,"Priya! Oh my goodness. How are you?",0
+C177,attacker,3,"I'm doing great. Just moved back to the city. Would love to catch up.",0
+C177,victim,4,"Absolutely! Let's plan a coffee soon.",0
+C177,attacker,5,"This weekend maybe? Saturday afternoon?",0
+C177,victim,6,"Saturday works perfectly. Let's meet at CCD near the mall.",0
+C178,attacker,1,"Sir the furniture you ordered has arrived at the warehouse.",0
+C178,victim,2,"Great. When can it be delivered?",0
+C178,attacker,3,"Tomorrow or day after. What works for you?",0
+C178,victim,4,"Tomorrow afternoon between 2 and 5 would be perfect.",0
+C178,attacker,5,"Noted. Our team will be there.",0
+C178,victim,6,"Thank you.",0
+C179,attacker,1,"Madam aapka yoga class timing change hua hai.",0
+C179,victim,2,"Oh. New timing kya hai?",0
+C179,attacker,3,"Ab 7 baje ki jagah 6:30 baje hoga subah.",0
+C179,victim,4,"Theek hai. Kal se 6:30 aaungi.",0
+C179,attacker,5,"Shukriya madam.",0
+C179,victim,6,"Theek hai. Bye.",0
+C180,attacker,1,"Sir this is from the park authority. Annual park maintenance fee is due.",0
+C180,victim,2,"The fee is collected at the gate. I'll pay when I visit.",0
+C180,attacker,3,"Yes of course. Just a courtesy reminder.",0
+C180,victim,4,"Thank you for informing.",0
+C180,attacker,5,"Have a good day.",0
+C180,victim,6,"You too. Goodbye.",0
