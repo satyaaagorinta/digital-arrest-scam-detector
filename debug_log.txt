@@ -1,0 +1,2 @@
+SUCCESS: text='You need to share your credit card number and you will get a notice if you want to share that then only I can access to.  Are you willing?' conv_len=3
+2026-05-08 14:11:48.969937 | text='You need to share your credit card number and you will get a notice if you want to share that then only I can access to.  Are you willing?' | conv_len=5
