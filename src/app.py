@@ -732,12 +732,57 @@ def analyse_full_conversation(conversation):
 # whisper_model, model, vectorizer = load_models()
 
 
+# def record_and_transcribe(duration=8):
+#     wav_path    = os.path.join(os.path.dirname(os.path.abspath(__file__)), "temp.wav")
+#     native_rate = 44100   # Intel Array native rate
+#     target_rate = 16000   # Whisper expects 16kHz
+
+#     # Record at native rate
+#     audio = sd.rec(int(duration * native_rate), samplerate=native_rate,
+#                    channels=1, dtype='float32')
+#     sd.wait()
+#     audio = np.squeeze(audio)
+
+#     if audio is None or len(audio) == 0:
+#         return None
+
+#     max_amp = float(np.max(np.abs(audio)))
+#     if max_amp < 0.0001:
+#         return None
+
+#     # Normalize to boost quiet mic
+#     audio = (audio / max_amp * 0.95).astype(np.float32)
+
+#     # Resample 44100 → 16000
+#     from scipy.signal import resample
+#     num_samples = int(len(audio) * target_rate / native_rate)
+#     audio = resample(audio, num_samples).astype(np.float32)
+
+#     # Write at 16000 for Whisper
+#     write(wav_path, target_rate, audio)
+
+#     segments, info = whisper_model.transcribe(
+#         wav_path,
+#         beam_size=5,
+#         vad_filter=False,
+#         language="en",
+#         condition_on_previous_text=False,
+#     )
+#     text = " ".join([seg.text for seg in segments]).strip()
+
+#     HALLUCINATIONS = {"thank you", "thanks for watching", "bye", "you", ".", "...", " "}
+#     if text.lower().strip() in HALLUCINATIONS:
+#         return None
+#     return text if text and len(text.strip()) >= 2 else None
+
 def record_and_transcribe(duration=8):
     wav_path    = os.path.join(os.path.dirname(os.path.abspath(__file__)), "temp.wav")
-    native_rate = 44100   # Intel Array native rate
-    target_rate = 16000   # Whisper expects 16kHz
+    native_rate = 44100
+    target_rate = 16000
 
-    # Record at native rate
+    if os.path.exists(wav_path):
+        os.remove(wav_path)
+
     audio = sd.rec(int(duration * native_rate), samplerate=native_rate,
                    channels=1, dtype='float32')
     sd.wait()
@@ -750,7 +795,7 @@ def record_and_transcribe(duration=8):
     if max_amp < 0.0001:
         return None
 
-    # Normalize to boost quiet mic
+    # Normalize
     audio = (audio / max_amp * 0.95).astype(np.float32)
 
     # Resample 44100 → 16000
@@ -758,23 +803,55 @@ def record_and_transcribe(duration=8):
     num_samples = int(len(audio) * target_rate / native_rate)
     audio = resample(audio, num_samples).astype(np.float32)
 
-    # Write at 16000 for Whisper
+    # Manual VAD — need at least 0.3s of real speech energy
+    frame_size    = 1600
+    active_frames = 0
+    for i in range(0, len(audio), frame_size):
+        frame = audio[i:i+frame_size]
+        if np.sqrt(np.mean(frame**2)) > 0.02:
+            active_frames += 1
+    if active_frames < 3:
+        return None
+
     write(wav_path, target_rate, audio)
 
     segments, info = whisper_model.transcribe(
         wav_path,
-        beam_size=5,
-        vad_filter=False,
-        language="en",
+        beam_size=1,
+        vad_filter=True,
+        language="en",        # English only — add Hindi below
         condition_on_previous_text=False,
+        temperature=0.0,      # deterministic, no sampling hallucinations
+        no_speech_threshold=0.6,   # if Whisper is <60% sure speech exists, skip
+        compression_ratio_threshold=2.0,  # reject repetitive/looping hallucinations
+        log_prob_threshold=-0.5,   # reject low-confidence segments
     )
+
+    # Filter to English and Hindi only — reject anything else
+    if info.language not in ("en", "hi"):
+        return None
+
     text = " ".join([seg.text for seg in segments]).strip()
 
-    HALLUCINATIONS = {"thank you", "thanks for watching", "bye", "you", ".", "...", " "}
+    # Reject hallucinations
+    HALLUCINATIONS = {
+        "thank you", "thanks for watching", "bye", "you", ".", "...", " ", "",
+        "thank you.", "thanks.", "goodbye.", "see you.", "you.",
+        "thank you for watching.", "please subscribe.", "like and subscribe.",
+        "subtitles by", "subscribe", "www.", ".com", "♪", "music","hello",
+    }
     if text.lower().strip() in HALLUCINATIONS:
         return None
-    return text if text and len(text.strip()) >= 2 else None
 
+    # Reject if >40% of characters are non-ASCII and non-Devanagari
+    # This blocks Chinese, Arabic, random unicode hallucinations
+    devanagari = sum(1 for c in text if '\u0900' <= c <= '\u097F')
+    ascii_chars = sum(1 for c in text if c.isascii())
+    total       = max(len(text), 1)
+    if (devanagari + ascii_chars) / total < 0.6:
+        return None
+
+    return text if text and len(text.strip()) >= 2 else None
 
 # ══════════════════════════════════════════════════════════════
 # CHUNK PROCESSORS  — write to session_state, return nothing.
@@ -912,18 +989,18 @@ elif attacker_btn:
         try:
             text = record_and_transcribe()
         except Exception as e:
-            import traceback
-            with open("C:/digital_arrest_detector/debug_log.txt", "w") as f:
-                f.write(traceback.format_exc())
-            st.session_state.status_msg = f"❌ CRASH: {e}"
             text = None
-    if text is None:
-        with open("C:/digital_arrest_detector/debug_log.txt", "a") as f:
-            f.write(f"text was None after record_and_transcribe\n")
+    if not text:
+        st.session_state.status_msg = "🔇 No speech detected. Try again."
     else:
-        with open("C:/digital_arrest_detector/debug_log.txt", "w") as f:
-            f.write(f"SUCCESS: text='{text}' conv_len={len(st.session_state.conversation)}\n")
         process_attacker_chunk(text)
+    # if text is None:
+    #     with open("C:/digital_arrest_detector/debug_log.txt", "a") as f:
+    #         f.write(f"text was None after record_and_transcribe\n")
+    # else:
+    #     with open("C:/digital_arrest_detector/debug_log.txt", "w") as f:
+    #         f.write(f"SUCCESS: text='{text}' conv_len={len(st.session_state.conversation)}\n")
+    #     process_attacker_chunk(text)
     
     if not text:
         st.session_state.status_msg = st.session_state.status_msg or "❌ record_and_transcribe returned None"
@@ -949,7 +1026,7 @@ elif victim_btn:
 elif analyse_btn:
     attacker_turns_btn = [t for t in st.session_state.conversation if t["speaker"] == "attacker"]
     # DEBUG — remove after confirming recordings work
-    st.info(f"DEBUG: conversation has {len(st.session_state.conversation)} entries, {len(attacker_turns_btn)} attacker turns")
+    
     if not attacker_turns_btn:
         st.warning("Record at least one attacker turn first.")
     else:

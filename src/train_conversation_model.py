@@ -300,19 +300,29 @@ print(f"  Test  : {len(y_test)}  conversations "
 print("\nTraining and comparing models...")
 
 candidates = {
-    "LogisticRegression": Pipeline([
+    "LogisticRegression_C0.01": Pipeline([
         ("scaler", StandardScaler()),
-        ("clf",    LogisticRegression(C=1.0, max_iter=500,
+        ("clf",    LogisticRegression(C=0.01, max_iter=500,
                                       class_weight="balanced",
                                       random_state=42))
     ]),
-    "RandomForest": RandomForestClassifier(
-        n_estimators=200, max_depth=6, min_samples_leaf=2,
+    "LogisticRegression_C0.1": Pipeline([
+        ("scaler", StandardScaler()),
+        ("clf",    LogisticRegression(C=0.1, max_iter=500,
+                                      class_weight="balanced",
+                                      random_state=42))
+    ]),
+    "RandomForest_d3": RandomForestClassifier(
+        n_estimators=100, max_depth=3, min_samples_leaf=5,
+        class_weight="balanced", random_state=42
+    ),
+    "RandomForest_d4": RandomForestClassifier(
+        n_estimators=100, max_depth=4, min_samples_leaf=4,
         class_weight="balanced", random_state=42
     ),
     "GradientBoosting": GradientBoostingClassifier(
-        n_estimators=200, max_depth=4, learning_rate=0.05,
-        random_state=42
+        n_estimators=100, max_depth=2, learning_rate=0.05,
+        subsample=0.8, random_state=42
     ),
 }
 
@@ -371,6 +381,23 @@ print(f"  TN={tn}  FP={fp}")
 print(f"  FN={fn}  TP={tp}")
 print(f"  False Negative Rate: {fn/(fn+tp)*100:.1f}%  (missed scams)")
 print(f"  False Positive Rate: {fp/(fp+tn)*100:.1f}%  (false alarms)")
+
+# ── Overfitting check: compare train vs test performance ──
+y_train_pred = best_model.predict(X_train)
+train_acc    = accuracy_score(y_train, y_train_pred)
+test_acc     = accuracy_score(y_test,  y_pred)
+gap          = train_acc - test_acc
+
+print(f"\nOverfitting Check:")
+print(f"  Train accuracy : {train_acc:.4f}")
+print(f"  Test  accuracy : {test_acc:.4f}")
+print(f"  Gap            : {gap:.4f}", end="")
+if gap < 0.05:
+    print("  ✅ Good — minimal overfitting")
+elif gap < 0.10:
+    print("  ⚠ Moderate — some overfitting")
+else:
+    print("  ❌ High — significant overfitting, consider more data")
 
 # ─────────────────────────────────────────────────────────────
 # 8. THRESHOLD SWEEP (same as sentence model)
