@@ -7,7 +7,7 @@ from scipy.io.wavfile import write
 import plotly.graph_objects as go
 import datetime
 from scipy.sparse import hstack, csr_matrix
-import sys, os
+import sys, os, re
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 try:
@@ -30,11 +30,8 @@ st.set_page_config(
 
 # ══════════════════════════════════════════════════════════════
 # SESSION STATE — initialize FIRST, before any widget or column
-# This is the #1 fix: all keys guarded with `if k not in`,
-# so reruns NEVER wipe existing data.
 # ══════════════════════════════════════════════════════════════
 def _fresh_state():
-    # Returns NEW list instances every call — avoids mutable default sharing bug
     return {
         "history":                 [],
         "conversation":            [],
@@ -374,6 +371,20 @@ CIALDINI_GROUPS = {
             "account details share","banking details","debit card details",
             "credit card number","ifsc share","account froze",
             "account suspend","aapka account block","frozen account",
+            # ── Card-digit verification scam patterns ──────────────────
+            # Scammers ask victims to "verify" card details digit-by-digit
+            # to appear legitimate ("just confirming your identity").
+            "verify your card","card verification","confirm your card",
+            "card number verify karo","last four digits","last 4 digits",
+            "first four digits","first 4 digits","card digits",
+            "read out your card","tell me your card number",
+            "card pe likha number","card ka number batao",
+            "expiry date batao","expiry date share","card expiry",
+            "three digit code","3 digit code","cvv batao",
+            "security code on card","card ke peeche","back of card",
+            "just confirm the digits","digits verify","verify digits",
+            "card se verify","card authentication","card validate",
+            "validate your card","card number confirm","confirm card details",
         ]
     },
     "distraction": {
@@ -389,6 +400,102 @@ CIALDINI_GROUPS = {
             "this is classified","classified inquiry","internal matter",
         ]
     },
+
+    # ══════════════════════════════════════════════════════════
+    # COMMITMENT — was referenced in PRINCIPLE_AMPLIFIERS and
+    # VICTIM_RESPONSE_SIGNALS["consistency"]["triggered_by"] but
+    # had NO keyword group, so the ML feature flag was always 0.
+    #
+    # Strategy: scammers extract small yes/agree responses early
+    # ("you agree this is serious, right?") then escalate.
+    # Foot-in-the-door, verbal micro-commitments, and "you said
+    # yourself" callbacks are all commitment triggers.
+    # ══════════════════════════════════════════════════════════
+    "commitment": {
+        "score": 0.25,
+        "keywords": [
+            # Explicit agreement extraction
+            "do you agree","you agree with me","you understand that",
+            "you acknowledge","you admit","am i right","isn't it","correct?",
+            "aap mante hain","aap samjhe","aap agree karte hain",
+            "aap ne maana","theek hai na","sahi hai na",
+            # Foot-in-the-door micro-commitments
+            "just say yes","just confirm","just say okay","just acknowledge",
+            "say you understand","confirm verbally","verbal confirmation",
+            "say yes for the record","on record please confirm",
+            "we are recording this call","call recorded","this call is recorded",
+            "recording ke liye boliye","record ho raha hai","call record ho rahi hai",
+            # Callback to prior agreement (consistency trap)
+            "you already said","you told me earlier","you confirmed",
+            "you agreed previously","aapne khud kaha","aapne pehle kaha",
+            "aap ne agree kiya tha","aap ne confirm kiya tha",
+            "as you admitted","as you acknowledged","you yourself said",
+            # Escalation via prior cooperation
+            "since you cooperated","you have been cooperative",
+            "because you agreed","you signed up for","you registered for",
+            "aap cooperative rahe","aapne sahi kiya","aapka cooperation",
+            # Pledge/promise extraction
+            "promise me","give me your word","do you promise",
+            "swear you will","aap vaada karo","aap kasam khao",
+            "commit to this","you are committing","your commitment",
+        ]
+    },
+
+    # ══════════════════════════════════════════════════════════
+    # SOCIAL PROOF — was in TRAIN_GROUP_ORDER (ML feature flag)
+    # but had NO keyword group, causing a permanent zero-feature.
+    #
+    # Strategy: scammers cite fake victims who "already complied",
+    # statistics to normalise fraud, or claim "everyone cooperates"
+    # to make resistance feel abnormal and embarrassing.
+    # ══════════════════════════════════════════════════════════
+    "social_proof": {
+        "score": 0.20,
+        "keywords": [
+            # Fake compliance crowd
+            "everyone cooperates","all others have cooperated",
+            "other people in your situation","victims like you",
+            "most people just pay","everyone pays the fine",
+            "all accused cooperate","all suspects comply",
+            "no one refuses","nobody refuses","baaki sab ne de diya",
+            "doosre logon ne bhi diya","sab ne pay kiya",
+            "baaki sab ne comply kiya","aap akele nahi hain",
+            # False authority by numbers
+            "hundreds of cases like yours","thousands of cases",
+            "this happens to many people","common in your area",
+            "we handle many such cases","aisa bahut logon ke saath hota hai",
+            "hazaaron log iske shikaar hain","bahut saare log iska shikar hue",
+            # Social shame / standing
+            "your neighbours will know","your colleagues found out",
+            "your family members also","people in your community",
+            "publicly known","publicly listed","public record mein",
+            "aapke padosi janenge","aapke colleagues ko pata chalega",
+            # Fake testimonial / precedent
+            "similar case was closed","similar case settled",
+            "in a similar case person paid","in previous cases",
+            "case like yours was resolved by paying",
+            "pehle bhi aisa case aaya tha","is tarah ke case mein",
+            # Trust-building phase (rapport before extraction) ──────────
+            # Scammers spend 2-5 minutes building false rapport to lower
+            # defences before making demands. These soft openers signal
+            # the trust-building phase of a scam call.
+            "just checking in","just a routine call","routine verification",
+            "we called to help you","calling for your benefit",
+            "we are concerned about you","we noticed your account",
+            "we flagged your account for protection","your account was flagged",
+            "precautionary call","safety call","protective measure",
+            "calling to warn you","called to alert you","alert call",
+            "aapki safety ke liye","aapki suraksha ke liye",
+            "aapko inform karne ke liye call kiya","bas inform karna tha",
+            "aapki help ke liye","aapko bachane ke liye call kiya",
+            "genuine call hai","official call hai","authorised call",
+            "we are the good guys","hum aapke dushman nahi",
+            "we want to resolve this","amicably resolve","friendly resolution",
+            "no need to panic","please stay calm","calm rehiye",
+            "nothing to worry about yet","abhi kuch nahi hoga",
+            "we can protect you if","we can help if you cooperate",
+        ]
+    },
 }
 
 GENERIC_ONLY_GROUPS = {
@@ -400,19 +507,43 @@ GENERIC_ONLY_GROUPS = {
 }
 
 COMBINATIONS = [
-    {"groups": ["authority", "warrant"],            "bonus": 0.15},
-    {"groups": ["authority", "threat"],             "bonus": 0.15},
-    {"groups": ["urgency",   "money"],              "bonus": 0.12},
-    {"groups": ["urgency",   "threat"],             "bonus": 0.12},
-    {"groups": ["scarcity",  "money"],              "bonus": 0.10},
-    {"groups": ["authority", "money"],              "bonus": 0.12},
-    {"groups": ["warrant",   "money"],              "bonus": 0.13},
-    {"groups": ["threat",    "money"],              "bonus": 0.14},
-    {"groups": ["distraction","authority"],         "bonus": 0.10},
-    {"groups": ["authority", "warrant", "urgency"], "bonus": 0.20},
-    {"groups": ["authority", "threat",  "money"],   "bonus": 0.22},
-    {"groups": ["account",   "urgency"],            "bonus": 0.15},
-    {"groups": ["account",   "authority"],          "bonus": 0.15},
+    {"groups": ["authority", "warrant"],                       "bonus": 0.15},
+    {"groups": ["authority", "threat"],                        "bonus": 0.15},
+    {"groups": ["urgency",   "money"],                         "bonus": 0.12},
+    {"groups": ["urgency",   "threat"],                        "bonus": 0.12},
+    {"groups": ["scarcity",  "money"],                         "bonus": 0.10},
+    {"groups": ["authority", "money"],                         "bonus": 0.12},
+    {"groups": ["warrant",   "money"],                         "bonus": 0.13},
+    {"groups": ["threat",    "money"],                         "bonus": 0.14},
+    {"groups": ["distraction","authority"],                    "bonus": 0.10},
+    {"groups": ["authority", "warrant", "urgency"],            "bonus": 0.20},
+    {"groups": ["authority", "threat",  "money"],              "bonus": 0.22},
+    {"groups": ["account",   "urgency"],                       "bonus": 0.15},
+    {"groups": ["account",   "authority"],                     "bonus": 0.15},
+    # NEW — commitment-based combinations
+    # Commitment + authority: "you agreed, the officer is waiting"
+    {"groups": ["commitment", "authority"],                    "bonus": 0.14},
+    # Commitment + urgency: "you said you'd do it — do it now"
+    {"groups": ["commitment", "urgency"],                      "bonus": 0.13},
+    # Commitment + money: extracted verbal yes before payment request
+    {"groups": ["commitment", "money"],                        "bonus": 0.15},
+    # Commitment + account: "you confirmed, now share the details"
+    {"groups": ["commitment", "account"],                      "bonus": 0.16},
+    # Classic foot-in-the-door full pattern
+    {"groups": ["commitment", "authority", "urgency"],         "bonus": 0.22},
+    # NEW — social_proof-based combinations
+    # Social proof + authority: fake crowd legitimises the officer
+    {"groups": ["social_proof", "authority"],                  "bonus": 0.12},
+    # Trust-build phase + authority: warm greeting + badge
+    {"groups": ["social_proof", "threat"],                     "bonus": 0.13},
+    # Trust-build + money: rapport then ask for payment
+    {"groups": ["social_proof", "money"],                      "bonus": 0.14},
+    # Trust-build + account: rapport then ask for card digits
+    {"groups": ["social_proof", "account"],                    "bonus": 0.15},
+    # Full trust-build → threat → money triple
+    {"groups": ["social_proof", "authority", "money"],         "bonus": 0.20},
+    # Card-digit verification pattern: account + commitment + authority
+    {"groups": ["account", "commitment", "authority"],         "bonus": 0.24},
 ]
 
 SAFE_CONTEXT = {
@@ -554,10 +685,15 @@ PRINCIPLE_AMPLIFIERS = {
     ("urgency",     "panic"):       1.3,
     ("scarcity",    "panic"):       1.2,
     ("reciprocity", "obligatory"):  1.3,
-    ("commitment",  "consistency"): 1.2,
+    ("commitment",  "consistency"): 1.2,   # now live — commitment group exists
     ("threat",      "panic"):       1.35,
     ("money",       "info_leak"):   1.5,
     ("account",     "info_leak"):   1.6,
+    # NEW amplifiers for the two new groups
+    ("social_proof","obligatory"):  1.25,  # "others cooperated" → victim feels obligated
+    ("social_proof","deference"):   1.20,  # trust-build phase → victim becomes deferential
+    ("commitment",  "info_leak"):   1.55,  # "you agreed" → victim leaks card digits
+    ("commitment",  "panic"):       1.25,  # commitment loop causes panic compliance
 }
 
 
@@ -572,6 +708,17 @@ def is_safe_context(text):
     words = set(text.lower().split())
     if words.issubset(SAFE_CONTEXT):
         return True
+    # FIX: original ratio check (≥70% safe words on short text) was too aggressive
+    # for Hindi scam phrases. "abhi paise transfer karo" has 4 words: "abhi" and
+    # "karo" are in SAFE_CONTEXT → 50% ratio → was being let through correctly,
+    # but "aap theek hain abhi" (3 safe + 1 unsafe) would hit the 70% threshold
+    # and get silently cleared.  Tighten: only apply ratio bypass if the text
+    # contains ZERO scam-adjacent tokens (any CIALDINI keyword hit → never safe).
+    text_lower = text.lower()
+    for group_data in CIALDINI_GROUPS.values():
+        for kw in group_data["keywords"]:
+            if kw in text_lower:
+                return False   # contains a scam keyword — never safe-context
     if len(words) <= 5 and len(words & SAFE_CONTEXT) / max(len(words), 1) >= 0.7:
         return True
     return False
@@ -584,8 +731,15 @@ def compute_keyword_score(text):
             if kw in text_lower:
                 groups_hit.add(group_name)
                 break
-    if len(groups_hit) < 2:
+
+    # These groups are standalone high-signal scam indicators:
+    # distraction ("kisi ko mat batana") and commitment ("call recorded, say yes")
+    # are so specific they score even without a second group.
+    STANDALONE_HIGH_SIGNAL = {"distraction", "commitment"}
+    solo_hit = groups_hit & STANDALONE_HIGH_SIGNAL
+    if len(groups_hit) < 2 and not solo_hit:
         return 0.0, groups_hit, None
+
     non_generic = groups_hit - set(GENERIC_ONLY_GROUPS.keys())
     adjusted_groups = set()
     for gname in groups_hit:
@@ -598,8 +752,10 @@ def compute_keyword_score(text):
                 adjusted_groups.add(gname)
         else:
             adjusted_groups.add(gname)
-    if len(adjusted_groups) < 2:
+
+    if len(adjusted_groups) < 2 and not (adjusted_groups & STANDALONE_HIGH_SIGNAL):
         return 0.0, adjusted_groups, None
+
     base_score = sum(CIALDINI_GROUPS[g]["score"] for g in adjusted_groups)
     combo_bonus, combo_name = 0.0, None
     for combo in COMBINATIONS:
@@ -614,6 +770,79 @@ def get_context_text(new_text, window, max_window=2):
     if len(window) > max_window:
         window.pop(0)
     return " ".join(window)
+
+
+# ── Hindi romanization normalizer ─────────────────────────────
+# Whisper transcribes Hindi speech inconsistently:
+#   "aabhī" / "abhi" / "ab hi" / "abhī" all mean the same thing.
+# Keyword dicts use a single canonical form. This map collapses
+# the most common Whisper variants → canonical keyword spelling
+# BEFORE keyword matching runs, so detection actually fires.
+_HINDI_NORM = {
+    # urgency — patterns use \s+ so "24 ghante mein" and "24ghante" both work
+    r"\bab\s+hi\b":               "abhi",
+    r"\bab-hi\b":                 "abhi",
+    r"\bab\s+hii\b":              "abhi",
+    r"\btur[aā]nt[a]?\b":         "turant",
+    r"\bjald[iī]\s+karo\b":       "jaldi karo",
+    r"\baaj\s+raat\b":            "aaj raat tak",
+    r"\b24\s+ghante\b":           "24 ghante mein",
+    r"\bek\s+ghante\b":           "ek ghante mein",
+    r"\b2\s+ghante\b":            "2 ghante mein",
+    # authority
+    r"\bcbi\s+se\b":              "cbi se hain",
+    r"\bpolice\s+vibhag\b":       "police vibhaag",
+    r"\bsarkari\s+adhikari\b":    "sarkaari adhikaari",
+    r"\bcourt\s+ka\s+aadesh\b":   "court ka order",
+    # threat — do NOT use "jail bheja" as replacement or it re-triggers
+    r"\bjail\s+bheja\b":          "jail bheja jayega",
+    r"\bgirftaari\b":             "giraftaari ka warrant",
+    r"\bgiraftari\b":             "giraftaari ka warrant",
+    # money — paise bhejo → abhi paise bhejo; no "transfer karo" alone (too broad)
+    r"\bpaise\s+bhejo\b":         "abhi paise bhejo",
+    r"\bupi\s+se\b":              "upi se bhejo",
+    # account
+    r"\botp\s+bata\b":            "otp batao",
+    r"\bcard\s+ka\s+number\b":    "card ka number batao",
+    # commitment
+    r"\baap\s*ne\s+mana\b":       "aapne maana",
+    r"\baapne\s+kaha\b":          "aapne pehle kaha",
+    # distraction
+    r"\bkisi\s+ko\s+mat\b":       "kisi ko mat batana",
+    r"\bghar\s+mein\s+mat\b":     "ghar mein mat batana",
+    # casual Hinglish normalization
+    r"\bbha+i+\b": "bhai",
+    r"\bbhay+\b": "bhai",
+    r"\bbhaiya+\b": "bhai",
+
+    r"\bha+n+\b": "haan",
+    r"\bhanji\b": "haan ji",
+
+    r"\bth[iy]k+\b": "theek",
+    r"\bthe+ek+\b": "theek",
+
+    r"\bpais[ae]y+\b": "paise",
+    r"\bpaysa+\b": "paise",
+
+    r"\bjldi\b": "jaldi",
+    r"\bjaldi+\b": "jaldi",
+
+    r"\bkr[o]+\b": "karo",
+    r"\bkro\b": "karo",
+
+    r"\bo tee pee\b": "otp",
+    r"\botipi\b": "otp",
+}
+
+_HINDI_NORM_COMPILED = [(re.compile(p, re.IGNORECASE), r) for p, r in _HINDI_NORM.items()]
+
+def _normalize_hindi(text):
+    """Collapse Whisper romanization variants → canonical keyword spellings.
+    Each pattern is applied once; no pattern's replacement can retrigger another
+    because replacements are the canonical *longer* form of the matched token."""
+    for pattern, replacement in _HINDI_NORM_COMPILED:
+        text = pattern.sub(replacement, text)
+    return text
 
 def detect_emotions(text):
     text_l = text.lower()
@@ -722,59 +951,6 @@ def analyse_full_conversation(conversation):
 # ══════════════════════════════════════════════════════════════
 # AUDIO + TRANSCRIPTION
 # ══════════════════════════════════════════════════════════════
-# @st.cache_resource(show_spinner=False)
-# def load_models():
-#     wm = WhisperModel("base", device="cpu", compute_type="int8")
-#     m  = joblib.load("models/scam_model.pkl")
-#     v  = joblib.load("models/vectorizer.pkl")
-#     return wm, m, v
-
-# whisper_model, model, vectorizer = load_models()
-
-
-# def record_and_transcribe(duration=8):
-#     wav_path    = os.path.join(os.path.dirname(os.path.abspath(__file__)), "temp.wav")
-#     native_rate = 44100   # Intel Array native rate
-#     target_rate = 16000   # Whisper expects 16kHz
-
-#     # Record at native rate
-#     audio = sd.rec(int(duration * native_rate), samplerate=native_rate,
-#                    channels=1, dtype='float32')
-#     sd.wait()
-#     audio = np.squeeze(audio)
-
-#     if audio is None or len(audio) == 0:
-#         return None
-
-#     max_amp = float(np.max(np.abs(audio)))
-#     if max_amp < 0.0001:
-#         return None
-
-#     # Normalize to boost quiet mic
-#     audio = (audio / max_amp * 0.95).astype(np.float32)
-
-#     # Resample 44100 → 16000
-#     from scipy.signal import resample
-#     num_samples = int(len(audio) * target_rate / native_rate)
-#     audio = resample(audio, num_samples).astype(np.float32)
-
-#     # Write at 16000 for Whisper
-#     write(wav_path, target_rate, audio)
-
-#     segments, info = whisper_model.transcribe(
-#         wav_path,
-#         beam_size=5,
-#         vad_filter=False,
-#         language="en",
-#         condition_on_previous_text=False,
-#     )
-#     text = " ".join([seg.text for seg in segments]).strip()
-
-#     HALLUCINATIONS = {"thank you", "thanks for watching", "bye", "you", ".", "...", " "}
-#     if text.lower().strip() in HALLUCINATIONS:
-#         return None
-#     return text if text and len(text.strip()) >= 2 else None
-
 def record_and_transcribe(duration=8):
     wav_path    = os.path.join(os.path.dirname(os.path.abspath(__file__)), "temp.wav")
     native_rate = 44100
@@ -795,15 +971,12 @@ def record_and_transcribe(duration=8):
     if max_amp < 0.0001:
         return None
 
-    # Normalize
     audio = (audio / max_amp * 0.95).astype(np.float32)
 
-    # Resample 44100 → 16000
     from scipy.signal import resample
     num_samples = int(len(audio) * target_rate / native_rate)
     audio = resample(audio, num_samples).astype(np.float32)
 
-    # Manual VAD — need at least 0.3s of real speech energy
     frame_size    = 1600
     active_frames = 0
     for i in range(0, len(audio), frame_size):
@@ -815,25 +988,29 @@ def record_and_transcribe(duration=8):
 
     write(wav_path, target_rate, audio)
 
+    # ── language=None lets Whisper auto-detect English vs Hindi.
+    # Forcing language="en" was silently mangling Hindi speech into
+    # broken romanized output that never matched any keywords.
     segments, info = whisper_model.transcribe(
         wav_path,
-        beam_size=1,
+        beam_size=5,               # beam_size=1 with temperature=0 kills Hindi accuracy
         vad_filter=True,
-        language="en",        # English only — add Hindi below
+        language=None,             # FIX: auto-detect; was hardcoded "en"
+        task="transcribe",         # keep original language — do NOT translate to English
         condition_on_previous_text=False,
-        temperature=0.0,      # deterministic, no sampling hallucinations
-        no_speech_threshold=0.6,   # if Whisper is <60% sure speech exists, skip
-        compression_ratio_threshold=2.0,  # reject repetitive/looping hallucinations
-        log_prob_threshold=-0.5,   # reject low-confidence segments
+        temperature=0.0,
+        no_speech_threshold=0.6,
+        compression_ratio_threshold=2.4,   # slightly looser — Hindi has higher natural repetition
+        log_prob_threshold=-0.8,           # FIX: -0.5 was too strict, silently dropped Hindi segs
     )
 
-    # Filter to English and Hindi only — reject anything else
     if info.language not in ("en", "hi"):
         return None
 
     text = " ".join([seg.text for seg in segments]).strip()
+    text = text.lower()
+    text = _normalize_hindi(text)
 
-    # Reject hallucinations
     HALLUCINATIONS = {
         "thank you", "thanks for watching", "bye", "you", ".", "...", " ", "",
         "thank you.", "thanks.", "goodbye.", "see you.", "you.",
@@ -843,23 +1020,31 @@ def record_and_transcribe(duration=8):
     if text.lower().strip() in HALLUCINATIONS:
         return None
 
-    # Reject if >40% of characters are non-ASCII and non-Devanagari
-    # This blocks Chinese, Arabic, random unicode hallucinations
     devanagari = sum(1 for c in text if '\u0900' <= c <= '\u097F')
     ascii_chars = sum(1 for c in text if c.isascii())
     total       = max(len(text), 1)
-    if (devanagari + ascii_chars) / total < 0.6:
+    # FIX: original check (devanagari + ascii) / total < 0.6 was CORRECT for
+    # blocking Chinese/Arabic hallucinations but it also silently rejected valid
+    # Devanagari-heavy output because spaces and punctuation count as ASCII,
+    # making the ratio look fine even for garbage.  The real guard we need is:
+    # reject if the text contains a lot of non-ASCII AND non-Devanagari chars
+    # (i.e. Chinese, Arabic, Korean, etc.).
+    non_latin_non_deva = sum(
+        1 for c in text
+        if not c.isascii() and not ('\u0900' <= c <= '\u097F')
+    )
+    if non_latin_non_deva / total > 0.35:
         return None
 
     return text if text and len(text.strip()) >= 2 else None
 
+
 # ══════════════════════════════════════════════════════════════
-# CHUNK PROCESSORS  — write to session_state, return nothing.
-# Called only from button handlers, never from render code.
+# CHUNK PROCESSORS
 # ══════════════════════════════════════════════════════════════
 def process_attacker_chunk(text):
-    
     now = datetime.datetime.now().strftime("%H:%M:%S")
+    text = _normalize_hindi(text)   # FIX: normalize before safe-context or keyword checks
     if is_safe_context(text):
         new_score = st.session_state.current_score * 0.4
         entry = {
@@ -871,16 +1056,16 @@ def process_attacker_chunk(text):
         context_text = get_context_text(text, st.session_state.transcript_window)
         text_vec     = vectorizer.transform([text])
         kw_score_ml, groups_hit_ml, _ = compute_keyword_score(text)
+        # TRAIN_GROUP_ORDER now includes all 11 groups that exist in CIALDINI_GROUPS
         TRAIN_GROUP_ORDER = [
-        "authority","urgency","scarcity","warrant","money",
-        "reciprocity","threat","account","distraction","social_proof","commitment"
+            "authority","urgency","scarcity","warrant","money",
+            "reciprocity","threat","account","distraction","social_proof","commitment"
         ]
         kw_flags = [
             (1 if any(kw in text.lower() for kw in CIALDINI_GROUPS[g]["keywords"]) else 0)
             if g in CIALDINI_GROUPS else 0
             for g in TRAIN_GROUP_ORDER
         ]
-        
         num_vec  = csr_matrix([[kw_score_ml, len(groups_hit_ml),
                         1 if kw_score_ml > 0 else 0] + kw_flags])
         probability  = model.predict_proba(hstack([text_vec, num_vec]))[0][1]
@@ -928,6 +1113,7 @@ def process_attacker_chunk(text):
 
 def process_victim_chunk(text):
     now = datetime.datetime.now().strftime("%H:%M:%S")
+    text = _normalize_hindi(text)   # FIX: normalize before victim response scoring
     compliance_score, response_type = score_victim_response(
         text, st.session_state.last_attacker_groups, st.session_state.last_attacker_score)
     if compliance_score > 0.15:
@@ -956,16 +1142,13 @@ def process_victim_chunk(text):
 st.markdown("""
 <div class="main-header">
     <h1>🛡️ SCAM SHIELD</h1>
-    <div class="subtitle">Real-Time Digital Arrest Scam Detection System</div>
+    <div class="subtitle">AI-Powered Real-Time Scam & Fraud Risk Detection System</div>
 </div>
 """, unsafe_allow_html=True)
 
 
 # ══════════════════════════════════════════════════════════════
-# BUTTON HANDLERS — process first, render after.
-# Streamlit reruns the entire script when a button is clicked.
-# These run before any st.columns / st.markdown calls, so state
-# is fully updated by the time the layout renders below.
+# BUTTON HANDLERS
 # ══════════════════════════════════════════════════════════════
 c1, c2, c3, c4 = st.columns(4)
 reset_btn    = c1.button("🔄 NEW CALL",         type="primary", use_container_width=True)
@@ -977,43 +1160,17 @@ if reset_btn:
     for k, v in _fresh_state().items():
         st.session_state[k] = v
 
-# elif attacker_btn:
-#     with st.spinner("🎙️ Recording attacker... speak now"):
-#         text = record_and_transcribe()
-#     if not text:
-#         st.warning("🔇 No speech detected. Try again.")
-#     else:
-#         process_attacker_chunk(text)
 elif attacker_btn:
     with st.spinner("🎙️ Recording attacker... speak now"):
         try:
             text = record_and_transcribe()
-        except Exception as e:
+        except Exception:
             text = None
     if not text:
         st.session_state.status_msg = "🔇 No speech detected. Try again."
     else:
+        st.session_state.status_msg = None
         process_attacker_chunk(text)
-    # if text is None:
-    #     with open("C:/digital_arrest_detector/debug_log.txt", "a") as f:
-    #         f.write(f"text was None after record_and_transcribe\n")
-    # else:
-    #     with open("C:/digital_arrest_detector/debug_log.txt", "w") as f:
-    #         f.write(f"SUCCESS: text='{text}' conv_len={len(st.session_state.conversation)}\n")
-    #     process_attacker_chunk(text)
-    
-    if not text:
-        st.session_state.status_msg = st.session_state.status_msg or "❌ record_and_transcribe returned None"
-    # else:
-    #     st.session_state.status_msg = f"✅ Got text: '{text}' — calling process_attacker_chunk"
-    #     process_attacker_chunk(text)
-    #     st.session_state.status_msg += f" | conversation length now: {len(st.session_state.conversation)}"
-    else:
-        st.session_state.status_msg = f"✅ Got text: '{text}' — calling process_attacker_chunk"
-        process_attacker_chunk(text)
-        st.session_state.status_msg += f" | conversation length now: {len(st.session_state.conversation)}"
-        with open("C:/digital_arrest_detector/debug_log.txt", "a") as f:
-            f.write(f"{datetime.datetime.now()} | text='{text}' | conv_len={len(st.session_state.conversation)}\n")
 
 elif victim_btn:
     with st.spinner("🎙️ Recording victim... speak now"):
@@ -1025,8 +1182,6 @@ elif victim_btn:
 
 elif analyse_btn:
     attacker_turns_btn = [t for t in st.session_state.conversation if t["speaker"] == "attacker"]
-    # DEBUG — remove after confirming recordings work
-    
     if not attacker_turns_btn:
         st.warning("Record at least one attacker turn first.")
     else:
@@ -1045,10 +1200,8 @@ elif analyse_btn:
             _err = str(e)
 
         if _err is not None:
-            # ML failed — run rule-based fallback directly
             r = analyse_full_conversation(st.session_state.conversation)
             if r is None:
-                # Attacker-only fallback — no victim turns needed
                 scores  = [t["score"] for t in attacker_turns_btn]
                 avg_s   = sum(scores) / len(scores)
                 peak_s  = max(scores)
@@ -1084,11 +1237,8 @@ st.markdown("<div style='margin-bottom:8px'></div>", unsafe_allow_html=True)
 
 
 # ══════════════════════════════════════════════════════════════
-# MAIN LAYOUT  — 3 columns: left (attacker), centre (victim), right (log)
-# Gauge + metrics live above all three in a shared strip.
+# MAIN LAYOUT
 # ══════════════════════════════════════════════════════════════
-
-# ── Top metrics strip ─────────────────────────────────────────
 sp = int(st.session_state.current_score * 100)
 sc = "red" if sp > 38 else ("orange" if sp > 22 else "green")
 rc = "red" if st.session_state.high_risk_count > 0 else "green"
@@ -1108,7 +1258,6 @@ m5.markdown(_box("COMPLIANCE", f"{round(st.session_state.last_attacker_score,2)}
 
 st.markdown("<div style='margin-bottom:4px'></div>", unsafe_allow_html=True)
 
-# ── Gauge (full width, always visible) ───────────────────────
 gauge_score = st.session_state.current_score
 gval = gauge_score * 100
 if gval > 38:
@@ -1141,15 +1290,8 @@ gauge_fig.update_layout(
 )
 st.plotly_chart(gauge_fig, use_container_width=True, key=f"gauge_{st.session_state.total_chunks}")
 
-# ── Three-column live panels ──────────────────────────────────
 atk_col, vic_col, log_col = st.columns([5, 5, 4], gap="medium")
 
-
-# ════════════════════════════════════════════════════════════════
-# LEFT — ATTACKER PANEL
-# last_attacker_chunk is ONLY written by process_attacker_chunk.
-# Recording victim NEVER touches this. Persists across all reruns.
-# ════════════════════════════════════════════════════════════════
 with atk_col:
     st.markdown('<div class="section-title">🔴 &nbsp; ATTACKER</div>', unsafe_allow_html=True)
     la = st.session_state.last_attacker_chunk
@@ -1194,11 +1336,6 @@ with atk_col:
             f'</div>', unsafe_allow_html=True)
 
 
-# ════════════════════════════════════════════════════════════════
-# CENTRE — VICTIM PANEL
-# last_victim_chunk is ONLY written by process_victim_chunk.
-# Recording attacker NEVER touches this.
-# ════════════════════════════════════════════════════════════════
 with vic_col:
     st.markdown('<div class="section-title">🟢 &nbsp; VICTIM</div>', unsafe_allow_html=True)
     lv = st.session_state.last_victim_chunk
@@ -1231,7 +1368,6 @@ with vic_col:
             f'color:{vc};letter-spacing:2px;margin-bottom:6px;">'
             f'{vl}</div>', unsafe_allow_html=True)
 
-        # Compliance bar
         st.markdown(
             f'<div style="margin-bottom:6px;">'
             f'<div style="font-family:Share Tech Mono,monospace;font-size:0.55rem;'
@@ -1251,9 +1387,6 @@ with vic_col:
             f'</div>', unsafe_allow_html=True)
 
 
-# ════════════════════════════════════════════════════════════════
-# RIGHT — CALL LOG + TIMELINE
-# ════════════════════════════════════════════════════════════════
 with log_col:
     st.markdown('<div class="section-title">📋 &nbsp; CALL LOG</div>', unsafe_allow_html=True)
 
@@ -1295,7 +1428,6 @@ with log_col:
             )
         st.markdown(html, unsafe_allow_html=True)
 
-    # Risk timeline
     st.markdown('<div class="section-title" style="margin-top:10px;">📈 TIMELINE</div>',
                 unsafe_allow_html=True)
     tl = st.session_state.risk_timeline
@@ -1329,7 +1461,7 @@ with log_col:
 
 
 # ══════════════════════════════════════════════════════════════
-# FINAL ANALYSIS PANEL — shown below all columns
+# FINAL ANALYSIS PANEL
 # ══════════════════════════════════════════════════════════════
 if st.session_state.final_analysis_done and st.session_state.final_result:
     r           = st.session_state.final_result
@@ -1390,7 +1522,6 @@ if st.session_state.final_analysis_done and st.session_state.final_result:
         f'{info_block}</div>',
         unsafe_allow_html=True)
 
-    # Full conversation transcript
     st.markdown(
         '<div class="section-title" style="margin-top:16px;margin-bottom:6px;">📜 FULL CONVERSATION</div>',
         unsafe_allow_html=True)

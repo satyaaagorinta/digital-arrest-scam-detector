@@ -1,3 +1,18 @@
 SUCCESS: text='Thank you so much and also can you send that file urgently I needed for the meeting.' conv_len=3
 2026-05-08 14:54:45.367895 | text='Thank you so much and also can you send that file urgently I needed for the meeting.' | conv_len=5
 2026-05-08 15:02:48.502039 | text='Hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello, hello' | conv_len=2
+2026-05-08 15:47:37.561679 | text='I need that I have a good one.  I need that I have a good one.  I need that I have a good one.' | conv_len=2
+2026-05-09 19:39:32.543212 | text='Hello, how may I assist you?' | conv_len=2
+2026-05-09 19:40:09.174458 | text='Yes, could you confirm whether we are recording the cancelled flight looking?' | conv_len=5
+2026-05-09 19:40:45.725724 | text='From right I see the request here. The fund initiated from merchant side but your receiving account isn't synced correctly.  Happened sometimes by mouth.' | conv_len=8
+2026-05-09 19:41:12.821529 | text='Leave open Google Pay, now click bank account, you may receive a collection verification request.  This is not a debit request.' | conv_len=11
+2026-05-09 19:41:39.886708 | text='Amount may temporarily appear due to RBI routing format at automatically reverses after synchronization.' | conv_len=14
+2026-05-09 19:42:04.405481 | text='Yes, that's the only routing placeholder. Please approve so the refund gateway reconnects.' | conv_len=17
+2026-05-09 20:08:53.623012 | text='Hello, how may I help you?' | conv_len=2
+2026-05-09 20:09:30.516329 | text='Yes mom, I will help you.  You can confirm once. Is this regarding the can?' | conv_len=5
+2026-05-09 20:10:10.661611 | text='Yes, I can see the request here refund already initiated from merchant side, but you are receiving a count in singing correctly.' | conv_len=8
+2026-05-09 20:10:52.979818 | text='Don't worry, click bank account and open UPI once you may receive a collection verification request from a settlement software.' | conv_len=11
+2026-05-09 20:11:21.838398 | text='The mount made temporarily appear due to the IR routing format at automatically reverses after synchronization.' | conv_len=14
+2026-05-09 20:11:44.856643 | text='Yes, ma'am that's the one, please approve so that the Re1 gateway reconnects.' | conv_len=17
+2026-05-09 20:19:39.916052 | text='Hello, I'm going to talk to you later.' | conv_len=2
+2026-05-09 20:20:06.427112 | text='Hello, I've gone home.' | conv_len=4
